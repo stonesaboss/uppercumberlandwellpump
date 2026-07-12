@@ -1,0 +1,86 @@
+---
+import ServicePage from "../layouts/ServicePage.astro";
+import type { Faq } from "../data/faqs";
+
+const faqs: Faq[] = [
+  {
+    question: "Do you take requests from outside Livingston itself?",
+    answer:
+      "Yes — Overton County requests from communities like Rickman, Alpine, Hilham and Monroe are submitted the same way. Include the community or road area so provider coverage can be matched.",
+  },
+  {
+    question: "Our farm waters cattle from the well. Does that make the request urgent?",
+    answer:
+      "Select the urgency level that fits and describe the livestock situation in the details. Providers weigh that context when deciding how quickly they can respond, though no response time can be promised through this site.",
+  },
+  {
+    question: "Is Upper Cumberland Well Pump based in Livingston?",
+    answer:
+      "No. This is an online referral resource with no local office in Livingston or anywhere else. Requests are connected with independent providers who serve Overton County.",
+  },
+];
+---
+
+<ServicePage
+  title="Well Pump Repair in Livingston, TN"
+  description="Request well pump repair in Livingston and Overton County, TN — rural private wells, farm water systems, pump and pressure problems routed to independent regional providers."
+  path="/well-pump-repair-livingston-tn/"
+  h1="Well Pump Repair in Livingston and Overton County"
+  eyebrow="Livingston & Overton County"
+  crumbs={[
+    { name: "Home", path: "/" },
+    { name: "Service Areas", path: "/service-area/" },
+    { name: "Well Pump Repair in Livingston", path: "/well-pump-repair-livingston-tn/" },
+  ]}
+  defaultService="Well Pump Repair"
+  faqs={faqs}
+  relatedLinks={[
+    { label: "Emergency No-Water Requests", href: "/emergency-no-water-well-service/" },
+    { label: "Well Pump Replacement", href: "/well-pump-replacement/" },
+    { label: "Low Water Pressure From a Well", href: "/low-water-pressure-from-well/" },
+    { label: "Upper Cumberland Service Area", href: "/service-area/" },
+    { label: "Tennessee Licensing Information", href: "/licensing-information/" },
+  ]}
+>
+  <p>
+    Overton County is genuinely rural — long road frontages, farms that have been in families
+    for generations, and homes well past the reach of utility water. Private wells are simply how
+    much of the county gets its water, which means a failed pump in Livingston, Rickman, Alpine
+    or Hilham is a household-stopping event. This page takes those requests and routes them
+    toward independent providers serving the region.
+  </p>
+
+  <h2>Rural Wells Have Rural Failure Patterns</h2>
+  <p>
+    Requests from Overton County often involve conditions city systems never see:
+  </p>
+  <ul>
+    <li><strong>Older systems</strong> — wells and pumps installed decades ago, sometimes with sparse records, where the first job is figuring out what is actually down the hole.</li>
+    <li><strong>Farm demand</strong> — a single well feeding the house, a barn and stock waterers, so an outage affects animals as well as people. Say so in the request; it matters for planning the visit.</li>
+    <li><strong>Distance and access</strong> — long private drives, creek crossings and pasture gates. A provider who knows what to bring saves a second trip.</li>
+    <li><strong>Storm and outage aftermath</strong> — power interruptions and lightning are hard on pump controls; a well that never recovered after an outage is a recognizable request pattern here.</li>
+  </ul>
+
+  <h2>What to Put in a Livingston-Area Request</h2>
+  <ul>
+    <li>The community or road area, and anything a driver should know about finding and accessing the property.</li>
+    <li>What the water is doing — no water, weak, intermittent — and when it changed.</li>
+    <li>Whether the pump can be heard trying to run, and the gauge reading if one is safely visible.</li>
+    <li>Whether livestock or other time-sensitive water needs are involved.</li>
+  </ul>
+  <p>
+    A total outage should go through the
+    <a href="/emergency-no-water-well-service/">urgent no-water request</a>, which flags it at the
+    highest priority the site offers. Gradual pressure decline fits the
+    <a href="/low-water-pressure-from-well/">low water pressure page</a>.
+  </p>
+
+  <h2>Regional Provider Availability</h2>
+  <p>
+    Provider density is thinner in rural counties than around Cookeville, and availability for a
+    given road or holler depends on the responding provider — coverage, distance and schedule all
+    factor in. No response time is promised through this website. Whoever responds, verify their
+    current applicable Tennessee license before regulated work begins; the
+    <a href="/licensing-information/">licensing information page</a> covers how.
+  </p>
+</ServicePage>

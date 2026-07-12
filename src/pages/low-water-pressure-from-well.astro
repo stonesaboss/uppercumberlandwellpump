@@ -1,0 +1,82 @@
+---
+import ServicePage from "../layouts/ServicePage.astro";
+import type { Faq } from "../data/faqs";
+
+const faqs: Faq[] = [
+  {
+    question: "The pressure drops when two things run at once. Is that the pump?",
+    answer:
+      "Maybe — or the pressure tank, the pressure settings, a restriction, or simply demand exceeding what the system was designed for. Simultaneous-use pressure drop is one of the classic multi-cause symptoms; the provider sorts it out on site.",
+  },
+  {
+    question: "My pressure got worse gradually over months. Does that narrow it down?",
+    answer:
+      "Gradual decline often suggests different candidates (clogging filters, scaling, a wearing pump, dropping well yield) than a sudden loss does, but it still is not conclusive. Mention the timeline in your request — it genuinely helps.",
+  },
+  {
+    question: "Can I just turn up the pressure switch?",
+    answer:
+      "Adjusting pressure switches involves live electrical components and can mask real problems or overwork the pump. Leave settings changes to the provider.",
+  },
+];
+---
+
+<ServicePage
+  title="Low Water Pressure From a Well"
+  description="Low or inconsistent water pressure on a private well in the Upper Cumberland? Learn the possible categories — pump, tank, filters, leaks, yield — and request a diagnostic visit."
+  path="/low-water-pressure-from-well/"
+  h1="Low Water Pressure From a Private Well"
+  crumbs={[
+    { name: "Home", path: "/" },
+    { name: "Well Pump Services", path: "/#services-heading" },
+    { name: "Low Water Pressure", path: "/low-water-pressure-from-well/" },
+  ]}
+  defaultService="Low Water Pressure"
+  faqs={faqs}
+  relatedLinks={[
+    { label: "Pressure Tank Replacement", href: "/pressure-tank-replacement/" },
+    { label: "Constant-Pressure Systems", href: "/constant-pressure-well-pump-systems/" },
+    { label: "Well Pump Repair in Cookeville", href: "/well-pump-repair-cookeville-tn/" },
+    { label: "Water Treatment & Filtration", href: "/well-water-treatment-filtration/" },
+  ]}
+>
+  <p>
+    Weak showers, a washing machine that takes forever to fill, sprinklers that barely reach —
+    low pressure on a private well is one of the most common complaints in the Upper Cumberland,
+    and one of the least straightforward. Unlike a dead pump, low pressure has a long suspect
+    list, and honest troubleshooting means keeping every suspect on it until the system is
+    examined.
+  </p>
+
+  <h2>The Suspect List</h2>
+  <ul>
+    <li><strong>Pump output</strong> — a worn pump, or one that was never sized for the demand, delivers less than the plumbing expects.</li>
+    <li><strong>Pressure settings</strong> — the cut-in/cut-out range at the switch defines the pressure you feel; wrong or drifted settings feel like weak water.</li>
+    <li><strong>Pressure-tank condition</strong> — a failing tank causes surging and sag between cycles (see <a href="/pressure-tank-replacement/">pressure tank replacement</a>).</li>
+    <li><strong>Clogged filters</strong> — whole-house sediment filters quietly strangle flow as they load up.</li>
+    <li><strong>Plumbing restrictions</strong> — scaled or corroded pipe, partially closed valves, undersized lines on additions.</li>
+    <li><strong>Leaks</strong> — underground line leaks between the well and the house bleed pressure constantly and can also make the pump cycle.</li>
+    <li><strong>Well yield</strong> — the well itself may recover water more slowly than the household draws it, especially in dry spells.</li>
+    <li><strong>High property demand</strong> — new bathrooms, irrigation or livestock watering added since the system was designed.</li>
+    <li><strong>Treatment equipment</strong> — softeners and filtration systems add pressure drop, more as media ages.</li>
+  </ul>
+
+  <h2>Details That Sharpen the Diagnosis</h2>
+  <p>When you submit a request, these observations are worth including:</p>
+  <ul>
+    <li>Whether the weakness is constant, intermittent or only under simultaneous use.</li>
+    <li>Whether it affects the whole property or certain fixtures.</li>
+    <li>How it developed — overnight or over months.</li>
+    <li>The pressure-gauge reading at the tank, if safely visible.</li>
+    <li>Whether a filter or treatment system is installed and when media or cartridges were last changed.</li>
+  </ul>
+
+  <h2>Why This Page Won't Name Your Cause</h2>
+  <p>
+    Because it can't — and any site that claims otherwise is guessing with your money. The right
+    fix might be a cartridge, a tank, a switch adjustment, a leak repair or a pump. A provider
+    confirms the cause with gauges and flow measurements on site, then quotes the actual fix. Use
+    the form on this page, pick "Low Water Pressure," and describe the pattern; the details route
+    the request to a provider whose capabilities fit.
+  </p>
+</ServicePage>

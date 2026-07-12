@@ -1,0 +1,170 @@
+---
+/**
+ * Shared layout for service & location pages: breadcrumbs, page hero,
+ * long-form content slot, related links, referral disclosure and lead form.
+ */
+import BaseLayout from "./BaseLayout.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import LeadForm from "../components/LeadForm.astro";
+import FaqList from "../components/FaqList.astro";
+import { REFERRAL_DISCLOSURE } from "../data/site";
+import {
+  breadcrumbSchema,
+  faqSchema,
+  serviceSchema,
+  webPageSchema,
+  type Crumb,
+} from "../utils/schema";
+import type { Faq } from "../data/faqs";
+
+interface RelatedLink {
+  label: string;
+  href: string;
+  note?: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  path: string;
+  h1: string;
+  eyebrow?: string;
+  crumbs: Crumb[];
+  relatedLinks?: RelatedLink[];
+  defaultService?: string;
+  faqs?: Faq[];
+  faqHeading?: string;
+  isService?: boolean;
+}
+
+const {
+  title,
+  description,
+  path,
+  h1,
+  eyebrow = "Upper Cumberland, Tennessee",
+  crumbs,
+  relatedLinks = [],
+  defaultService = "",
+  faqs = [],
+  faqHeading = "Related Questions",
+  isService = true,
+} = Astro.props;
+
+const schema: object[] = [
+  webPageSchema({ path, title, description }),
+  breadcrumbSchema(crumbs),
+];
+if (isService) {
+  schema.push(serviceSchema({ path, name: h1, description }));
+}
+if (faqs.length > 0) {
+  schema.push(faqSchema(faqs));
+}
+---
+
+<BaseLayout title={title} description={description} path={path} schema={schema}>
+  <div class="page-hero">
+    <div class="container">
+      <p class="page-hero__eyebrow">{eyebrow}</p>
+      <h1>{h1}</h1>
+    </div>
+  </div>
+
+  <Breadcrumbs crumbs={crumbs} />
+
+  <div class="container service-layout">
+    <article class="prose service-content">
+      <slot />
+
+      {
+        faqs.length > 0 && (
+          <section aria-labelledby="page-faqs">
+            <h2 id="page-faqs">{faqHeading}</h2>
+            <FaqList faqs={faqs} />
+          </section>
+        )
+      }
+
+      <div class="disclosure-box">
+        <p style="margin:0;">{REFERRAL_DISCLOSURE}</p>
+      </div>
+    </article>
+
+    <aside class="service-sidebar">
+      <LeadForm
+        variant="full"
+        defaultService={defaultService}
+        heading="Request Well-Pump Service"
+        description="Tell us what is happening with the property's water system."
+      />
+
+      {
+        relatedLinks.length > 0 && (
+          <nav class="related-links card" aria-label="Related pages">
+            <h3>Related Services &amp; Areas</h3>
+            <ul>
+              {relatedLinks.map((link) => (
+                <li>
+                  <a href={link.href}>{link.label}</a>
+                  {link.note && <span class="fine-print"> — {link.note}</span>}
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )
+      }
+    </aside>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-hero {
+    background: linear-gradient(160deg, var(--navy-deep), var(--navy) 70%, var(--blue));
+    color: var(--white);
+    padding-block: clamp(2.5rem, 6vw, 4rem);
+  }
+  .page-hero h1 {
+    color: var(--white);
+    margin-bottom: 0;
+  }
+  .page-hero__eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: #9fd7a8;
+    margin-bottom: 0.5rem;
+  }
+
+  .service-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 380px;
+    gap: 2.5rem;
+    padding-block: 1rem 3.5rem;
+    align-items: start;
+  }
+  .service-sidebar {
+    position: sticky;
+    top: 96px;
+    display: grid;
+    gap: 1.5rem;
+  }
+  .related-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .related-links li {
+    margin-bottom: 0.6rem;
+  }
+
+  @media (max-width: 1000px) {
+    .service-layout {
+      grid-template-columns: 1fr;
+    }
+    .service-sidebar {
+      position: static;
+    }
+  }
+</style>

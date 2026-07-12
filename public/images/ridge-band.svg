@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <rect width="1600" height="400" fill="#0C3158"/>
+  <path d="M0 300 L200 180 L360 260 L560 150 L760 250 L960 170 L1160 260 L1360 180 L1600 250 L1600 400 L0 400 Z" fill="#126FBA" opacity="0.35"/>
+  <path d="M0 340 L240 240 L440 300 L660 220 L880 300 L1100 240 L1320 310 L1600 250 L1600 400 L0 400 Z" fill="#071F3A" opacity="0.7"/>
+  <path d="M0 400 C300 360 600 380 900 395 C1150 405 1400 390 1600 375 L1600 400 Z" fill="#2C9AD1" opacity="0.5"/>
+</svg>

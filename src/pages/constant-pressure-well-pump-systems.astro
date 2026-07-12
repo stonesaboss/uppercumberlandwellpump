@@ -1,0 +1,88 @@
+---
+import ServicePage from "../layouts/ServicePage.astro";
+import type { Faq } from "../data/faqs";
+
+const faqs: Faq[] = [
+  {
+    question: "Is a constant-pressure system worth it?",
+    answer:
+      "For some properties, the steadier pressure across simultaneous uses is exactly what they wanted; for others, a correctly sized conventional system serves fine. It depends on demand patterns, the well, the budget and the provider's assessment — it is an option, not a required upgrade.",
+  },
+  {
+    question: "Does constant pressure mean more pressure?",
+    answer:
+      "Not necessarily. It means steadier pressure — the system varies pump speed to hold a target instead of swinging between cut-in and cut-out points. Maximum achievable pressure still depends on the pump and system design.",
+  },
+  {
+    question: "Can my existing well support one?",
+    answer:
+      "That is a compatibility question involving the well's yield, the existing pump and wiring, the electrical service and the controls. The provider evaluates it — often as part of a replacement or installation conversation.",
+  },
+];
+---
+
+<ServicePage
+  title="Constant-Pressure Well Pump Systems"
+  description="Learn how constant-pressure well pump systems work, who tends to ask about them, and how to request a suitability evaluation in the Upper Cumberland, TN."
+  path="/constant-pressure-well-pump-systems/"
+  h1="Constant-Pressure Well Pump Systems"
+  crumbs={[
+    { name: "Home", path: "/" },
+    { name: "Well Pump Services", path: "/#services-heading" },
+    { name: "Constant-Pressure Systems", path: "/constant-pressure-well-pump-systems/" },
+  ]}
+  defaultService="Constant-Pressure System"
+  faqs={faqs}
+  relatedLinks={[
+    { label: "Well Pump Replacement", href: "/well-pump-replacement/" },
+    { label: "Well Pump Installation", href: "/well-pump-installation/" },
+    { label: "Low Water Pressure From a Well", href: "/low-water-pressure-from-well/" },
+    { label: "Pressure Tank Replacement", href: "/pressure-tank-replacement/" },
+  ]}
+>
+  <p>
+    A conventional well system swings between two pressure points: the pump kicks on at the low
+    setting, fills the tank to the high setting, and shuts off — and you feel that swing in the
+    shower. A constant-pressure system works differently: a variable-speed drive adjusts the pump
+    continuously to hold pressure near a single target, even while demand changes around the
+    property.
+  </p>
+
+  <h2>How These Systems Generally Operate</h2>
+  <p>
+    The core is a controller (often called a variable-frequency drive) paired with a compatible
+    pump. When someone opens a tap, the drive speeds the pump just enough to hold the target
+    pressure; when demand rises — laundry plus a shower plus a stock waterer — it speeds up
+    further. Pressure tanks in these systems are typically much smaller, since the drive rather
+    than the tank does the smoothing. Suitability depends on the existing well, pump, electrical
+    system, plumbing, water demand and provider assessment.
+  </p>
+
+  <h2>Who Tends to Ask About Constant Pressure</h2>
+  <ul>
+    <li>Households annoyed by <strong>significant pressure fluctuation</strong> — the strong-then-weak shower problem.</li>
+    <li>Properties with <strong>multiple simultaneous water uses</strong> — big families, guest quarters, in-law suites.</li>
+    <li>Anyone running <strong>irrigation</strong> alongside household demand.</li>
+    <li><strong>Farms and larger properties</strong> where barns, waterers and residences share a system.</li>
+    <li>Owners doing <strong>system modernization</strong> or planning ahead for a <a href="/well-pump-replacement/">pump replacement</a> and weighing options while the system is already open.</li>
+  </ul>
+
+  <h2>An Option to Evaluate — Not a Required Upgrade</h2>
+  <p>
+    Constant-pressure equipment costs more than a conventional setup, involves electronics that
+    have their own service considerations, and is not automatically better for every property. A
+    correctly sized conventional pump and <a href="/pressure-tank-replacement/">healthy pressure
+    tank</a> solve plenty of pressure complaints on their own — sometimes the honest answer to a
+    pressure problem is a <a href="/low-water-pressure-from-well/">diagnosis</a>, not an upgrade.
+    The right way to decide is a provider assessment against your actual well, wiring and
+    demand.
+  </p>
+
+  <h2>Asking About Constant-Pressure Options</h2>
+  <p>
+    Use the form and select "Constant-Pressure System." Describe the property, what bothers you
+    about the current pressure behavior, and any known system details. An independent provider
+    can assess compatibility and give you a real comparison between upgrading and servicing what
+    you have.
+  </p>
+</ServicePage>

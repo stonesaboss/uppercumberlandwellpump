@@ -1,0 +1,11 @@
+// Cloudflare Pages configuration for uppercumberlandwellpump.com
+// This file intentionally contains ONLY configuration that works without
+// placeholder resource IDs. Optional D1 / R2 bindings live in
+// wrangler.bindings.example.jsonc — copy them here only after creating
+// the real resources (see README).
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "uppercumberlandwellpump",
+  "compatibility_date": "2026-07-01",
+  "pages_build_output_dir": "dist"
+}

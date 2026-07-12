@@ -1,0 +1,88 @@
+---
+import { SITE } from "../data/site";
+---
+
+<div class="sticky-bar" data-sticky-bar>
+  {
+    SITE.phone.tel ? (
+      <a href={`tel:${SITE.phone.tel}`} class="sticky-bar__btn sticky-bar__btn--call" data-event="sticky_phone_click">
+        Call
+      </a>
+    ) : (
+      <a href="/contact/" class="sticky-bar__btn sticky-bar__btn--call">
+        Call
+      </a>
+    )
+  }
+  <a href="/request-service/" class="sticky-bar__btn sticky-bar__btn--request" data-event="sticky_request_cta">
+    Request Service
+  </a>
+</div>
+
+<style>
+  .sticky-bar {
+    display: none;
+  }
+  @media (max-width: 860px) {
+    .sticky-bar {
+      display: flex;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 120;
+      height: var(--sticky-bar-height);
+      box-shadow: 0 -3px 12px rgba(7, 31, 58, 0.25);
+      transition: transform 0.2s ease;
+    }
+    .sticky-bar[data-hidden] {
+      transform: translateY(110%);
+    }
+    .sticky-bar__btn {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      font-size: 1.05rem;
+      text-decoration: none;
+      color: var(--white);
+    }
+    .sticky-bar__btn--call {
+      background: var(--green);
+    }
+    .sticky-bar__btn--request {
+      background: var(--blue);
+    }
+  }
+</style>
+
+<script>
+  // Hide the sticky bar while a lead form or the footer is on screen so it
+  // never covers submit buttons, consent language or footer navigation.
+  const bar = document.querySelector<HTMLElement>("[data-sticky-bar]");
+  if (bar) {
+    const watched = Array.from(
+      document.querySelectorAll<HTMLElement>("form[data-lead-form], footer"),
+    );
+    const update = () => {
+      const vh = window.innerHeight;
+      const overlapping = watched.some((el) => {
+        const rect = el.getBoundingClientRect();
+        return rect.top < vh && rect.bottom > 0;
+      });
+      if (overlapping) {
+        bar.setAttribute("data-hidden", "");
+      } else {
+        bar.removeAttribute("data-hidden");
+      }
+    };
+
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update, { passive: true });
+    update();
+  }
+</script>

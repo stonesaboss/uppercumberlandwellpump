@@ -1,0 +1,16 @@
+# Canonical host: apex domain. www redirects to apex.
+https://www.uppercumberlandwellpump.com/* https://uppercumberlandwellpump.com/:splat 301!
+
+# Convenience aliases -> canonical service paths
+/well-pump-repair/ /well-pump-repair-cookeville-tn/ 301
+/well-pump-repair /well-pump-repair-cookeville-tn/ 301
+/emergency/ /emergency-no-water-well-service/ 301
+/emergency /emergency-no-water-well-service/ 301
+/no-water/ /emergency-no-water-well-service/ 301
+/no-water /emergency-no-water-well-service/ 301
+/service-areas/ /service-area/ 301
+/service-areas /service-area/ 301
+/request/ /request-service/ 301
+/request /request-service/ 301
+
+# NOTE: unknown paths intentionally fall through to the custom 404 page.

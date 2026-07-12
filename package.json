@@ -1,0 +1,27 @@
+{
+  "name": "uppercumberlandwellpump",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Upper Cumberland Well Pump — local well pump service request and referral website for Cookeville and the Upper Cumberland region of Tennessee.",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check && tsc -p functions",
+    "typecheck": "astro check && tsc -p functions",
+    "lint": "prettier --check \"src/**/*.{astro,ts,css}\" \"functions/**/*.ts\"",
+    "format": "prettier --write \"src/**/*.{astro,ts,css}\" \"functions/**/*.ts\""
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.4.1",
+    "astro": "^5.12.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@cloudflare/workers-types": "^4.20260701.0",
+    "prettier": "^3.6.2",
+    "prettier-plugin-astro": "^0.14.1",
+    "typescript": "^5.8.3"
+  }
+}

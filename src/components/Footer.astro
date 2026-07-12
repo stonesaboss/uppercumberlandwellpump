@@ -1,0 +1,232 @@
+---
+import { FOOTER_SERVICES, FOOTER_AREAS, FOOTER_RESOURCES, FOOTER_LEGAL } from "../data/nav";
+import { REFERRAL_DISCLOSURE, SITE } from "../data/site";
+import PhoneLink from "./PhoneLink.astro";
+
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="footer-cta">
+    <div class="container footer-cta__inner">
+      <div>
+        <p class="footer-cta__title">Let's Get Your Water Flowing.</p>
+        <p class="footer-cta__sub">
+          Whether it's a failed pump, low pressure or a new well project, describe the problem and
+          we'll route your request.
+        </p>
+      </div>
+      <div class="footer-cta__actions">
+        <a href="/request-service/" class="btn btn--primary" data-event="request_service_cta">
+          Request Well-Pump Service
+        </a>
+        <p class="footer-cta__phone">
+          or call <PhoneLink eventLabel="footer_phone_click" />
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container footer-main">
+    <div class="footer-brand">
+      <img
+        src="/logos/ucwp-shield-400.png"
+        alt="Upper Cumberland Well Pump shield logo"
+        width="150"
+        height="150"
+        loading="lazy"
+        class="footer-brand__logo"
+      />
+      <p class="footer-brand__text">
+        {SITE.name} is an independent referral resource for well pump repair, replacement, pressure
+        tank service and water-well services throughout Cookeville and the Upper Cumberland region
+        of Tennessee.
+      </p>
+    </div>
+
+    <nav aria-label="Footer — services">
+      <p class="footer-heading">Services</p>
+      <ul>
+        {FOOTER_SERVICES.map((l) => (
+          <li><a href={l.href}>{l.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+
+    <nav aria-label="Footer — service area">
+      <p class="footer-heading">Service Area</p>
+      <ul>
+        {FOOTER_AREAS.map((l) => (
+          <li><a href={l.href}>{l.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+
+    <nav aria-label="Footer — resources">
+      <p class="footer-heading">Resources</p>
+      <ul>
+        {FOOTER_RESOURCES.map((l) => (
+          <li><a href={l.href}>{l.label}</a></li>
+        ))}
+      </ul>
+      <p class="footer-heading footer-heading--gap">Requests</p>
+      <ul>
+        <li><a href="/request-service/">Request Service Online</a></li>
+        <li>
+          <PhoneLink prefix="Call " eventLabel="footer_phone_click" />
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="container footer-disclosure">
+    <p class="fine-print">{REFERRAL_DISCLOSURE}</p>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container footer-bottom__inner">
+      <p>&copy; {year} {SITE.name}. All rights reserved.</p>
+      <ul class="footer-legal">
+        {FOOTER_LEGAL.map((l) => (
+          <li><a href={l.href}>{l.label}</a></li>
+        ))}
+        <li><a href="/sitemap-index.xml">Sitemap</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--navy-deep);
+    color: #cfdcea;
+    font-size: 0.95rem;
+  }
+  .site-footer a {
+    color: #cfdcea;
+    text-decoration: none;
+  }
+  .site-footer a:hover {
+    color: var(--white);
+    text-decoration: underline;
+  }
+
+  .footer-cta {
+    background: var(--navy);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+  .footer-cta__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding-block: 2rem;
+    flex-wrap: wrap;
+  }
+  .footer-cta__title {
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: var(--white);
+    margin: 0 0 0.25rem;
+  }
+  .footer-cta__sub {
+    margin: 0;
+    max-width: 34rem;
+  }
+  .footer-cta__actions {
+    text-align: center;
+  }
+  .footer-cta__phone {
+    margin: 0.5rem 0 0;
+    font-size: 0.9rem;
+  }
+  .footer-cta__phone :global(a),
+  .footer-cta__phone :global(span) {
+    color: var(--white);
+    font-weight: 700;
+  }
+
+  .footer-main {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr 1fr;
+    gap: 2rem;
+    padding-block: 2.5rem;
+  }
+  .footer-main ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .footer-main li {
+    margin-bottom: 0.45rem;
+  }
+  .footer-heading {
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    color: var(--white);
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    margin: 0 0 0.8rem;
+  }
+  .footer-heading--gap {
+    margin-top: 1.5rem;
+  }
+
+  .footer-brand__logo {
+    width: 130px;
+    height: auto;
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 8px;
+    margin-bottom: 1rem;
+  }
+  .footer-brand__text {
+    max-width: 24rem;
+    line-height: 1.6;
+  }
+
+  .footer-disclosure {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding-block: 1.25rem;
+  }
+  .footer-disclosure .fine-print {
+    color: #93a9bd;
+    margin: 0;
+  }
+
+  .footer-bottom {
+    background: #051629;
+  }
+  .footer-bottom__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding-block: 1rem;
+    font-size: 0.85rem;
+  }
+  .footer-bottom p {
+    margin: 0;
+  }
+  .footer-legal {
+    list-style: none;
+    display: flex;
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 900px) {
+    .footer-main {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media (max-width: 560px) {
+    .footer-main {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,91 @@
+---
+import ServicePage from "../layouts/ServicePage.astro";
+---
+
+<ServicePage
+  title="Upper Cumberland Well Pump Service Area"
+  description="Where well-pump service requests are accepted: Cookeville and Putnam County, Crossville, Livingston, Sparta and surrounding Upper Cumberland, TN communities. Coverage varies by provider."
+  path="/service-area/"
+  h1="Well-Pump Service Requests Across Upper Cumberland"
+  crumbs={[
+    { name: "Home", path: "/" },
+    { name: "Service Area", path: "/service-area/" },
+  ]}
+  defaultService=""
+  isService={false}
+  relatedLinks={[
+    { label: "Well Pump Repair in Cookeville", href: "/well-pump-repair-cookeville-tn/" },
+    { label: "Well Pump Repair in Crossville", href: "/well-pump-repair-crossville-tn/" },
+    { label: "Well Pump Repair in Livingston", href: "/well-pump-repair-livingston-tn/" },
+    { label: "How Referrals Work", href: "/how-referrals-work/" },
+  ]}
+>
+  <p>
+    Upper Cumberland Well Pump accepts service requests from across the Upper Cumberland region
+    of Tennessee. The map and list below show where requests are routed — with an honest note on
+    each tier, because <strong>actual coverage varies by provider, service type, property access,
+    licensing, distance and scheduling.</strong> There is no office pin on this map because there
+    is no office: this is an online referral resource.
+  </p>
+
+  <img
+    src="/images/map-upper-cumberland.svg"
+    alt="Illustrated map of the Upper Cumberland region showing Putnam, Cumberland, Overton, White and DeKalb counties"
+    width="760"
+    height="560"
+    loading="lazy"
+    style="margin-block: 1.5rem; border: 1px solid var(--gray-border); border-radius: 10px;"
+  />
+
+  <h2>Primary Market — Cookeville &amp; Putnam County</h2>
+  <p>
+    Cookeville is the hub of the region and of this service: the primary content and
+    lead-generation focus for pump repair, urgent no-water requests, replacement, pressure tanks
+    and related water-well services. Requests from Algood, Baxter, Monterey and rural Putnam
+    County roads are submitted through the same
+    <a href="/well-pump-repair-cookeville-tn/">Cookeville well pump repair page</a>.
+  </p>
+
+  <h2>Secondary Markets</h2>
+  <h3>Crossville &amp; Cumberland County</h3>
+  <p>
+    Plateau communities including Fairfield Glade, Lake Tansi, Crab Orchard and Pleasant Hill.
+    Cumberland County has its own request page:
+    <a href="/well-pump-repair-crossville-tn/">Well Pump Repair in Crossville</a>.
+  </p>
+  <h3>Livingston &amp; Overton County</h3>
+  <p>
+    Livingston, Rickman, Alpine, Hilham, Monroe and the county's rural farm properties. See
+    <a href="/well-pump-repair-livingston-tn/">Well Pump Repair in Livingston</a>.
+  </p>
+
+  <h2 id="sparta">Supporting Coverage</h2>
+  <h3>Sparta &amp; White County</h3>
+  <p>
+    Requests from Sparta, Doyle, Quebeck and rural White County are accepted through the standard
+    <a href="/request-service/">request form</a> — enter "Sparta" or "White County" in the
+    city/county field. Provider coverage for a specific White County address is confirmed during
+    routing.
+  </p>
+  <h3>Smithville &amp; DeKalb County</h3>
+  <p>
+    DeKalb County requests are accepted <strong>subject to verified provider coverage</strong> —
+    routing depends on whether a provider serving that direction can take the request. Submitting
+    costs nothing and gets you an honest answer either way.
+  </p>
+  <h3>Nearby Rural Communities</h3>
+  <p>
+    Jackson, Fentress and other neighboring Upper Cumberland counties fall outside the core
+    focus, but rural requests from adjacent areas are welcome and routed where a provider's
+    range allows.
+  </p>
+
+  <h2>How Coverage Actually Gets Confirmed</h2>
+  <p>
+    A request is reviewed against the providers who serve your direction, service type and
+    property situation — a drilling rig ranges differently than a repair truck, and a gated farm
+    two counties out is a different trip than a subdivision address. That is why this page makes
+    no blanket promises. The <a href="/how-referrals-work/">how referrals work page</a> walks
+    through the full process step by step.
+  </p>
+</ServicePage>

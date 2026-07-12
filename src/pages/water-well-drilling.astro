@@ -1,0 +1,92 @@
+---
+import ServicePage from "../layouts/ServicePage.astro";
+import type { Faq } from "../data/faqs";
+
+const faqs: Faq[] = [
+  {
+    question: "How deep will my well need to be?",
+    answer:
+      "No website can tell you. Depth varies property to property across the Upper Cumberland plateau and valleys, and the licensed driller determines it from site conditions and experience in the immediate area. Be wary of anyone promising a depth before drilling.",
+  },
+  {
+    question: "Is a certain water yield guaranteed?",
+    answer:
+      "No. Yield is a property of the formation the well intersects, and it cannot be guaranteed in advance. Discuss how the driller handles low-yield outcomes before the project starts.",
+  },
+  {
+    question: "Do I need a permit to drill a well in Tennessee?",
+    answer:
+      "Tennessee regulates water-well construction and licenses drillers, and notification/reporting requirements apply to drillers. Requirements can change and vary by situation, so confirm current rules with the licensed driller and the State of Tennessee rather than relying on a summary here.",
+  },
+];
+---
+
+<ServicePage
+  title="Water Well Drilling Requests | Upper Cumberland TN"
+  description="Request water well drilling information for new construction, replacement wells, farms and rural property in the Upper Cumberland, TN. Honest expectations — no depth or yield guarantees."
+  path="/water-well-drilling/"
+  h1="Water Well Drilling in Upper Cumberland"
+  crumbs={[
+    { name: "Home", path: "/" },
+    { name: "Water Well Services", path: "/#drilling-heading" },
+    { name: "Water Well Drilling", path: "/water-well-drilling/" },
+  ]}
+  defaultService="Water Well Drilling"
+  faqs={faqs}
+  relatedLinks={[
+    { label: "Well Pump Installation", href: "/well-pump-installation/" },
+    { label: "Well Inspections", href: "/well-inspection/" },
+    { label: "Water Treatment & Filtration", href: "/well-water-treatment-filtration/" },
+    { label: "Tennessee Licensing Information", href: "/licensing-information/" },
+    { label: "Upper Cumberland Service Area", href: "/service-area/" },
+  ]}
+>
+  <p>
+    New homes going up on rural acreage outside Cookeville, farms adding stock water, cabins on
+    the plateau near Crossville, properties whose existing well no longer keeps up — these are
+    the projects that lead people to ask about drilling a water well. This page collects drilling
+    requests for the Upper Cumberland region and routes them toward appropriately licensed local
+    drillers.
+  </p>
+
+  <h2>Projects That Fit a Drilling Request</h2>
+  <ul>
+    <li><strong>New construction</strong> — a build site with no water source.</li>
+    <li><strong>Replacement wells</strong> — when an existing well has failed structurally or no longer produces adequately.</li>
+    <li><strong>Farms and agricultural use</strong> — stock water, barns, irrigation.</li>
+    <li><strong>Rural residential</strong> — properties beyond utility water lines.</li>
+    <li><strong>System expansion</strong> — eligible projects adding demand an existing well cannot carry.</li>
+  </ul>
+
+  <h2>Information Worth Gathering Before You Submit</h2>
+  <ul>
+    <li>Property location and how a rig would access the site.</li>
+    <li>Intended use — household, farm, irrigation, mixed.</li>
+    <li>Whether this is new construction or an existing property, and whether an existing well is present.</li>
+    <li>Any known records — old well logs, neighbor well information, prior site work.</li>
+    <li>Desired timing and whether electrical power is available at the site.</li>
+    <li>Expected water needs and any known water-quality concerns in the area.</li>
+  </ul>
+
+  <h2>Honest Expectations About Drilling</h2>
+  <p>
+    Drilling is the one well service where over-promising does the most damage, so here is the
+    straight version:
+  </p>
+  <ul>
+    <li><strong>No guaranteed depth.</strong> Depth is determined by what the driller encounters, not by a website estimate.</li>
+    <li><strong>No guaranteed yield.</strong> The formation decides how much water a well produces.</li>
+    <li><strong>No fixed price here.</strong> Drilling pricing depends on depth, casing, site conditions and the driller's terms — get it from the driller in writing.</li>
+    <li><strong>Not every property outcome is identical.</strong> Well viability, location on the parcel, construction method and yield must be evaluated by the licensed professional on site.</li>
+  </ul>
+
+  <h2>Licensing Is Not Optional</h2>
+  <p>
+    Tennessee licenses water-well drillers, and drilling is regulated work. Whoever drills on
+    your property should hold the current applicable Tennessee license — verify it directly
+    before the rig shows up. The <a href="/licensing-information/">licensing information page</a>
+    covers what to check. Once the well exists, the
+    <a href="/well-pump-installation/">pump installation page</a> covers the next phase of the
+    project.
+  </p>
+</ServicePage>

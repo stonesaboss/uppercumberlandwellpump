@@ -1,0 +1,91 @@
+---
+import ServicePage from "../layouts/ServicePage.astro";
+import type { Faq } from "../data/faqs";
+
+const faqs: Faq[] = [
+  {
+    question: "Can someone tell me over the phone what is wrong with my pump?",
+    answer:
+      "No. A no-water or low-pressure symptom can come from the pump, the pressure switch, the tank, wiring, plumbing or the well itself. The symptoms you describe help route the request, but the cause is confirmed on site by the provider.",
+  },
+  {
+    question: "Does the request cover all of Putnam County?",
+    answer:
+      "Requests are accepted from Cookeville and the surrounding Putnam County area, including rural properties outside the city limits. Whether a specific address is served depends on the responding provider's coverage.",
+  },
+  {
+    question: "Who actually performs the repair?",
+    answer:
+      "An independent local well-service provider. Upper Cumberland Well Pump is a referral resource — confirm the provider's current Tennessee license, pricing and terms directly with them before work begins.",
+  },
+];
+---
+
+<ServicePage
+  title="Well Pump Repair in Cookeville, TN"
+  description="Request well pump repair in Cookeville and Putnam County, TN. Describe no-water problems, pressure loss or pump symptoms and get connected with an independent local provider."
+  path="/well-pump-repair-cookeville-tn/"
+  h1="Well Pump Repair in Cookeville, TN"
+  eyebrow="Cookeville & Putnam County"
+  crumbs={[
+    { name: "Home", path: "/" },
+    { name: "Well Pump Services", path: "/#services-heading" },
+    { name: "Well Pump Repair in Cookeville", path: "/well-pump-repair-cookeville-tn/" },
+  ]}
+  defaultService="Well Pump Repair"
+  faqs={faqs}
+  relatedLinks={[
+    { label: "Emergency No-Water Requests", href: "/emergency-no-water-well-service/" },
+    { label: "Well Pump Replacement", href: "/well-pump-replacement/" },
+    { label: "Pressure Tank Replacement", href: "/pressure-tank-replacement/" },
+    { label: "Upper Cumberland Service Area", href: "/service-area/" },
+    { label: "Tennessee Licensing Information", href: "/licensing-information/" },
+  ]}
+>
+  <p>
+    Cookeville sits at the center of the Upper Cumberland, and a large share of homes, farms and
+    rural properties around it — along Highway 70, out toward Buffalo Valley Road, up around
+    Boiling Springs and across the county line communities — rely on private wells rather than city
+    water. When a well pump acts up on one of those properties, the water stops with it. This page
+    is where Cookeville and Putnam County property owners can describe the problem and request
+    repair service from an independent local provider.
+  </p>
+
+  <h2>Repair Requests We Route for Cookeville Properties</h2>
+  <ul>
+    <li><strong>No water at any fixture</strong> — the most urgent request category. If this is you, the <a href="/emergency-no-water-well-service/">emergency no-water page</a> walks through what to note before submitting.</li>
+    <li><strong>Pump troubleshooting</strong> — the pump hums but doesn't deliver, runs constantly, trips the breaker or won't start at all.</li>
+    <li><strong>Electrical and control symptoms</strong> — clicking pressure switches, buzzing control boxes, repeated relay sounds. Describe what you hear; never open the panel or control box yourself.</li>
+    <li><strong>Pressure equipment problems</strong> — rapid cycling, unstable pressure or a waterlogged tank, which may point at the <a href="/pressure-tank-replacement/">pressure tank</a> rather than the pump.</li>
+    <li><strong>Recurring breakdowns</strong> — when the same pump keeps failing, the request may become a <a href="/well-pump-replacement/">repair-versus-replacement evaluation</a>.</li>
+  </ul>
+
+  <h2>What Helps a Provider Respond to a Putnam County Request</h2>
+  <p>
+    Rural Putnam County properties vary a lot — a drilled well behind a house near Algood is a
+    different job than an older bored well on a farm toward Baxter. The details below help match
+    the request with a provider that fits:
+  </p>
+  <ul>
+    <li>Property location (address or nearest road) and access — gated drives, steep terrain or livestock areas are worth mentioning.</li>
+    <li>What the water is doing now: none at all, intermittent, sputtering or weak.</li>
+    <li>Anything safely observable: pressure-gauge reading, whether the pump can be heard, whether a breaker appears tripped.</li>
+    <li>Known system facts, if any: pump type, well depth, prior service records.</li>
+  </ul>
+
+  <h2>No Online Diagnosis — and Why That Protects You</h2>
+  <p>
+    The same "no water" symptom can be a $40 pressure switch or a failed submersible pump hundreds
+    of feet down the casing. Nobody can tell which from a web form, and this site will not pretend
+    to. What the form does is capture the symptoms accurately so the responding provider arrives
+    informed. Diagnosis, pricing, scheduling and warranty terms are all determined by that
+    provider, not by this website.
+  </p>
+
+  <h2>Verify the Provider's Tennessee License</h2>
+  <p>
+    Tennessee regulates well-pump installation and repair work. Before regulated work begins,
+    confirm the responding provider holds the current applicable Tennessee license — the
+    <a href="/licensing-information/">licensing information page</a> explains what to ask for.
+  </p>
+</ServicePage>

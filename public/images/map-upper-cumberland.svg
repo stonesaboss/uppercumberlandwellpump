@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 560" role="img" aria-label="Illustrated map of the Upper Cumberland service region showing Putnam, Overton, Cumberland, White and DeKalb counties">
+  <style>
+    .county { fill: #5F8B54; stroke: #FFFFFF; stroke-width: 3; opacity: 0.92; }
+    .county--primary { fill: #245F35; }
+    .county--support { fill: #8FAF87; }
+    .lbl { font-family: Arial, sans-serif; font-size: 22px; font-weight: 700; fill: #FFFFFF; }
+    .sub { font-family: Arial, sans-serif; font-size: 15px; fill: #EAF2E8; }
+  </style>
+
+  <!-- Stylized, illustrative county shapes (not survey-accurate) -->
+  <!-- Overton (Livingston) - north -->
+  <path class="county" d="M250 40 L470 55 L455 185 L245 175 Z"/>
+  <text class="lbl" x="310" y="110">OVERTON</text>
+  <text class="sub" x="316" y="135">Livingston</text>
+
+  <!-- Putnam (Cookeville) - center, primary -->
+  <path class="county county--primary" d="M180 185 L455 195 L445 320 L170 305 Z"/>
+  <text class="lbl" x="255" y="245">PUTNAM</text>
+  <text class="sub" x="252" y="270">Cookeville ★</text>
+
+  <!-- Cumberland (Crossville) - east -->
+  <path class="county" d="M465 200 L700 215 L690 400 L450 385 Z"/>
+  <text class="lbl" x="500" y="295">CUMBERLAND</text>
+  <text class="sub" x="530" y="320">Crossville</text>
+
+  <!-- White (Sparta) - south -->
+  <path class="county county--support" d="M215 315 L440 330 L425 455 L205 440 Z"/>
+  <text class="lbl" x="270" y="380">WHITE</text>
+  <text class="sub" x="268" y="405">Sparta</text>
+
+  <!-- DeKalb (Smithville) - southwest -->
+  <path class="county county--support" d="M40 300 L200 310 L190 445 L35 430 Z"/>
+  <text class="lbl" x="62" y="365">DEKALB</text>
+  <text class="sub" x="58" y="390">Smithville</text>
+
+  <!-- Cookeville marker -->
+  <circle cx="330" cy="252" r="9" fill="#FFFFFF" stroke="#0C3158" stroke-width="3"/>
+
+  <text class="sub" x="40" y="520" fill="#4A5A68" style="fill:#4A5A68;">Illustrative service region — not a survey map. Coverage varies by provider.</text>
+</svg>

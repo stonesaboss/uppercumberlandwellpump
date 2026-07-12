@@ -1,0 +1,92 @@
+---
+import ServicePage from "../layouts/ServicePage.astro";
+import type { Faq } from "../data/faqs";
+
+const faqs: Faq[] = [
+  {
+    question: "Will someone come out today?",
+    answer:
+      "That cannot be promised by this website. Urgent requests are routed as quickly as possible, but response timing depends entirely on the responding provider's coverage, schedule and capacity.",
+  },
+  {
+    question: "Should I keep resetting the breaker while I wait?",
+    answer:
+      "No. If a breaker trips again after one reset, leave it off and note that in your request. Repeated resetting can worsen an electrical or pump problem and can be unsafe.",
+  },
+  {
+    question: "Is no water always a pump failure?",
+    answer:
+      "No. Power loss, pressure-switch problems, control failures, frozen lines, plumbing breaks and low well yield can all produce the same symptom. The responding provider determines the cause on site.",
+  },
+];
+---
+
+<ServicePage
+  title="Emergency No-Water Well Service Requests"
+  description="Suddenly have no water from your well in Cookeville or the Upper Cumberland? Submit an urgent no-water request with safe observations so a local provider can evaluate coverage and availability."
+  path="/emergency-no-water-well-service/"
+  h1="Urgent No-Water Well-Service Requests"
+  eyebrow="Cookeville & Regional Coverage"
+  crumbs={[
+    { name: "Home", path: "/" },
+    { name: "Well Pump Services", path: "/#services-heading" },
+    { name: "Emergency No-Water Requests", path: "/emergency-no-water-well-service/" },
+  ]}
+  defaultService="Emergency No-Water Request"
+  faqs={faqs}
+  relatedLinks={[
+    { label: "Well Pump Repair in Cookeville", href: "/well-pump-repair-cookeville-tn/" },
+    { label: "Well Pump Replacement", href: "/well-pump-replacement/" },
+    { label: "Low Water Pressure From a Well", href: "/low-water-pressure-from-well/" },
+    { label: "Common Well Problems", href: "/common-well-problems/" },
+  ]}
+>
+  <p>
+    A sudden, total loss of water on a private-well property is disruptive anywhere — and on a
+    farm with livestock or a household on a rural road outside Cookeville, Crossville or
+    Livingston, it can feel like a genuine emergency. Use this page to submit an urgent request.
+    Be aware up front: <strong>urgent submission does not guarantee immediate, same-day or
+    after-hours service.</strong> Availability is determined by the responding provider.
+  </p>
+
+  <h2>Safe Observations Before You Submit</h2>
+  <p>
+    A few details, gathered only from what is safely visible, make an urgent request far more
+    useful:
+  </p>
+  <ul>
+    <li><strong>Scope</strong> — is the entire property without water, or only some fixtures?</li>
+    <li><strong>Onset</strong> — did it stop suddenly, or had pressure been declining for days?</li>
+    <li><strong>Pump sound</strong> — can the pump or its relay be heard trying to run?</li>
+    <li><strong>Breaker status</strong> — does the well-pump breaker appear tripped? Note it; do not repeatedly reset it, and never open the electrical panel beyond looking at switch positions.</li>
+    <li><strong>Pressure gauge</strong> — if a gauge is visible near the pressure tank, what does it read? Zero tells a very different story than 40 PSI.</li>
+    <li><strong>Weather</strong> — in a cold snap, frozen pipes or well-house components can mimic pump failure.</li>
+  </ul>
+
+  <div class="disclosure-box disclosure-box--warn">
+    <p style="margin:0;">
+      <strong>Safety first:</strong> do not open electrical panels beyond viewing breaker
+      positions, handle exposed wiring, enter a well or well pit, remove pump equipment, bypass
+      controls or attempt repairs while you wait. Electricity and confined spaces around well
+      systems can be lethal.
+    </p>
+  </div>
+
+  <h2>What a No-Water Symptom Can Involve</h2>
+  <p>
+    Loss of power, a tripped breaker, a failed pressure switch, control-box faults, wiring damage,
+    a failed pump motor, a broken drop pipe, a waterlogged pressure tank, frozen components or a
+    well that is temporarily low on water can all end in the same dry faucet. That range is
+    exactly why the responding provider — not a website — determines the cause and the fix.
+  </p>
+
+  <h2>How Urgent Routing Works</h2>
+  <p>
+    Submitting through the form on this page marks your request with the
+    "No Water — Urgent" priority. The details are reviewed and may be shared with an independent
+    local provider whose coverage and capabilities fit the request. The provider decides whether
+    and when it can respond; there is no dispatcher and no guaranteed response window. If your
+    situation involves a medical need for water, do not wait on a web form — contact local
+    emergency resources.
+  </p>
+</ServicePage>

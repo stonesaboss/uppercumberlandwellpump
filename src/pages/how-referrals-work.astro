@@ -1,0 +1,74 @@
+---
+import ServicePage from "../layouts/ServicePage.astro";
+---
+
+<ServicePage
+  title="How Referrals Work | Upper Cumberland Well Pump"
+  description="Step-by-step explanation of how well-pump service requests are reviewed, shared with independent Upper Cumberland, TN providers, and what the provider — not the website — decides."
+  path="/how-referrals-work/"
+  h1="How Well-Pump Service Referrals Work"
+  crumbs={[
+    { name: "Home", path: "/" },
+    { name: "How Referrals Work", path: "/how-referrals-work/" },
+  ]}
+  isService={false}
+  defaultService=""
+  relatedLinks={[
+    { label: "About This Service", href: "/about-this-service/" },
+    { label: "Referral Disclosure", href: "/referral-disclosure/" },
+    { label: "Tennessee Licensing Information", href: "/licensing-information/" },
+    { label: "Privacy Policy", href: "/privacy-policy/" },
+  ]}
+>
+  <p>
+    Every request submitted through this website follows the same four-step path. Knowing the
+    path — and who decides what at each step — keeps expectations honest.
+  </p>
+
+  <h2>Step 1 — You Describe the Problem</h2>
+  <p>
+    The <a href="/request-service/">request form</a> asks for the property location, the
+    symptoms, the service you think you need and any system details you happen to know. You
+    check a consent box agreeing that the information may be shared with an independent provider
+    for the purpose of responding to your inquiry. Nothing is shared without that consent.
+  </p>
+
+  <h2>Step 2 — The Request Is Reviewed</h2>
+  <p>
+    The submission is reviewed to identify what type of provider fits: a no-water repair call, a
+    drilling project and a treatment-equipment question go to different kinds of operators, at
+    different distances, with different licensing. Urgent no-water requests are flagged for
+    priority handling in this review.
+  </p>
+
+  <h2>Step 3 — A Provider May Contact You</h2>
+  <p>
+    If a provider whose coverage and capabilities match is available, your request details are
+    passed along and the provider may contact you directly to discuss coverage, availability,
+    licensing, property access and next steps. "May" is the honest word: coverage and capacity
+    vary, and neither contact nor timing is guaranteed by this website.
+  </p>
+
+  <h2>Step 4 — The Provider Determines Everything About the Service</h2>
+  <p>
+    Diagnosis, pricing, scheduling, warranties, service scope and whether to accept the job are
+    all determined by the provider, independently. Upper Cumberland Well Pump is not a party to
+    the service agreement, does not set or influence pricing and does not supervise the work.
+  </p>
+
+  <h2>What You Should Do Regardless of Referral</h2>
+  <ul>
+    <li><strong>Verify licensing.</strong> Tennessee regulates well drilling, pump installation and treatment-device installation. Confirm the provider's current applicable license — the <a href="/licensing-information/">licensing page</a> explains how. A referral through this site is not a certification.</li>
+    <li><strong>Get terms in writing.</strong> Pricing, scope and any warranty should come from the provider directly, in writing.</li>
+    <li><strong>Ask about insurance.</strong> Confirm coverage directly with the provider.</li>
+  </ul>
+
+  <h2>Compensation Disclosure</h2>
+  <p>
+    Upper Cumberland Well Pump may receive compensation from providers in connection with
+    referred requests. This is stated plainly here and in the
+    <a href="/referral-disclosure/">referral disclosure</a> so you can weigh it. It does not
+    change what you pay the provider, and it does not make any provider "endorsed" — the
+    verification steps above are yours to take either way.
+  </p>
+</ServicePage>

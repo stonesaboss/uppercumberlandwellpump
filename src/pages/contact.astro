@@ -1,0 +1,70 @@
+---
+import ServicePage from "../layouts/ServicePage.astro";
+import PhoneLink from "../components/PhoneLink.astro";
+import { SITE } from "../data/site";
+---
+
+<ServicePage
+  title="Contact | Upper Cumberland Well Pump"
+  description="Contact Upper Cumberland Well Pump — service requests, privacy and data questions, accessibility reports and provider inquiries for the Upper Cumberland, TN region."
+  path="/contact/"
+  h1="Contact Upper Cumberland Well Pump"
+  crumbs={[
+    { name: "Home", path: "/" },
+    { name: "Contact", path: "/contact/" },
+  ]}
+  isService={false}
+  defaultService="Not Sure"
+  relatedLinks={[
+    { label: "Request Service", href: "/request-service/" },
+    { label: "About This Service", href: "/about-this-service/" },
+    { label: "Privacy Policy", href: "/privacy-policy/" },
+  ]}
+>
+  <p>
+    The fastest path for a well problem is the request form on this page (or the full
+    <a href="/request-service/">request-service form</a>) — it captures the details a provider
+    needs and routes with the right priority. For everything else, here is how to reach the
+    service:
+  </p>
+
+  <h2>By Phone</h2>
+  <p>
+    <PhoneLink prefix="Call " eventLabel="contact_phone_click" />
+  </p>
+
+  <h2>Service Requests</h2>
+  <p>
+    Use the <a href="/request-service/">request form</a>. Urgent no-water situations should go
+    through the <a href="/emergency-no-water-well-service/">urgent no-water page</a> so they are
+    flagged correctly.
+  </p>
+
+  <h2>Privacy and Data Requests</h2>
+  <p>
+    To ask what was stored about your submission or request its deletion, submit a note through
+    the form on this page with "Privacy request" in the description, and include your lead
+    reference number if you have it. See the <a href="/privacy-policy/">privacy policy</a> for
+    details.
+  </p>
+
+  <h2>Accessibility Reports</h2>
+  <p>
+    Describe the barrier and the page it occurred on — details on the
+    <a href="/accessibility/">accessibility page</a>. Reports are prioritized.
+  </p>
+
+  <h2>Local Providers</h2>
+  <p>
+    If you are a licensed well driller, pump installer or treatment installer serving the Upper
+    Cumberland and want to receive referred requests, submit a note through the form with
+    "Provider inquiry" in the description, including your license category and coverage area.
+  </p>
+
+  {SITE.email === "" && (
+    <p class="fine-print">
+      A public contact email address will be published here once available; until then, the form
+      is the reliable channel.
+    </p>
+  )}
+</ServicePage>

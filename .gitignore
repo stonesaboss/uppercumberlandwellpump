@@ -1,0 +1,26 @@
+# dependencies
+node_modules/
+
+# build output
+dist/
+.astro/
+
+# environment & secrets — never commit
+.env
+.env.*
+.dev.vars
+.dev.vars.*
+!.env.example
+
+# logs
+npm-debug.log*
+*.log
+
+# editor
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# wrangler local state
+.wrangler/

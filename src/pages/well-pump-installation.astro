@@ -1,0 +1,87 @@
+---
+import ServicePage from "../layouts/ServicePage.astro";
+import type { Faq } from "../data/faqs";
+
+const faqs: Faq[] = [
+  {
+    question: "Does a new well come with a pump?",
+    answer:
+      "Not automatically — drilling and pump installation are related but distinct phases, sometimes performed by the same provider and sometimes not. Clarify with the driller whether pump setting is included in their scope.",
+  },
+  {
+    question: "What determines which pump gets installed?",
+    answer:
+      "Well depth and yield, household or farm demand, pressure targets, electrical service and the pressure equipment it will pair with. The installer sizes the pump to the actual well data rather than to a catalog default.",
+  },
+  {
+    question: "Can an installation include a constant-pressure system?",
+    answer:
+      "Often, if the well, electrical service and demand profile fit. Installation time is the natural moment to evaluate it — see the constant-pressure systems page for what is involved.",
+  },
+];
+---
+
+<ServicePage
+  title="Well Pump Installation | Upper Cumberland TN"
+  description="Request well pump installation in the Upper Cumberland, TN — new wells, replacement pumps and system upgrades. Learn what drives pump selection and why licensed installation matters."
+  path="/well-pump-installation/"
+  h1="Well Pump Installation in Upper Cumberland"
+  crumbs={[
+    { name: "Home", path: "/" },
+    { name: "Well Pump Services", path: "/#services-heading" },
+    { name: "Well Pump Installation", path: "/well-pump-installation/" },
+  ]}
+  defaultService="Well Pump Installation"
+  faqs={faqs}
+  relatedLinks={[
+    { label: "Water Well Drilling", href: "/water-well-drilling/" },
+    { label: "Well Pump Replacement", href: "/well-pump-replacement/" },
+    { label: "Constant-Pressure Systems", href: "/constant-pressure-well-pump-systems/" },
+    { label: "Pressure Tank Replacement", href: "/pressure-tank-replacement/" },
+    { label: "Tennessee Licensing Information", href: "/licensing-information/" },
+  ]}
+>
+  <p>
+    A pump installation request usually arrives from one of two directions: a freshly drilled
+    well that needs its first pump set, or an existing system getting new equipment — a
+    <a href="/well-pump-replacement/">replacement</a>, an upgrade for a growing household, or a
+    modernization to a <a href="/constant-pressure-well-pump-systems/">constant-pressure
+    system</a>. Either way, the installation decisions made at this stage determine how the
+    system performs for the next decade or two.
+  </p>
+
+  <h2>What Goes Into Pump Selection</h2>
+  <ul>
+    <li><strong>Well depth and static water level</strong> — how far down the pump sets and how hard it must push.</li>
+    <li><strong>Well yield</strong> — a pump that out-pumps the well causes dry-run problems; matching matters.</li>
+    <li><strong>System demand</strong> — bathrooms, appliances, irrigation zones, livestock waterers; peak simultaneous use drives sizing.</li>
+    <li><strong>Electrical service and controls</strong> — voltage, wire runs to the well, control-box or drive requirements.</li>
+    <li><strong>Pressure system pairing</strong> — the tank, switch and settings the new pump will work against; an installation is a natural time to evaluate the <a href="/pressure-tank-replacement/">pressure tank</a>.</li>
+  </ul>
+
+  <h2>New Wells: Coordinating Drilling and Pump Setting</h2>
+  <p>
+    On new construction, pump installation follows the drilling phase and uses the well's actual
+    logged data — depth, casing, yield — to size the equipment. If your project has not been
+    drilled yet, start at the <a href="/water-well-drilling/">water well drilling page</a>; if
+    the hole is in the ground and you're ready for water at the tap, this is the right request.
+  </p>
+
+  <h2>Why Licensed Installation Matters</h2>
+  <p>
+    Tennessee regulates pump installation and licenses the individuals who do it. Beyond legal
+    compliance, licensed installation matters practically: torque arrestors, splice quality,
+    pitless adapter sealing and sanitary well-cap details are the difference between a system
+    that lasts and one that fails early or lets contamination in. Verify the installer's current
+    Tennessee license — the <a href="/licensing-information/">licensing information page</a>
+    explains how.
+  </p>
+
+  <h2>Submitting an Installation Request</h2>
+  <p>
+    Choose "Well Pump Installation" in the form and describe the project: new well or existing
+    system, intended use, any known well data, timing and site access. The request is routed to
+    an independent local provider, who determines equipment options, pricing and scheduling
+    directly with you.
+  </p>
+</ServicePage>

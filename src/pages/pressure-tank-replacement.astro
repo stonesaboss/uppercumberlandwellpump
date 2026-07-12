@@ -1,0 +1,90 @@
+---
+import ServicePage from "../layouts/ServicePage.astro";
+import type { Faq } from "../data/faqs";
+
+const faqs: Faq[] = [
+  {
+    question: "How can I tell if the tank is waterlogged?",
+    answer:
+      "A common sign is the pump kicking on for just a second or two every time water runs, sometimes with the gauge needle bouncing. A provider confirms it by checking the tank's air charge and drawdown on site — don't open valves or fittings to test it yourself.",
+  },
+  {
+    question: "Does a bad pressure tank hurt the pump?",
+    answer:
+      "Rapid cycling caused by a failed tank puts extra starts on the pump motor, and frequent starts are hard on pumps. That is one reason providers take tank condition seriously during any pump service.",
+  },
+  {
+    question: "What size pressure tank do I need?",
+    answer:
+      "Sizing depends on pump flow rate, household or farm demand and the pressure settings. The provider calculates it from the actual system rather than from the size of the old tank, which may itself have been wrong.",
+  },
+];
+---
+
+<ServicePage
+  title="Pressure Tank Replacement | Upper Cumberland TN"
+  description="Request pressure tank replacement or evaluation in the Upper Cumberland, TN — waterlogged tanks, rapid pump cycling, unstable pressure and failed bladders explained honestly."
+  path="/pressure-tank-replacement/"
+  h1="Well Pressure Tank Replacement"
+  crumbs={[
+    { name: "Home", path: "/" },
+    { name: "Well Pump Services", path: "/#services-heading" },
+    { name: "Pressure Tank Replacement", path: "/pressure-tank-replacement/" },
+  ]}
+  defaultService="Pressure Tank Replacement"
+  faqs={faqs}
+  relatedLinks={[
+    { label: "Low Water Pressure From a Well", href: "/low-water-pressure-from-well/" },
+    { label: "Well Pump Repair in Cookeville", href: "/well-pump-repair-cookeville-tn/" },
+    { label: "Well Pump Replacement", href: "/well-pump-replacement/" },
+    { label: "Common Well Problems", href: "/common-well-problems/" },
+  ]}
+>
+  <p>
+    The pressure tank is the unsung part of a private well system. It stores a cushion of
+    pressurized water so the pump doesn't have to start every time someone opens a tap, and it
+    smooths delivery between pump cycles. When the tank fails, the symptoms often get blamed on
+    the pump — which is why an honest evaluation looks at both.
+  </p>
+
+  <h2>Symptoms That Point Toward the Pressure Tank</h2>
+  <ul>
+    <li><strong>Rapid cycling</strong> — the pump clicking on and off every few seconds while water runs.</li>
+    <li><strong>Unstable pressure</strong> — surging strong-weak-strong at fixtures.</li>
+    <li><strong>Waterlogged tank</strong> — the tank has lost its air cushion and filled with water; it may feel heavy at the top when it shouldn't.</li>
+    <li><strong>Visible corrosion or leaks</strong> — rust at seams, fittings or the base of the tank.</li>
+    <li><strong>Air-charge problems</strong> — the pre-charge no longer matches the pressure-switch settings.</li>
+    <li><strong>Pressure-switch concerns</strong> — chattering or clicking at the switch, often interacting with tank problems.</li>
+    <li><strong>Lost drawdown</strong> — the tank technically holds pressure but stores almost no usable water, so the pump runs constantly.</li>
+  </ul>
+  <p>
+    None of these confirm the tank by themselves — leaks, pump problems and control faults can
+    imitate several of them. The provider verifies on site.
+  </p>
+
+  <h2>Bladder Tanks and Air-Charge Basics</h2>
+  <p>
+    Most modern tanks are <strong>bladder or diaphragm tanks</strong>: a rubber membrane separates
+    pressurized air from the water. When the membrane fails, water takes over the air space and
+    the cushion disappears. Older galvanized tanks manage the air-water balance differently and
+    have their own failure modes. Knowing which type sits in your well house (a photo of the
+    label helps) speeds up the conversation with the provider.
+  </p>
+
+  <h2>Tank Sizing Is a System Decision</h2>
+  <p>
+    A replacement tank is sized to the pump's flow rate, the pressure settings and how the
+    property draws water — a weekend cabin, a family of six and a cattle operation need different
+    drawdown. The tank and pump work as a pair: the right tank extends pump life by reducing
+    starts. This is also why a tank evaluation is standard during
+    <a href="/well-pump-replacement/">pump replacement</a>.
+  </p>
+
+  <h2>A Safety Note</h2>
+  <p>
+    Pressure tanks and their switches sit next to live electrical controls. Look, listen and
+    photograph the exterior if it is safely visible — but leave valves, fittings, air stems and
+    anything electrical to the provider. This site does not provide DIY electrical or plumbing
+    instructions.
+  </p>
+</ServicePage>

@@ -1,0 +1,90 @@
+---
+import ServicePage from "../layouts/ServicePage.astro";
+import type { Faq } from "../data/faqs";
+
+const faqs: Faq[] = [
+  {
+    question: "My water smells like rotten eggs. What filter do I buy?",
+    answer:
+      "None yet. Sulfur-like odor has several possible sources, and the right response depends on testing. Buying equipment before testing is how people end up with the wrong system treating the wrong problem.",
+  },
+  {
+    question: "Will a softener fix the orange staining?",
+    answer:
+      "Sometimes staining relates to iron in forms a softener handles poorly. Testing identifies what form and concentration you are dealing with, which determines the equipment category.",
+  },
+  {
+    question: "Who is allowed to install treatment systems in Tennessee?",
+    answer:
+      "Tennessee licenses water-treatment device installers as part of its water-well program. Confirm the installer's current applicable license before installation — see the licensing information page.",
+  },
+];
+---
+
+<ServicePage
+  title="Well Water Treatment & Filtration"
+  description="Request well water treatment and filtration information in the Upper Cumberland, TN — sediment, hardness, staining, odor and taste concerns. Testing comes before equipment."
+  path="/well-water-treatment-filtration/"
+  h1="Well Water Treatment and Filtration"
+  crumbs={[
+    { name: "Home", path: "/" },
+    { name: "Water Well Services", path: "/#treatment-heading" },
+    { name: "Water Treatment & Filtration", path: "/well-water-treatment-filtration/" },
+  ]}
+  defaultService="Water Treatment & Filtration"
+  faqs={faqs}
+  relatedLinks={[
+    { label: "Well Inspections", href: "/well-inspection/" },
+    { label: "Low Water Pressure From a Well", href: "/low-water-pressure-from-well/" },
+    { label: "Common Well Problems", href: "/common-well-problems/" },
+    { label: "Tennessee Licensing Information", href: "/licensing-information/" },
+  ]}
+>
+  <p>
+    Private-well water in the Upper Cumberland picks up the character of the rock it travels
+    through — which is why one property's water is crystal clear while the neighbor's stains
+    fixtures orange or smells off after a heavy rain. Treatment and filtration requests submitted
+    here are routed toward providers who handle water-quality equipment for well systems.
+  </p>
+
+  <h2>The Rule This Page Won't Break: Test Before You Treat</h2>
+  <p>
+    Color, odor and taste are clues, not diagnoses. The same rusty tint can come from different
+    forms of iron requiring different equipment; the same odor can have several origins; and the
+    concerns that matter most for health are frequently ones you cannot see, smell or taste at
+    all. That leads to two commitments:
+  </p>
+  <ul>
+    <li>This website will not diagnose contamination from appearance, odor or taste alone.</li>
+    <li>No treatment device should be assumed to make water safe without appropriate testing and professional evaluation.</li>
+  </ul>
+
+  <h2>Concerns That Fit a Treatment Request</h2>
+  <ul>
+    <li><strong>Sediment</strong> — grit, cloudiness or particles; sediment filtration options.</li>
+    <li><strong>Iron-related staining</strong> — orange or brown marks on fixtures and laundry; evaluation of iron form and level.</li>
+    <li><strong>Odor concerns</strong> — smells at some or all fixtures, hot or cold side.</li>
+    <li><strong>Hardness</strong> — scale on fixtures and appliances; softening equipment.</li>
+    <li><strong>Whole-property filtration</strong> — treating all water entering the building.</li>
+    <li><strong>Taste changes</strong> — metallic, earthy or otherwise changed taste.</li>
+    <li><strong>Treatment-device installation</strong> — installing equipment selected from test results.</li>
+    <li><strong>Water-quality testing referrals</strong> — getting the water professionally sampled and lab-analyzed as the first step.</li>
+  </ul>
+
+  <h2>Treatment Interacts With the Rest of the System</h2>
+  <p>
+    Filtration and softening equipment adds pressure drop, and neglected media or cartridges are
+    a recurring hidden cause of <a href="/low-water-pressure-from-well/">low water pressure</a>.
+    A good treatment conversation includes the pump, tank and plumbing the equipment will live
+    with. If water quality changed suddenly alongside other symptoms, consider a
+    <a href="/well-inspection/">system inspection</a> — a change in the water can accompany a
+    change in the well.
+  </p>
+
+  <h2>Licensed Installation</h2>
+  <p>
+    Tennessee licenses water-treatment device installers within its water-well program. Whoever
+    installs equipment on your well system should hold the current applicable license — details
+    on the <a href="/licensing-information/">licensing information page</a>.
+  </p>
+</ServicePage>

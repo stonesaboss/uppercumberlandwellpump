@@ -1,0 +1,28 @@
+---
+/**
+ * Renders the tracking phone number. While SITE.phone.tel is empty it renders
+ * plain text (no broken tel: link). Set both values in src/data/site.ts.
+ */
+import { SITE } from "../data/site";
+
+interface Props {
+  class?: string;
+  prefix?: string;
+  eventLabel?: string;
+}
+const { class: className, prefix = "", eventLabel = "phone_click" } = Astro.props;
+---
+
+{
+  SITE.phone.tel ? (
+    <a href={`tel:${SITE.phone.tel}`} class={className} data-event={eventLabel}>
+      {prefix}
+      {SITE.phone.display}
+    </a>
+  ) : (
+    <span class={className}>
+      {prefix}
+      {SITE.phone.display}
+    </span>
+  )
+}

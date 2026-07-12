@@ -1,0 +1,83 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Icon from "../components/Icon.astro";
+import PhoneLink from "../components/PhoneLink.astro";
+import { FORM_DISCLAIMER } from "../data/site";
+
+const title = "Request Received | Upper Cumberland Well Pump";
+const description = "Your well-service request has been received.";
+---
+
+<BaseLayout title={title} description={description} path="/thank-you/" noindex={true}>
+  <section class="section">
+    <div class="container thank-you">
+      <span class="icon-circle icon-circle--green" style="width: 84px; height: 84px;">
+        <Icon name="check" size={44} />
+      </span>
+      <h1>Your Request Has Been Received</h1>
+      <p class="thank-you__ref" data-lead-reference hidden>
+        Reference number: <strong data-lead-reference-value></strong> — keep it for any follow-up.
+      </p>
+      <p style="max-width: 40rem; margin-inline: auto;">
+        Your request has been recorded and will be reviewed for routing. If an independent local
+        provider's coverage and availability fit, that provider may contact you using the details
+        you gave. Providers independently determine diagnosis, pricing, scheduling and service
+        terms.
+      </p>
+      <p class="fine-print" style="max-width: 40rem; margin-inline: auto;">
+        {FORM_DISCLAIMER}
+      </p>
+      <div class="thank-you__actions">
+        <a href="/" class="btn btn--primary">Back to Homepage</a>
+        <a href="/common-well-problems/" class="btn btn--green">Read About Common Well Problems</a>
+      </div>
+      <p style="margin-top: 1.5rem;">
+        Situation getting worse? <PhoneLink prefix="Call " eventLabel="thankyou_phone_click" />
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .thank-you {
+    text-align: center;
+    max-width: 780px;
+  }
+  .thank-you .icon-circle {
+    margin-inline: auto;
+    margin-bottom: 1.5rem;
+  }
+  .thank-you__ref {
+    font-size: 1.1rem;
+    background: var(--green-light);
+    border: 1px solid var(--green);
+    border-radius: var(--radius-sm);
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+  }
+  .thank-you__actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+  }
+</style>
+
+<script>
+  // Show the lead reference stored by the form (never passed via URL).
+  try {
+    const ref = sessionStorage.getItem("ucwp_lead_reference");
+    if (ref) {
+      const wrap = document.querySelector<HTMLElement>("[data-lead-reference]");
+      const val = document.querySelector<HTMLElement>("[data-lead-reference-value]");
+      if (wrap && val) {
+        val.textContent = ref;
+        wrap.hidden = false;
+      }
+    }
+    if (window.ucwpEvent) window.ucwpEvent("thank_you_view");
+  } catch {
+    /* sessionStorage unavailable — page still works */
+  }
+</script>

@@ -1,0 +1,66 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PhoneLink from "../components/PhoneLink.astro";
+
+const title = "Page Not Found | Upper Cumberland Well Pump";
+const description = "The page you were looking for could not be found.";
+---
+
+<BaseLayout title={title} description={description} path="/404/" noindex={true}>
+  <section class="section">
+    <div class="container notfound">
+      <img
+        src="/logos/ucwp-shield-400.png"
+        alt="Upper Cumberland Well Pump shield logo"
+        width="160"
+        height="160"
+        class="notfound__logo"
+      />
+      <h1>Page Not Found</h1>
+      <p style="max-width: 36rem; margin-inline: auto;">
+        The page you were looking for doesn't exist or may have moved. If you're dealing with a
+        well problem right now, these will get you where you need to go:
+      </p>
+      <ul class="notfound__links">
+        <li><a href="/">Homepage</a></li>
+        <li><a href="/well-pump-repair-cookeville-tn/">Well Pump Repair in Cookeville</a></li>
+        <li><a href="/emergency-no-water-well-service/">Emergency No-Water Requests</a></li>
+        <li><a href="/service-area/">Upper Cumberland Service Area</a></li>
+      </ul>
+      <div class="notfound__actions">
+        <a href="/request-service/" class="btn btn--primary" data-event="request_service_cta">
+          Request Well-Pump Service
+        </a>
+        <PhoneLink class="btn btn--green" prefix="Call " eventLabel="notfound_phone_click" />
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .notfound {
+    text-align: center;
+    max-width: 760px;
+  }
+  .notfound__logo {
+    margin: 0 auto 1.5rem;
+    width: 140px;
+    height: auto;
+  }
+  .notfound__links {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 1.05rem;
+  }
+  .notfound__actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+</style>

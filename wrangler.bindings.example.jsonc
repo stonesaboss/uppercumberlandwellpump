@@ -1,0 +1,29 @@
+// EXAMPLE ONLY — optional D1 and R2 bindings for lead storage & photo uploads.
+// Do NOT copy this file verbatim. Create the real resources first:
+//
+//   npx wrangler d1 create ucwp-leads
+//   npx wrangler r2 bucket create ucwp-lead-uploads
+//
+// then merge the bindings below (with the REAL database_id) into wrangler.jsonc,
+// and set ENABLE_D1_STORAGE=true / ENABLE_R2_UPLOADS=true in the Pages
+// environment variables. The site builds and deploys fine without any of this.
+{
+  "name": "uppercumberlandwellpump",
+  "compatibility_date": "2026-07-01",
+  "pages_build_output_dir": "dist",
+
+  "d1_databases": [
+    {
+      "binding": "LEADS_DB",
+      "database_name": "ucwp-leads",
+      "database_id": "REPLACE_WITH_REAL_DATABASE_ID"
+    }
+  ],
+
+  "r2_buckets": [
+    {
+      "binding": "LEAD_UPLOADS",
+      "bucket_name": "ucwp-lead-uploads"
+    }
+  ]
+}

@@ -1,0 +1,948 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import LeadForm from "../components/LeadForm.astro";
+import FaqList from "../components/FaqList.astro";
+import Icon from "../components/Icon.astro";
+import CtaBand from "../components/CtaBand.astro";
+import { HOME_FAQS } from "../data/faqs";
+import { REFERRAL_DISCLOSURE } from "../data/site";
+import { faqSchema, webPageSchema } from "../utils/schema";
+
+const title = "Well Pump Repair & Water Well Service | Upper Cumberland TN";
+const description =
+  "Request help with well-pump repair, no-water problems, pump replacement, pressure tanks and water-well services in Cookeville and Upper Cumberland, TN.";
+
+const schema = [
+  webPageSchema({ path: "/", title, description }),
+  faqSchema(HOME_FAQS),
+];
+
+const serviceCards = [
+  {
+    icon: "wrench",
+    iconClass: "",
+    title: "Well Pump Repair",
+    copy: "Request troubleshooting and repair for pumps that have stopped working, cycle repeatedly, lose pressure, make unusual noises or fail to supply water reliably.",
+    linkText: "Well Pump Repair in Cookeville",
+    href: "/well-pump-repair-cookeville-tn/",
+  },
+  {
+    icon: "alert",
+    iconClass: "icon-circle--urgent",
+    title: "Emergency No-Water Help",
+    copy: "Submit an urgent request when a private-well property suddenly has no water or severely reduced flow.",
+    linkText: "Request Emergency No-Water Service",
+    href: "/emergency-no-water-well-service/",
+    note: "Availability is determined by the responding provider.",
+  },
+  {
+    icon: "pump",
+    iconClass: "",
+    title: "Well Pump Replacement",
+    copy: "Request evaluation when an aging, damaged or repeatedly failing pump may need to be replaced.",
+    linkText: "Well Pump Replacement",
+    href: "/well-pump-replacement/",
+  },
+  {
+    icon: "tank",
+    iconClass: "",
+    title: "Pressure Tank Service",
+    copy: "Request help with waterlogged tanks, rapid cycling, unstable pressure, damaged bladders or suspected pressure-tank failure.",
+    linkText: "Pressure Tank Replacement",
+    href: "/pressure-tank-replacement/",
+  },
+  {
+    icon: "drill",
+    iconClass: "icon-circle--green",
+    title: "Water Well Drilling",
+    copy: "Submit a drilling request for new construction, replacement wells, farms, rural properties and other eligible projects.",
+    linkText: "Water Well Drilling",
+    href: "/water-well-drilling/",
+  },
+  {
+    icon: "drop",
+    iconClass: "",
+    title: "Well Pump Installation",
+    copy: "Request installation information for new pumps, replacement pumps, new wells or system upgrades.",
+    linkText: "Well Pump Installation",
+    href: "/well-pump-installation/",
+  },
+];
+
+const warningSigns = [
+  {
+    icon: "drop-slash",
+    title: "No Water",
+    copy: "No water from any fixture may involve the pump, electrical supply, controls, pressure tank, well yield or another system component.",
+  },
+  {
+    icon: "gauge",
+    title: "Low Water Pressure",
+    copy: "Weak or inconsistent pressure may be related to the pump, pressure tank, controls, plumbing, filtration equipment or well conditions.",
+  },
+  {
+    icon: "faucet",
+    title: "Sputtering Faucets",
+    copy: "Air or inconsistent water flow may indicate a pressure, plumbing, pump or well-system concern.",
+  },
+  {
+    icon: "cycle",
+    title: "Pump Cycling Frequently",
+    copy: "A pump that repeatedly turns on and off may involve pressure settings, tank condition, leaks or system demand.",
+  },
+  {
+    icon: "ear",
+    title: "Unusual Noises",
+    copy: "Grinding, humming, clicking or repeated relay sounds may warrant evaluation.",
+  },
+  {
+    icon: "glass",
+    title: "Dirty, Cloudy or Changed Water",
+    copy: "Changes in color, sediment, odor or taste can have several causes and may require system inspection or water testing.",
+  },
+];
+
+const noWaterQuestions = [
+  "Is the entire property without water?",
+  "Did the problem begin suddenly?",
+  "Is the pump making noise?",
+  "Has a breaker tripped?",
+  "Is the pressure gauge reading zero?",
+  "Have you noticed previous pressure changes?",
+  "Is the property supplied by a private well?",
+];
+
+const steps = [
+  {
+    title: "Describe the Problem",
+    copy: "Provide the property location, symptoms, service requested and any known system information.",
+  },
+  {
+    title: "Request Review",
+    copy: "The submitted details are reviewed to identify the type of local provider that may fit the request.",
+  },
+  {
+    title: "Provider Contact",
+    copy: "An independent provider may contact the property owner to discuss coverage, availability, licensing, access and next steps.",
+  },
+  {
+    title: "Provider Determines Service Terms",
+    copy: "The provider independently determines diagnosis, pricing, schedule, warranties, service scope and acceptance.",
+  },
+];
+---
+
+<BaseLayout title={title} description={description} path="/" schema={schema}>
+  <!-- SECTION 1 — HERO -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__copy">
+        <p class="hero__eyebrow">Upper Cumberland Well-Pump Service</p>
+        <h1>Well Pump Repair &amp;<br />Water Well Service</h1>
+        <p class="hero__sub">
+          Request help for no-water problems, failed well pumps, low water pressure, pressure
+          tanks, pump replacement and water-well services throughout <strong>Cookeville</strong>
+          and the <strong>Upper Cumberland</strong>.
+        </p>
+        <div class="hero__ctas">
+          <a href="/request-service/" class="btn btn--primary" data-event="request_service_cta">
+            <Icon name="drop" size={20} /> Request Well-Pump Service
+          </a>
+          <a
+            href="/emergency-no-water-well-service/"
+            class="btn btn--urgent"
+            data-event="urgent_no_water_cta"
+          >
+            <Icon name="alert" size={20} /> No Water? Request Urgent Help
+          </a>
+        </div>
+        <p class="hero__urgent-note">
+          Urgent requests are subject to local provider coverage and availability.
+        </p>
+        <ul class="hero__points">
+          <li>
+            <Icon name="house" size={22} />
+            <span>Residential, Farm &amp; Rural Property Requests</span>
+          </li>
+          <li>
+            <Icon name="wrench" size={22} />
+            <span>Repair, Replacement &amp; Well-System Services</span>
+          </li>
+          <li>
+            <Icon name="pin" size={22} />
+            <span>Cookeville &amp; Upper Cumberland Coverage</span>
+          </li>
+        </ul>
+      </div>
+      <div class="hero__form">
+        <LeadForm
+          variant="hero"
+          heading="Request Well-Pump Service"
+          description="Tell us what is happening with the property's water system."
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2 — CORE SERVICE CARDS -->
+  <section class="section" aria-labelledby="services-heading">
+    <div class="container">
+      <h2 id="services-heading" class="section-heading">Well Pump &amp; Water Well Services</h2>
+      <div class="section-intro">
+        <p>
+          Request service for urgent water loss, pump failures, pressure problems, replacement
+          systems, drilling and related private-well needs.
+        </p>
+      </div>
+      <div class="card-grid">
+        {
+          serviceCards.map((card) => (
+            <div class="card service-card">
+              <span class={`icon-circle ${card.iconClass}`}>
+                <Icon name={card.icon} />
+              </span>
+              <h3>{card.title}</h3>
+              <p>{card.copy}</p>
+              {card.note && <p class="fine-print">{card.note}</p>}
+              <a href={card.href} class="card-link">
+                {card.linkText}
+              </a>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3 — WARNING SIGNS -->
+  <section class="section section--gray" aria-labelledby="signs-heading">
+    <div class="container">
+      <h2 id="signs-heading" class="section-heading">Signs Your Well System May Need Service</h2>
+      <div class="card-grid signs-grid">
+        {
+          warningSigns.map((sign) => (
+            <div class="card sign-card">
+              <span class="icon-circle">
+                <Icon name={sign.icon} />
+              </span>
+              <h3>{sign.title}</h3>
+              <p>{sign.copy}</p>
+            </div>
+          ))
+        }
+      </div>
+      <div class="text-center mt-2">
+        <a href="/request-service/" class="btn btn--primary" data-event="request_service_cta">
+          Describe Your Well Problem
+        </a>
+        <p class="fine-print" style="max-width: 44rem; margin: 1rem auto 0;">
+          Online symptoms cannot confirm the cause. Electrical, pump, tank, plumbing, well and
+          water-quality problems can produce similar warning signs.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4 — URGENT NO-WATER -->
+  <section class="section section--navy" aria-labelledby="nowater-heading">
+    <div class="container nowater">
+      <div class="nowater__copy">
+        <h2 id="nowater-heading">No Water at Your Home, Farm or Property?</h2>
+        <p>
+          A sudden loss of water may involve the pump, pressure switch, breaker, wiring, control
+          box, pressure tank, frozen components, low well yield or another issue. Submit the
+          property details so a local provider can determine whether the request fits its coverage
+          and capabilities.
+        </p>
+        <a
+          href="/emergency-no-water-well-service/"
+          class="btn btn--urgent nowater__cta"
+          data-event="urgent_no_water_cta"
+        >
+          Submit a No-Water Request
+        </a>
+        <p class="fine-print">
+          Urgent submission does not guarantee immediate, same-day or after-hours service.
+        </p>
+      </div>
+      <div class="nowater__checklist card">
+        <h3>Before you submit, it helps to know:</h3>
+        <ul>
+          {noWaterQuestions.map((q) => (
+            <li>
+              <Icon name="check" size={18} /> <span>{q}</span>
+            </li>
+          ))}
+        </ul>
+        <p class="fine-print" style="margin-bottom: 0;">
+          Only observe what is safely visible. Do not open electrical panels, handle wiring or
+          attempt repairs while waiting.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5 — REPAIR OR REPLACE -->
+  <section class="section" aria-labelledby="repair-replace-heading">
+    <div class="container">
+      <h2 id="repair-replace-heading" class="section-heading">
+        Well Pump Repair or Replacement?
+      </h2>
+      <div class="compare-grid">
+        <div class="card">
+          <h3>Repair May Be Appropriate When:</h3>
+          <ul class="check-list">
+            <li>The failure involves a replaceable component</li>
+            <li>The pump is otherwise in usable condition</li>
+            <li>The problem is isolated to controls, wiring or pressure equipment</li>
+            <li>The repair cost is reasonable compared with replacement</li>
+            <li>The provider confirms repair is practical</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Replacement May Be Appropriate When:</h3>
+          <ul class="check-list">
+            <li>The pump has repeated failures</li>
+            <li>Major pump components have failed</li>
+            <li>Output or efficiency is consistently inadequate</li>
+            <li>The system no longer fits the property's needs</li>
+            <li>Repair cost approaches replacement cost</li>
+            <li>A licensed provider recommends replacement</li>
+          </ul>
+        </div>
+      </div>
+      <p class="fine-print text-center" style="max-width: 46rem; margin: 1.5rem auto 0;">
+        Pump age alone does not determine whether repair or replacement is appropriate. A qualified
+        provider should evaluate the pump, controls, pressure system, well and property needs.
+      </p>
+      <div class="text-center" style="margin-top: 1.5rem;">
+        <a href="/well-pump-replacement/" class="btn btn--primary">Request a Pump Evaluation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6 — PRESSURE TANK & LOW PRESSURE -->
+  <section class="section section--gray" aria-labelledby="pressure-heading">
+    <div class="container">
+      <h2 id="pressure-heading" class="section-heading">
+        Pressure Tank and Low Water Pressure Help
+      </h2>
+      <div class="compare-grid">
+        <div class="card">
+          <span class="icon-circle"><Icon name="tank" /></span>
+          <h3>Pressure Tank Concerns</h3>
+          <ul>
+            <li>Pump rapidly turning on and off</li>
+            <li>Unstable pressure</li>
+            <li>Waterlogged tank</li>
+            <li>Visible corrosion</li>
+            <li>Air-charge issues</li>
+            <li>Pressure switch concerns</li>
+            <li>Tank no longer storing usable drawdown</li>
+          </ul>
+          <a href="/pressure-tank-replacement/" class="card-link">Pressure Tank Replacement</a>
+        </div>
+        <div class="card">
+          <span class="icon-circle"><Icon name="gauge" /></span>
+          <h3>Low Water Pressure</h3>
+          <p>Weak pressure can involve several categories:</p>
+          <ul>
+            <li>Pump output</li>
+            <li>Pressure settings</li>
+            <li>Pressure-tank condition</li>
+            <li>Clogged filters</li>
+            <li>Plumbing restrictions</li>
+            <li>Leaks</li>
+            <li>Well yield</li>
+            <li>High property demand</li>
+            <li>Treatment equipment</li>
+          </ul>
+          <a href="/low-water-pressure-from-well/" class="card-link">
+            Low Water Pressure From a Well
+          </a>
+        </div>
+      </div>
+      <p class="fine-print text-center" style="margin-top: 1.25rem;">
+        The website does not diagnose the problem as one specific cause — an on-site evaluation is
+        how the cause gets confirmed.
+      </p>
+      <div class="text-center" style="margin-top: 1rem;">
+        <a href="/request-service/" class="btn btn--primary" data-event="request_service_cta">
+          Request Pressure-System Service
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7 — REPAIR, REPLACE OR DRILL -->
+  <section class="section" aria-labelledby="rrd-heading">
+    <div class="container">
+      <h2 id="rrd-heading" class="section-heading">Repair, Replace or Drill?</h2>
+      <div class="card-grid rrd-grid">
+        <div class="card">
+          <span class="icon-circle"><Icon name="wrench" /></span>
+          <h3>Repair</h3>
+          <p>Appropriate for evaluation when:</p>
+          <ul>
+            <li>The existing well remains usable</li>
+            <li>A component or pump may be repairable</li>
+            <li>The problem is isolated</li>
+            <li>The provider finds a practical repair path</li>
+          </ul>
+          <a href="/well-pump-repair-cookeville-tn/" class="card-link">Well Pump Repair</a>
+        </div>
+        <div class="card">
+          <span class="icon-circle"><Icon name="pump" /></span>
+          <h3>Replace</h3>
+          <p>Appropriate for evaluation when:</p>
+          <ul>
+            <li>The pump is failing or obsolete</li>
+            <li>Repair has not provided lasting results</li>
+            <li>The system needs different capacity</li>
+            <li>The equipment is incompatible with current needs</li>
+          </ul>
+          <a href="/well-pump-replacement/" class="card-link">Well Pump Replacement</a>
+        </div>
+        <div class="card">
+          <span class="icon-circle icon-circle--green"><Icon name="drill" /></span>
+          <h3>Drill</h3>
+          <p>May be considered when:</p>
+          <ul>
+            <li>A new property needs a water source</li>
+            <li>An existing well is no longer viable</li>
+            <li>Well yield is inadequate</li>
+            <li>Major well-construction concerns exist</li>
+            <li>A licensed driller determines drilling is appropriate</li>
+          </ul>
+          <a href="/water-well-drilling/" class="card-link">Water Well Drilling</a>
+        </div>
+      </div>
+      <p class="fine-print text-center" style="max-width: 46rem; margin: 1.5rem auto 0;">
+        The website cannot determine whether drilling is required. Well viability, location,
+        construction and yield must be evaluated by an appropriately licensed professional.
+      </p>
+    </div>
+  </section>
+
+  <!-- SECTION 8 — DRILLING & INSTALLATION -->
+  <section class="section section--gray" aria-labelledby="drilling-heading">
+    <div class="container">
+      <h2 id="drilling-heading" class="section-heading">
+        Water Well Drilling &amp; Pump Installation
+      </h2>
+      <div class="section-intro">
+        <p>
+          Request information for new wells, replacement wells, pump installation, rural
+          construction, agricultural properties and eligible system-expansion projects.
+        </p>
+      </div>
+      <div class="compare-grid">
+        <div class="card">
+          <h3>Helpful Project Information</h3>
+          <ul>
+            <li>Property location</li>
+            <li>Intended property use</li>
+            <li>New construction or existing property</li>
+            <li>Whether an existing well is present</li>
+            <li>Known records (well logs, prior service)</li>
+            <li>Desired project timing</li>
+            <li>Site access</li>
+            <li>Power availability</li>
+            <li>Water-use needs</li>
+            <li>Known water-quality concerns</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>What to Expect Honestly</h3>
+          <p>
+            Drilling depth, water yield and final cost cannot be promised in advance by a website.
+            Site conditions vary from property to property, and an appropriately licensed driller
+            or installer evaluates the project before committing to specifics.
+          </p>
+          <p>
+            Explore the details on each project page:
+          </p>
+          <ul>
+            <li><a href="/water-well-drilling/">Water Well Drilling in Upper Cumberland</a></li>
+            <li><a href="/well-pump-installation/">Well Pump Installation</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-center" style="margin-top: 1.75rem;">
+        <a href="/water-well-drilling/" class="btn btn--green">
+          Request Water-Well Project Information
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 9 — WELL INSPECTION -->
+  <section class="section" aria-labelledby="inspection-heading">
+    <div class="container">
+      <h2 id="inspection-heading" class="section-heading">
+        Private Well and Pump Inspection Requests
+      </h2>
+      <div class="card-grid rrd-grid">
+        <div class="card">
+          <span class="icon-circle"><Icon name="clipboard" /></span>
+          <h3>Property Purchase or Sale</h3>
+          <p>
+            Request information about inspection options for a property transaction, subject to the
+            inspection scope and provider capabilities.
+          </p>
+        </div>
+        <div class="card">
+          <span class="icon-circle"><Icon name="alert" /></span>
+          <h3>System-Problem Inspection</h3>
+          <p>
+            Request evaluation for pressure loss, cycling, unusual noises, sediment, alarms or
+            recurring pump issues.
+          </p>
+        </div>
+        <div class="card">
+          <span class="icon-circle icon-circle--green"><Icon name="check" /></span>
+          <h3>Maintenance-Focused Inspection</h3>
+          <p>
+            Request review of visible equipment, pressure components, controls and system concerns.
+          </p>
+        </div>
+      </div>
+      <p class="fine-print text-center" style="margin-top: 1.25rem;">
+        Inspection scope, water testing, reporting, regulatory acceptance and fees vary by provider
+        and purpose.
+      </p>
+      <div class="text-center" style="margin-top: 1rem;">
+        <a href="/well-inspection/" class="btn btn--primary">Request a Well-System Inspection</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 10 — WATER TREATMENT -->
+  <section class="section section--gray" aria-labelledby="treatment-heading">
+    <div class="container">
+      <h2 id="treatment-heading" class="section-heading">Well Water Treatment &amp; Filtration</h2>
+      <div class="section-intro">
+        <p>
+          Request provider information for sediment, odor, staining, hardness and other
+          water-quality concerns.
+        </p>
+      </div>
+      <div class="treatment-flex">
+        <div class="card">
+          <h3>Supporting Services May Include</h3>
+          <ul class="two-col-list">
+            <li>Sediment filtration</li>
+            <li>Iron-related staining evaluation</li>
+            <li>Odor concerns</li>
+            <li>Hardness treatment</li>
+            <li>Whole-property filtration</li>
+            <li>Water softening</li>
+            <li>Treatment-device installation</li>
+            <li>Water-quality testing referrals</li>
+          </ul>
+          <div class="disclosure-box disclosure-box--warn" style="margin-bottom: 0;">
+            <p style="margin: 0;">
+              Appearance, odor or taste alone cannot diagnose contamination, and no treatment
+              device should be assumed to make water safe without appropriate testing and
+              professional evaluation.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="text-center" style="margin-top: 1.5rem;">
+        <a href="/well-water-treatment-filtration/" class="btn btn--primary">
+          Request Water-Treatment Information
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 11 — CONSTANT-PRESSURE SYSTEMS -->
+  <section class="section" aria-labelledby="cp-heading">
+    <div class="container cp-section">
+      <div>
+        <h2 id="cp-heading">Constant-Pressure Well Pump Systems</h2>
+        <p>
+          Constant-pressure equipment may help eligible properties maintain steadier pressure
+          across changing household or property demand. Suitability depends on the existing well,
+          pump, electrical system, plumbing, water demand and provider assessment.
+        </p>
+        <p>Common reasons people ask about constant-pressure systems:</p>
+        <ul class="check-list">
+          <li>Significant pressure fluctuation</li>
+          <li>Multiple simultaneous water uses</li>
+          <li>Irrigation demand</li>
+          <li>Farm or larger-property use</li>
+          <li>System modernization</li>
+          <li>Replacement planning</li>
+        </ul>
+        <p class="fine-print">
+          A constant-pressure system is an option to evaluate — not a required upgrade.
+        </p>
+        <a href="/constant-pressure-well-pump-systems/" class="btn btn--primary">
+          Ask About Constant-Pressure Options
+        </a>
+      </div>
+      <div class="cp-visual" aria-hidden="true">
+        <span class="icon-circle" style="width: 120px; height: 120px;">
+          <Icon name="cycle" size={64} />
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 12 — HOW SERVICE REQUESTS WORK -->
+  <section class="section section--gray" aria-labelledby="how-heading">
+    <div class="container">
+      <h2 id="how-heading" class="section-heading">How to Request Well-Pump Service</h2>
+      <ol class="steps-grid">
+        {
+          steps.map((step, i) => (
+            <li class="card step-card">
+              <span class="step-card__num">{i + 1}</span>
+              <h3>{step.title}</h3>
+              <p>{step.copy}</p>
+            </li>
+          ))
+        }
+      </ol>
+      <div class="disclosure-box" style="max-width: 56rem; margin: 2rem auto 0;">
+        <p style="margin: 0;">"{REFERRAL_DISCLOSURE}"</p>
+      </div>
+      <p class="text-center" style="margin-top: 1.25rem;">
+        <a href="/how-referrals-work/">Learn more about how referrals work</a> ·
+        <a href="/licensing-information/">Tennessee licensing information</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- SECTION 13 — SERVICE AREA -->
+  <section class="section" aria-labelledby="area-heading">
+    <div class="container">
+      <h2 id="area-heading" class="section-heading">
+        Well-Pump Service Requests Across Upper Cumberland
+      </h2>
+      <div class="area-layout">
+        <div class="area-list">
+          <div class="card area-card area-card--primary">
+            <h3><Icon name="pin" size={20} /> Cookeville &amp; Putnam County</h3>
+            <p>
+              The primary content and lead-generation hub for pump repair, urgent no-water
+              requests, replacement, pressure tanks and related water-well services.
+            </p>
+            <a href="/well-pump-repair-cookeville-tn/" class="card-link">
+              Well Pump Repair in Cookeville
+            </a>
+          </div>
+          <div class="card area-card">
+            <h3><Icon name="pin" size={20} /> Crossville &amp; Cumberland County</h3>
+            <p>Secondary market with its own dedicated request page.</p>
+            <a href="/well-pump-repair-crossville-tn/" class="card-link">
+              Well Pump Repair in Crossville
+            </a>
+          </div>
+          <div class="card area-card">
+            <h3><Icon name="pin" size={20} /> Livingston &amp; Overton County</h3>
+            <p>Secondary market serving rural Overton County properties.</p>
+            <a href="/well-pump-repair-livingston-tn/" class="card-link">
+              Well Pump Repair in Livingston
+            </a>
+          </div>
+          <div class="card area-card">
+            <h3><Icon name="pin" size={20} /> Supporting Coverage</h3>
+            <p>
+              Sparta &amp; White County; Smithville &amp; DeKalb County (subject to verified
+              provider coverage); nearby rural Upper Cumberland communities.
+            </p>
+            <a href="/service-area/" class="card-link">Upper Cumberland Service Area</a>
+          </div>
+        </div>
+        <div class="area-map">
+          <img
+            src="/images/map-upper-cumberland.svg"
+            alt="Illustrated map of the Upper Cumberland region highlighting Putnam, Cumberland, Overton, White and DeKalb counties"
+            width="760"
+            height="560"
+            loading="lazy"
+          />
+        </div>
+      </div>
+      <p class="fine-print text-center" style="margin-top: 1.25rem;">
+        Actual coverage varies by provider, service type, property access, licensing, distance and
+        scheduling.
+      </p>
+      <div class="text-center" style="margin-top: 1rem;">
+        <a href="/service-area/" class="btn btn--primary">Check Provider Availability</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 14 — FAQS -->
+  <section class="section section--gray" id="faqs" aria-labelledby="faq-heading">
+    <div class="container" style="max-width: 900px;">
+      <h2 id="faq-heading" class="section-heading">Well Pump &amp; Water Well Questions</h2>
+      <div class="mt-2">
+        <FaqList faqs={HOME_FAQS} />
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 15 — FINAL CTA -->
+  <CtaBand />
+</BaseLayout>
+
+<style>
+  /* HERO */
+  .hero {
+    background-image:
+      linear-gradient(100deg, rgba(7, 31, 58, 0.92) 0%, rgba(12, 49, 88, 0.75) 45%, rgba(7, 31, 58, 0.35) 100%),
+      url("/images/hero-rural.svg");
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+  }
+  .hero__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 420px;
+    gap: 3rem;
+    align-items: center;
+    padding-block: clamp(2.5rem, 6vw, 5rem);
+  }
+  .hero__eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-weight: 700;
+    color: #9fd7a8;
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+  }
+  .hero h1 {
+    color: var(--white);
+    margin-bottom: 0.75rem;
+  }
+  .hero__sub {
+    font-size: 1.1rem;
+    max-width: 34rem;
+    color: #e3eef8;
+  }
+  .hero__ctas {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+  }
+  .hero__ctas .btn--urgent {
+    background: rgba(255, 255, 255, 0.96);
+  }
+  .hero__urgent-note {
+    font-size: 0.85rem;
+    color: #b9cbdd;
+    margin-top: 0.75rem;
+  }
+  .hero__points {
+    list-style: none;
+    display: flex;
+    gap: 1.75rem;
+    flex-wrap: wrap;
+    margin: 1.75rem 0 0;
+    padding: 0;
+  }
+  .hero__points li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.92rem;
+    font-weight: 600;
+  }
+  .hero__points :global(svg) {
+    color: #9fd7a8;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 1000px) {
+    .hero__inner {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .hero__form {
+      display: flex;
+      justify-content: center;
+    }
+    .hero__form :global(.lead-form-card--hero) {
+      max-width: 560px;
+    }
+  }
+
+  /* Cards */
+  .service-card h3 {
+    margin-bottom: 0.4rem;
+  }
+  .sign-card {
+    text-align: center;
+  }
+  .sign-card .icon-circle {
+    margin-inline: auto;
+  }
+
+  /* No-water section */
+  .nowater {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 2.5rem;
+    align-items: start;
+  }
+  .nowater__cta {
+    margin-block: 1rem;
+    background: var(--white);
+  }
+  .nowater__checklist ul {
+    list-style: none;
+    margin: 0 0 1rem;
+    padding: 0;
+  }
+  .nowater__checklist li {
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-start;
+    margin-bottom: 0.6rem;
+  }
+  .nowater__checklist :global(svg) {
+    color: var(--green);
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+  }
+  @media (max-width: 900px) {
+    .nowater {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Comparisons */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  @media (max-width: 800px) {
+    .compare-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .check-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .check-list li {
+    padding-left: 1.6rem;
+    position: relative;
+    margin-bottom: 0.5rem;
+  }
+  .check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--green);
+    font-weight: 700;
+  }
+
+  .rrd-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .two-col-list {
+    columns: 2;
+    column-gap: 2rem;
+    padding-left: 1.2rem;
+    margin-bottom: 1.25rem;
+  }
+  @media (max-width: 640px) {
+    .two-col-list {
+      columns: 1;
+    }
+  }
+  .treatment-flex {
+    max-width: 56rem;
+    margin-inline: auto;
+  }
+
+  /* Constant pressure */
+  .cp-section {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 220px;
+    gap: 2.5rem;
+    align-items: center;
+  }
+  .cp-visual {
+    display: flex;
+    justify-content: center;
+  }
+  @media (max-width: 800px) {
+    .cp-section {
+      grid-template-columns: 1fr;
+    }
+    .cp-visual {
+      display: none;
+    }
+  }
+
+  /* Steps */
+  .steps-grid {
+    list-style: none;
+    counter-reset: step;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
+  }
+  .step-card {
+    position: relative;
+    padding-top: 2.4rem;
+  }
+  .step-card__num {
+    position: absolute;
+    top: -18px;
+    left: 1.25rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--blue);
+    color: var(--white);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Area */
+  .area-layout {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 2.5rem;
+    align-items: center;
+  }
+  .area-list {
+    display: grid;
+    gap: 1rem;
+  }
+  .area-card h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 0.35rem;
+  }
+  .area-card h3 :global(svg) {
+    color: var(--green);
+  }
+  .area-card--primary {
+    border-left: 5px solid var(--green);
+  }
+  @media (max-width: 900px) {
+    .area-layout {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

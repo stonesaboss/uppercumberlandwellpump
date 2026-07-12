@@ -1,0 +1,108 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import LeadForm from "../components/LeadForm.astro";
+import { REFERRAL_DISCLOSURE } from "../data/site";
+import { breadcrumbSchema, contactPageSchema } from "../utils/schema";
+
+const title = "Request Well-Pump Service | Upper Cumberland Well Pump";
+const description =
+  "Submit a well-pump or water-well service request for Cookeville and the Upper Cumberland, TN. Describe the problem and get connected with an independent local provider.";
+const crumbs = [
+  { name: "Home", path: "/" },
+  { name: "Request Service", path: "/request-service/" },
+];
+const schema = [
+  contactPageSchema({ path: "/request-service/", title, description }),
+  breadcrumbSchema(crumbs),
+];
+---
+
+<BaseLayout title={title} description={description} path="/request-service/" schema={schema}>
+  <div class="page-hero">
+    <div class="container">
+      <p class="page-hero__eyebrow">Upper Cumberland, Tennessee</p>
+      <h1>Request Well-Pump Service</h1>
+    </div>
+  </div>
+
+  <Breadcrumbs crumbs={crumbs} />
+
+  <div class="container request-layout">
+    <div class="request-form">
+      <LeadForm
+        variant="full"
+        heading="Request Well-Pump Service"
+        description="Tell us what is happening with the property's water system. Required fields are marked; the optional details genuinely help the responding provider prepare."
+        id="request-service-form"
+      />
+    </div>
+    <aside class="request-aside">
+      <div class="card">
+        <h2 style="font-size: 1.3rem;">What Happens Next</h2>
+        <ol style="padding-left: 1.3rem;">
+          <li>Your description is reviewed to identify the type of local provider that fits.</li>
+          <li>The details may be shared with an independent provider serving your area.</li>
+          <li>The provider may contact you to discuss coverage, availability and next steps.</li>
+          <li>The provider independently determines diagnosis, pricing, schedule and terms.</li>
+        </ol>
+        <p class="fine-print">{REFERRAL_DISCLOSURE}</p>
+      </div>
+      <div class="card">
+        <h2 style="font-size: 1.3rem;">No Water Right Now?</h2>
+        <p>
+          Total water loss gets the highest routing priority. Read the safe-observation checklist
+          first:
+        </p>
+        <a href="/emergency-no-water-well-service/" class="btn btn--urgent" style="width: 100%;">
+          Urgent No-Water Requests
+        </a>
+      </div>
+      <div class="card">
+        <h2 style="font-size: 1.3rem;">Helpful Reading</h2>
+        <ul style="padding-left: 1.2rem; margin: 0;">
+          <li><a href="/common-well-problems/">Common well problems</a></li>
+          <li><a href="/how-referrals-work/">How referrals work</a></li>
+          <li><a href="/licensing-information/">Tennessee licensing information</a></li>
+          <li><a href="/service-area/">Service area</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-hero {
+    background: linear-gradient(160deg, var(--navy-deep), var(--navy) 70%, var(--blue));
+    color: var(--white);
+    padding-block: clamp(2.5rem, 6vw, 4rem);
+  }
+  .page-hero h1 {
+    color: var(--white);
+    margin-bottom: 0;
+  }
+  .page-hero__eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: #9fd7a8;
+    margin-bottom: 0.5rem;
+  }
+  .request-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 340px;
+    gap: 2.5rem;
+    padding-block: 1.5rem 3.5rem;
+    align-items: start;
+  }
+  .request-aside {
+    display: grid;
+    gap: 1.25rem;
+  }
+  @media (max-width: 900px) {
+    .request-layout {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

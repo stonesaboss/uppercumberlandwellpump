@@ -696,10 +696,19 @@ const steps = [
   .hero {
     background-image:
       linear-gradient(100deg, rgba(7, 31, 58, 0.92) 0%, rgba(12, 49, 88, 0.75) 45%, rgba(7, 31, 58, 0.35) 100%),
-      url("/images/hero-rural.svg");
+      url("/images/hero/well-pump-rural-service-desktop.webp");
     background-size: cover;
     background-position: center;
     color: var(--white);
+  }
+
+  @media (max-width: 767px) {
+    .hero {
+      background-image:
+        linear-gradient(100deg, rgba(7, 31, 58, 0.94) 0%, rgba(12, 49, 88, 0.82) 52%, rgba(7, 31, 58, 0.62) 100%),
+        url("/images/hero/well-pump-rural-service-mobile.webp");
+      background-position: center;
+    }
   }
   .hero__inner {
     display: grid;
@@ -794,6 +803,16 @@ const steps = [
   .nowater__cta {
     margin-block: 1rem;
     background: var(--white);
+  }
+  /* White card inside the navy section — restore dark text so it stays readable */
+  .nowater__checklist {
+    color: var(--charcoal);
+  }
+  .nowater__checklist h3 {
+    color: var(--navy);
+  }
+  .nowater__checklist .fine-print {
+    color: #4a5a68;
   }
   .nowater__checklist ul {
     list-style: none;

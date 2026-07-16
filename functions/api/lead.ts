@@ -147,9 +147,10 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     return json(400, { ok: false, error: "The request could not be read. Please try again." });
   }
 
-  // Honeypot: silently accept but do nothing.
+  // Honeypot: return a success-looking response but record nothing.
   const honeypot = form.get("company_website");
   if (typeof honeypot === "string" && honeypot.trim() !== "") {
+    console.log("[lead] honeypot triggered — submission discarded");
     return json(200, { ok: true, reference: makeReference() });
   }
 
@@ -267,7 +268,10 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
   }
 
   // ---- Optional D1 storage ----
+  // d1Stored is only true after a CONFIRMED insert — an enabled-but-failing
+  // database must never count as a captured lead.
   const d1Enabled = env.ENABLE_D1_STORAGE === "true" && !!env.LEADS_DB;
+  let d1Stored = false;
   if (d1Enabled && env.LEADS_DB) {
     try {
       await env.LEADS_DB.prepare(
@@ -306,8 +310,13 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
           isTest ? "test" : "new",
         )
         .run();
-    } catch {
-      // Storage failure must not block delivery.
+      d1Stored = true;
+    } catch (err) {
+      // Storage failure must not block webhook/email delivery, but it must
+      // be visible in the Pages logs. No personal data in the log line.
+      console.error(
+        `[lead] D1 insert failed for ${reference}: ${err instanceof Error ? err.message : "unknown error"}`,
+      );
     }
   }
 
@@ -334,8 +343,13 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
         body: JSON.stringify(payload),
       });
       delivered = res.ok;
-    } catch {
-      delivered = false;
+      if (!res.ok) {
+        console.error(`[lead] webhook rejected ${reference}: HTTP ${res.status}`);
+      }
+    } catch (err) {
+      console.error(
+        `[lead] webhook unreachable for ${reference}: ${err instanceof Error ? err.message : "unknown error"}`,
+      );
     }
   }
 
@@ -367,8 +381,13 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
         }),
       });
       delivered = delivered || emailRes.ok;
-    } catch {
-      // fall through
+      if (!emailRes.ok) {
+        console.error(`[lead] email send failed for ${reference}: HTTP ${emailRes.status}`);
+      }
+    } catch (err) {
+      console.error(
+        `[lead] email service unreachable for ${reference}: ${err instanceof Error ? err.message : "unknown error"}`,
+      );
     }
   }
 
@@ -381,8 +400,13 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     delivered = true;
   }
 
-  if (!delivered && !d1Enabled) {
-    // Nothing accepted the lead anywhere — tell the visitor honestly.
+  if (!delivered && !d1Stored) {
+    // Nothing accepted the lead anywhere — fail loudly, never silently drop.
+    console.error(
+      `[lead] DELIVERY FAILED for ${reference}: no delivery channel accepted the lead ` +
+        `(webhook configured: ${!!env.LEAD_WEBHOOK_URL}, email configured: ${!!env.FORM_RECIPIENT_EMAIL}, ` +
+        `d1 enabled: ${d1Enabled}). Configure LEAD_WEBHOOK_URL, FORM_RECIPIENT_EMAIL or D1 storage.`,
+    );
     return json(502, {
       ok: false,
       error:

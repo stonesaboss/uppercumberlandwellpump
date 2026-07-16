@@ -11,6 +11,9 @@
  */
 
 interface Env {
+  /** Turnstile secret — set as a Pages environment SECRET named TURNSTILE_SECRET. */
+  TURNSTILE_SECRET?: string;
+  /** Legacy name; supported as a fallback. */
   TURNSTILE_SECRET_KEY?: string;
   LEAD_WEBHOOK_URL?: string;
   LEAD_WEBHOOK_SECRET?: string;
@@ -182,21 +185,25 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
   }
 
   // ---- Turnstile ----
+  // Verification is enforced whenever a secret is configured, regardless of
+  // any client-supplied fields (turnstile_dev_mode or similar is never
+  // trusted). Production with no secret refuses submissions outright.
+  const turnstileSecret = env.TURNSTILE_SECRET || env.TURNSTILE_SECRET_KEY;
   const turnstileToken = form.get("cf-turnstile-response");
-  if (env.TURNSTILE_SECRET_KEY) {
+  if (turnstileSecret) {
     if (typeof turnstileToken !== "string" || turnstileToken.length === 0) {
-      return json(422, {
+      return json(400, {
         ok: false,
         error: "The anti-spam check did not complete. Please wait a moment and try again.",
       });
     }
     const passed = await verifyTurnstile(
-      env.TURNSTILE_SECRET_KEY,
+      turnstileSecret,
       turnstileToken,
       request.headers.get("CF-Connecting-IP"),
     );
     if (!passed) {
-      return json(422, {
+      return json(400, {
         ok: false,
         error: "The anti-spam check failed or expired. Please try again.",
       });

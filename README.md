@@ -58,7 +58,7 @@ npm run build
 npx wrangler pages dev dist
 ```
 
-Local development safety: with no `TURNSTILE_SECRET_KEY`, `LEAD_WEBHOOK_URL` or
+Local development safety: with no `TURNSTILE_SECRET`, `LEAD_WEBHOOK_URL` or
 `FORM_RECIPIENT_EMAIL` set, submissions on non-production hosts are accepted in a mocked mode —
 logged as `[TEST LEAD] <reference> …` (no personal details) and marked `TEST_SUBMISSION`.
 Production hosts **reject** submissions when Turnstile is not configured, so a misconfigured
@@ -106,8 +106,8 @@ Environment variables. **Never commit real values.**
 | Variable | Purpose |
 | --- | --- |
 | `PUBLIC_SITE_URL` | Canonical origin, `https://uppercumberlandwellpump.com` |
-| `PUBLIC_TURNSTILE_SITE_KEY` | Turnstile site key (public, rendered in forms) |
-| `TURNSTILE_SECRET_KEY` | Turnstile secret (server-side verification) — **secret** |
+| `PUBLIC_TURNSTILE_SITE_KEY` | Turnstile site key override (a default is baked into `src/data/site.ts`) |
+| `TURNSTILE_SECRET` | Turnstile secret (server-side verification) — **secret** (`TURNSTILE_SECRET_KEY` accepted as legacy alias) |
 | `LEAD_WEBHOOK_URL` | Webhook that receives lead JSON (Zapier/Make/custom) |
 | `LEAD_WEBHOOK_SECRET` | Sent as `X-Webhook-Secret` header — **secret** |
 | `FORM_RECIPIENT_EMAIL` | Email address for lead notifications |
@@ -121,10 +121,14 @@ Environment variables. **Never commit real values.**
 
 1. Cloudflare dashboard → **Turnstile** → Add site → domain `uppercumberlandwellpump.com`
    (managed or visible mode).
-2. Put the site key in `PUBLIC_TURNSTILE_SITE_KEY` and the secret in `TURNSTILE_SECRET_KEY`.
-3. Behavior: token verified server-side on every submission; expired/failed tokens reset the
-   widget with an accessible error; production without a configured secret **rejects**
-   submissions (fail-safe).
+2. The public site key is baked into `src/data/site.ts` (override with
+   `PUBLIC_TURNSTILE_SITE_KEY` if rotated). Store the secret as a Pages environment
+   **secret** named `TURNSTILE_SECRET` — never commit it.
+3. Behavior: the client blocks submission until the widget issues a token; the token is
+   verified server-side (with client IP) on every submission and failures return 400;
+   expired/failed tokens reset the widget with an accessible error; production without a
+   configured secret **rejects** submissions (fail-safe). No client-supplied field can
+   bypass verification.
 
 ## 8. Lead Delivery (Webhook / Email)
 
@@ -250,7 +254,7 @@ Honor deletion requests received via the contact page across all three.
 | Symptom | Likely cause / fix |
 | --- | --- |
 | Build fails on Pages but works locally | Node version — set `NODE_VERSION=20` (or current LTS) in Pages env vars. |
-| Form returns 503 in production | `TURNSTILE_SECRET_KEY` missing — intentional fail-safe. Configure Turnstile. |
+| Form returns 503 in production | `TURNSTILE_SECRET` missing — intentional fail-safe. Configure Turnstile. |
 | Form returns 502 | No delivery channel configured (webhook/email/D1). Configure one. |
 | Preview shows in Google | Middleware missing/modified — restore `functions/_middleware.ts`. |
 | www not redirecting | Add `www` as a custom domain so Cloudflare serves the redirect rule. |

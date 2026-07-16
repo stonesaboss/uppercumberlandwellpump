@@ -30,8 +30,12 @@ export const SITE = {
   analyticsId: import.meta.env.PUBLIC_ANALYTICS_ID || "",
   tagManagerId: import.meta.env.PUBLIC_TAG_MANAGER_ID || "",
 
-  /** Cloudflare Turnstile site key (public). Empty = dev fallback mode. */
-  turnstileSiteKey: import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || "",
+  /**
+   * Cloudflare Turnstile site key. This is the PUBLIC site key (safe to ship
+   * in HTML); the secret lives only in the Pages env as TURNSTILE_SECRET.
+   * An env var overrides the default if ever rotated.
+   */
+  turnstileSiteKey: import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || "0x4AAAAAAD2nlTxvVikZz36k",
 } as const;
 
 /** Referral disclosure used across the site. Keep wording consistent. */

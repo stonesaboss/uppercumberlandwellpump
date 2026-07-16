@@ -258,13 +258,7 @@ const isFull = variant === "full";
     </div>
     <p class="field-error" id={`${id}-consent-err`} data-consent-error>Please check the consent box to send your request.</p>
 
-    {
-      SITE.turnstileSiteKey ? (
-        <div class="cf-turnstile" data-sitekey={SITE.turnstileSiteKey} data-turnstile></div>
-      ) : (
-        <input type="hidden" name="turnstile_dev_mode" value="1" />
-      )
-    }
+    <div class="cf-turnstile" data-sitekey={SITE.turnstileSiteKey} data-turnstile></div>
 
     <input type="hidden" name="source_page" value={Astro.url.pathname} />
     <input type="text" name="company_website" value="" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp-field" />

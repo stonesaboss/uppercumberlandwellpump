@@ -124,6 +124,18 @@ function initForm(form: HTMLFormElement): void {
     e.preventDefault();
     if (!validate(form)) return;
 
+    // Require a Turnstile token before submitting when the widget is present.
+    const widget = form.querySelector<HTMLElement>("[data-turnstile]");
+    const token = form.querySelector<HTMLInputElement>('[name="cf-turnstile-response"]')?.value;
+    if (widget && !token) {
+      showStatus(
+        form,
+        "error",
+        "Please wait a moment for the security check to finish, then try again.",
+      );
+      return;
+    }
+
     const btn = form.querySelector<HTMLButtonElement>("[data-submit-btn]");
     const originalLabel = btn?.textContent ?? "";
     if (btn) {
@@ -150,6 +162,11 @@ function initForm(form: HTMLFormElement): void {
         } catch {
           /* storage unavailable — thank-you page copes */
         }
+        // Clear the form and Turnstile token before navigating so a
+        // back-button return can't resubmit a stale token.
+        form.reset();
+        const successWidget = form.querySelector<HTMLElement>("[data-turnstile]");
+        if (successWidget && window.turnstile) window.turnstile.reset(successWidget);
         window.location.assign("/thank-you/");
         return;
       }

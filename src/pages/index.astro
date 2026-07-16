@@ -1,6 +1,5 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import LeadForm from "../components/LeadForm.astro";
 import FaqList from "../components/FaqList.astro";
 import Icon from "../components/Icon.astro";
 import CtaBand from "../components/CtaBand.astro";
@@ -173,13 +172,6 @@ const steps = [
             <span>Cookeville &amp; Upper Cumberland Coverage</span>
           </li>
         </ul>
-      </div>
-      <div class="hero__form">
-        <LeadForm
-          variant="hero"
-          heading="Request Well-Pump Service"
-          description="Tell us what is happening with the property's water system."
-        />
       </div>
     </div>
   </section>
@@ -711,11 +703,9 @@ const steps = [
     }
   }
   .hero__inner {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 420px;
-    gap: 3rem;
-    align-items: center;
-    padding-block: clamp(2.5rem, 6vw, 5rem);
+    max-width: 46rem;
+    margin-left: 0;
+    padding-block: clamp(3rem, 8vw, 6rem);
   }
   .hero__eyebrow {
     text-transform: uppercase;
@@ -766,20 +756,6 @@ const steps = [
   .hero__points :global(svg) {
     color: #9fd7a8;
     flex-shrink: 0;
-  }
-
-  @media (max-width: 1000px) {
-    .hero__inner {
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-    .hero__form {
-      display: flex;
-      justify-content: center;
-    }
-    .hero__form :global(.lead-form-card--hero) {
-      max-width: 560px;
-    }
   }
 
   /* Cards */

@@ -130,6 +130,7 @@ import PhoneLink from "./PhoneLink.astro";
     justify-content: space-between;
     gap: 1rem;
     min-height: 76px;
+    max-width: 1380px; /* header may run wider than page sections so the nav fits one line */
   }
 
   .brand {
@@ -151,10 +152,11 @@ import PhoneLink from "./PhoneLink.astro";
   }
   .brand__name {
     font-family: var(--font-heading);
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     text-transform: uppercase;
     color: var(--navy);
     letter-spacing: 0.02em;
+    white-space: nowrap;
   }
   .brand__name strong {
     color: var(--blue);
@@ -195,17 +197,17 @@ import PhoneLink from "./PhoneLink.astro";
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 0.25rem;
+    gap: 0.1rem;
     margin: 0;
     padding: 0;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
   .primary-nav__link {
     display: inline-flex;
     align-items: center;
     gap: 0.3rem;
-    padding: 0.6rem 0.7rem;
-    font-size: 0.95rem;
+    padding: 0.6rem 0.4rem;
+    font-size: 0.85rem;
     font-weight: 600;
     color: var(--charcoal);
     text-decoration: none;
@@ -214,6 +216,7 @@ import PhoneLink from "./PhoneLink.astro";
     cursor: pointer;
     font-family: var(--font-body);
     border-radius: var(--radius-sm);
+    white-space: nowrap;
   }
   .primary-nav__link:hover {
     color: var(--blue);
@@ -257,18 +260,23 @@ import PhoneLink from "./PhoneLink.astro";
   }
 
   .primary-nav__cta {
-    font-size: 0.85rem;
-    padding: 0.7rem 1.1rem;
-    margin-left: 0.4rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.01em;
+    padding: 0.55rem 0.75rem;
+    margin-left: 0.3rem;
+    white-space: nowrap;
+    min-height: 42px;
   }
 
-  @media (max-width: 1080px) {
-    .brand__tag {
+  /* Between the mobile breakpoint and full-width desktop, show the shield
+     only so the whole nav fits on one line. */
+  @media (min-width: 1181px) and (max-width: 1419px) {
+    .brand__text {
       display: none;
     }
   }
 
-  @media (max-width: 960px) {
+  @media (max-width: 1180px) {
     .nav-toggle {
       display: inline-flex;
     }

@@ -16,8 +16,8 @@ export const SITE = {
    * Example: display: "(931) 555-0100", tel: "+19315550100"
    */
   phone: {
-    display: "[TRACKING PHONE NUMBER]",
-    tel: "",
+    display: "629-888-3733",
+    tel: "+16298883733",
   },
 
   /**

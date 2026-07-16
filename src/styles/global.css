@@ -206,14 +206,16 @@ a:hover {
   transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
 
+/* CTA text uses the palette's light tints rather than pure white —
+   softer on the eyes against the saturated button colors. */
 .btn--primary {
   background: var(--blue);
-  color: var(--white);
+  color: #e9f4fd; /* lightened tint of --blue-light; 4.7:1 on --blue */
 }
 
 .btn--primary:hover {
   background: var(--navy);
-  color: var(--white);
+  color: #e9f4fd;
 }
 
 .btn--urgent {
@@ -229,22 +231,22 @@ a:hover {
 
 .btn--green {
   background: var(--green);
-  color: var(--white);
+  color: var(--green-light);
 }
 
 .btn--green:hover {
   background: #1a4727;
-  color: var(--white);
+  color: var(--green-light);
 }
 
 .btn--outline-light {
   background: transparent;
-  color: var(--white);
-  border-color: var(--white);
+  color: var(--blue-light);
+  border-color: var(--blue-light);
 }
 
 .btn--outline-light:hover {
-  background: var(--white);
+  background: var(--blue-light);
   color: var(--navy);
 }
 

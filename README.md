@@ -100,8 +100,30 @@ are marked `TEST_SUBMISSION` and are not delivered to production webhooks/email.
 
 ## 6. Environment Variables
 
-Copy `.env.example` → `.env` locally; set the same names in Cloudflare Pages → Settings →
-Environment variables. **Never commit real values.**
+Copy `.env.example` → `.env` locally. **Never commit real values.**
+
+**This project is wrangler-config-managed** (`wrangler.jsonc` has `pages_build_output_dir`),
+so the dashboard shows "Environment variables … managed through wrangler.toml". What that
+actually means:
+
+- **Plaintext variables** must be declared in `wrangler.jsonc` under `"vars"` — the
+  dashboard is read-only for them. Only non-sensitive values belong there
+  (e.g. `ENABLE_D1_STORAGE`).
+- **Secrets** (`TURNSTILE_SECRET`, `LEAD_WEBHOOK_URL`, `LEAD_WEBHOOK_SECRET`,
+  `EMAIL_API_KEY`, …) are NOT declared in the config file. Set them with:
+
+  ```bash
+  npx wrangler pages secret put TURNSTILE_SECRET --project-name uppercumberlandwellpump
+  npx wrangler pages secret put LEAD_WEBHOOK_URL --project-name uppercumberlandwellpump
+  ```
+
+  (or dashboard → the project → Settings → Variables and Secrets → Add → type "Secret").
+
+- **Secrets bind at deployment time.** A secret added after the latest deployment does
+  not reach the running function — push a commit or hit "Retry deployment" afterwards.
+- **Verify what the deployed function actually sees** at
+  `https://uppercumberlandwellpump.com/api/health` — returns booleans per variable
+  (never values) plus an overall `ok`.
 
 | Variable | Purpose |
 | --- | --- |

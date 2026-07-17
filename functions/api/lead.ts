@@ -345,6 +345,28 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
       delivered = res.ok;
       if (!res.ok) {
         console.error(`[lead] webhook rejected ${reference}: HTTP ${res.status}`);
+      } else {
+        // Google Apps Script (and some other receivers) always return HTTP
+        // 200 — inspect the response to catch failures a status can't show.
+        if (res.url.includes("accounts.google.com")) {
+          // Redirected to a login page: the Apps Script deployment is not
+          // set to "Anyone" access, so nothing was recorded.
+          delivered = false;
+          console.error(
+            `[lead] webhook auth wall for ${reference}: receiver requires login (check Apps Script "Who has access: Anyone")`,
+          );
+        } else {
+          const bodyText = await res.text().catch(() => "");
+          try {
+            const body = JSON.parse(bodyText) as { ok?: boolean };
+            if (body.ok === false) {
+              delivered = false;
+              console.error(`[lead] webhook script error for ${reference}: receiver returned ok=false`);
+            }
+          } catch {
+            // Non-JSON body with a 2xx status — accept (not all webhooks return JSON).
+          }
+        }
       }
     } catch (err) {
       console.error(

@@ -26,8 +26,11 @@ export const SITE = {
    */
   email: "",
 
-  /** Analytics — loaded only when an ID is present. */
-  analyticsId: import.meta.env.PUBLIC_ANALYTICS_ID || "",
+  /**
+   * GA4 Measurement ID (public — ships in HTML by design).
+   * Env var overrides if ever rotated.
+   */
+  analyticsId: import.meta.env.PUBLIC_ANALYTICS_ID || "G-ZZ2FMNVW0X",
   tagManagerId: import.meta.env.PUBLIC_TAG_MANAGER_ID || "",
 
   /**

@@ -1,11 +1,23 @@
 // Cloudflare Pages configuration for uppercumberlandwellpump.com
-// This file intentionally contains ONLY configuration that works without
-// placeholder resource IDs. Optional D1 / R2 bindings live in
-// wrangler.bindings.example.jsonc — copy them here only after creating
-// the real resources (see README).
+// This project is wrangler-config-managed: bindings and plaintext vars are
+// defined HERE (the dashboard is read-only for them). Secrets are set via
+// `npx wrangler pages secret put <NAME>` — never in this file.
+// Optional D1 binding example lives in wrangler.bindings.example.jsonc.
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "uppercumberlandwellpump",
   "compatibility_date": "2026-07-01",
-  "pages_build_output_dir": "dist"
+  "pages_build_output_dir": "dist",
+
+  "vars": {
+    // Enables private R2 photo storage in functions/api/lead.ts
+    "ENABLE_R2_UPLOADS": "true"
+  },
+
+  "r2_buckets": [
+    {
+      "binding": "LEAD_UPLOADS",
+      "bucket_name": "ucwp-lead-uploads"
+    }
+  ]
 }

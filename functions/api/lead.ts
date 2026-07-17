@@ -90,6 +90,17 @@ const MAX_TOTAL_BYTES = 20 * 1024 * 1024;
 const ALLOWED_PHOTO_TYPES = new Set(["image/jpeg", "image/png", "image/heic", "image/heif"]);
 const ALLOWED_PHOTO_EXT = /\.(jpe?g|png|heic)$/i;
 
+/**
+ * Sanitize an env-provided value: strip BOM/zero-width characters and
+ * surrounding whitespace. Secrets pasted through editors or shells can pick
+ * up invisible bytes (a UTF-8 BOM once made the webhook URL "invalid").
+ * Built via RegExp constructor so this source file stays pure ASCII.
+ */
+const INVISIBLE_CHARS = new RegExp("[\\uFEFF\\u200B\\u200E\\u200F]", "g");
+function cleanEnv(value: string | undefined): string {
+  return (value ?? "").replace(INVISIBLE_CHARS, "").trim();
+}
+
 function json(status: number, body: Record<string, unknown>): Response {
   return new Response(JSON.stringify(body), {
     status,
@@ -189,7 +200,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
   // Verification is enforced whenever a secret is configured, regardless of
   // any client-supplied fields (turnstile_dev_mode or similar is never
   // trusted). Production with no secret refuses submissions outright.
-  const turnstileSecret = env.TURNSTILE_SECRET || env.TURNSTILE_SECRET_KEY;
+  const turnstileSecret = cleanEnv(env.TURNSTILE_SECRET) || cleanEnv(env.TURNSTILE_SECRET_KEY);
   const turnstileToken = form.get("cf-turnstile-response");
   if (turnstileSecret) {
     if (typeof turnstileToken !== "string" || turnstileToken.length === 0) {
@@ -333,11 +344,13 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 
   // Webhook delivery. Preview/dev submissions only go to localhost webhooks
   // and are clearly marked via kind: TEST_SUBMISSION.
-  if (env.LEAD_WEBHOOK_URL && (isProduction || env.LEAD_WEBHOOK_URL.includes("localhost"))) {
+  const webhookUrl = cleanEnv(env.LEAD_WEBHOOK_URL);
+  const webhookSecret = cleanEnv(env.LEAD_WEBHOOK_SECRET);
+  if (webhookUrl && (isProduction || webhookUrl.includes("localhost"))) {
     try {
       const headers: Record<string, string> = { "Content-Type": "application/json" };
-      if (env.LEAD_WEBHOOK_SECRET) headers["X-Webhook-Secret"] = env.LEAD_WEBHOOK_SECRET;
-      const res = await fetch(env.LEAD_WEBHOOK_URL, {
+      if (webhookSecret) headers["X-Webhook-Secret"] = webhookSecret;
+      const res = await fetch(webhookUrl, {
         method: "POST",
         headers,
         body: JSON.stringify(payload),
@@ -376,7 +389,9 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
   }
 
   // Email delivery via MailChannels-compatible API when configured (production only).
-  if (env.FORM_RECIPIENT_EMAIL && isProduction) {
+  const recipientEmail = cleanEnv(env.FORM_RECIPIENT_EMAIL);
+  const emailApiKey = cleanEnv(env.EMAIL_API_KEY);
+  if (recipientEmail && isProduction) {
     try {
       const summaryLines = Object.entries(lead)
         .map(([k, v]) => `${k.replace(/_/g, " ")}: ${v}`)
@@ -385,10 +400,10 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          ...(env.EMAIL_API_KEY ? { "X-Api-Key": env.EMAIL_API_KEY } : {}),
+          ...(emailApiKey ? { "X-Api-Key": emailApiKey } : {}),
         },
         body: JSON.stringify({
-          personalizations: [{ to: [{ email: env.FORM_RECIPIENT_EMAIL }] }],
+          personalizations: [{ to: [{ email: recipientEmail }] }],
           from: {
             email: "leads@uppercumberlandwellpump.com",
             name: "Upper Cumberland Well Pump",
@@ -415,7 +430,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 
   // In local development with no delivery configured, log a minimal,
   // non-identifying line so the flow can be tested end to end.
-  if (!isProduction && !env.LEAD_WEBHOOK_URL && !env.FORM_RECIPIENT_EMAIL) {
+  if (!isProduction && !webhookUrl && !recipientEmail) {
     console.log(
       `[TEST LEAD] ${reference} service=${lead.service_needed} situation=${lead.water_situation} photos=${photos.length}`,
     );
@@ -426,7 +441,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     // Nothing accepted the lead anywhere — fail loudly, never silently drop.
     console.error(
       `[lead] DELIVERY FAILED for ${reference}: no delivery channel accepted the lead ` +
-        `(webhook configured: ${!!env.LEAD_WEBHOOK_URL}, email configured: ${!!env.FORM_RECIPIENT_EMAIL}, ` +
+        `(webhook configured: ${!!webhookUrl}, email configured: ${!!recipientEmail}, ` +
         `d1 enabled: ${d1Enabled}). Configure LEAD_WEBHOOK_URL, FORM_RECIPIENT_EMAIL or D1 storage.`,
     );
     return json(502, {

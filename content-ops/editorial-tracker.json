@@ -1,0 +1,746 @@
+{
+  "updated": "2026-07-19",
+  "site": "uppercumberlandwellpump.com",
+  "note": "COMPLETE well-pump knowledge catalog (82 guides across 7 hubs). Rendered by data-driven route src/pages/resources/guides/[slug].astro from src/data/guides.ts. Images use the ResourceImage slot with status 'pending' (branded fallback band shown until the final asset is generated from the recommendedSubject brief). All plannedGuides in resources.ts are now published.",
+  "publishedCount": 82,
+  "articles": [
+    {
+      "topic": "How Much Does Well Pump Replacement Cost in Tennessee?",
+      "hub": "well-pump-costs",
+      "status": "in-repo",
+      "href": "/resources/guides/how-much-does-well-pump-replacement-cost-in-tennessee/",
+      "image": "/images/resources/guide-how-much-does-well-pump-replacement-cost-in-tennessee.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "What Affects the Cost of Well Pump Repair?",
+      "hub": "well-pump-costs",
+      "status": "in-repo",
+      "href": "/resources/guides/what-affects-the-cost-of-well-pump-repair/",
+      "image": "/images/resources/guide-what-affects-the-cost-of-well-pump-repair.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Should You Repair or Replace a Well Pump?",
+      "hub": "well-pump-costs",
+      "status": "in-repo",
+      "href": "/resources/guides/should-you-repair-or-replace-a-well-pump/",
+      "image": "/images/resources/guide-should-you-repair-or-replace-a-well-pump.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "How Well Depth Can Affect Pump Replacement",
+      "hub": "well-pump-costs",
+      "status": "in-repo",
+      "href": "/resources/guides/how-well-depth-can-affect-pump-replacement/",
+      "image": "/images/resources/guide-how-well-depth-can-affect-pump-replacement.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Submersible Pump Versus Jet Pump Replacement",
+      "hub": "well-pump-costs",
+      "status": "in-repo",
+      "href": "/resources/guides/submersible-pump-versus-jet-pump-replacement/",
+      "image": "/images/resources/guide-submersible-pump-versus-jet-pump-replacement.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "How Much Does Pressure Tank Replacement Cost?",
+      "hub": "well-pump-costs",
+      "status": "in-repo",
+      "href": "/resources/guides/how-much-does-pressure-tank-replacement-cost/",
+      "image": "/images/resources/guide-how-much-does-pressure-tank-replacement-cost.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Why Pulling a Deep-Well Pump Can Affect Labor",
+      "hub": "well-pump-costs",
+      "status": "in-repo",
+      "href": "/resources/guides/why-pulling-a-deep-well-pump-can-affect-labor/",
+      "image": "/images/resources/guide-why-pulling-a-deep-well-pump-can-affect-labor.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Does a Well Pump Estimate Include Wiring and Pipe?",
+      "hub": "well-pump-costs",
+      "status": "in-repo",
+      "href": "/resources/guides/does-a-well-pump-estimate-include-wiring-and-pipe/",
+      "image": "/images/resources/guide-does-a-well-pump-estimate-include-wiring-and-pipe.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "What Information Is Needed for a Pump Replacement Estimate?",
+      "hub": "well-pump-costs",
+      "status": "in-repo",
+      "href": "/resources/guides/what-information-is-needed-for-a-pump-replacement-estimate/",
+      "image": "/images/resources/guide-what-information-is-needed-for-a-pump-replacement-estimate.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Why Emergency Well Pump Repairs Can Vary in Scope",
+      "hub": "well-pump-costs",
+      "status": "in-repo",
+      "href": "/resources/guides/why-emergency-well-pump-repairs-can-vary-in-scope/",
+      "image": "/images/resources/guide-why-emergency-well-pump-repairs-can-vary-in-scope.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Why Did My Well Water Suddenly Stop?",
+      "hub": "well-pump-problems",
+      "status": "in-repo",
+      "href": "/resources/guides/why-did-my-well-water-suddenly-stop/",
+      "image": "/images/resources/guide-why-did-my-well-water-suddenly-stop.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Well Pump Runs but No Water Reaches the House",
+      "hub": "well-pump-problems",
+      "status": "in-repo",
+      "href": "/resources/guides/well-pump-runs-but-no-water-reaches-the-house/",
+      "image": "/images/resources/guide-well-pump-runs-but-no-water-reaches-the-house.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Why a Well Pump May Not Turn On",
+      "hub": "well-pump-problems",
+      "status": "in-repo",
+      "href": "/resources/guides/why-a-well-pump-may-not-turn-on/",
+      "image": "/images/resources/guide-why-a-well-pump-may-not-turn-on.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Why a Well Pump Runs Constantly",
+      "hub": "well-pump-problems",
+      "status": "in-repo",
+      "href": "/resources/guides/why-a-well-pump-runs-constantly/",
+      "image": "/images/resources/guide-why-a-well-pump-runs-constantly.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "What Causes a Well Pump to Short Cycle?",
+      "hub": "well-pump-problems",
+      "status": "in-repo",
+      "href": "/resources/guides/what-causes-a-well-pump-to-short-cycle/",
+      "image": "/images/resources/guide-what-causes-a-well-pump-to-short-cycle.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Why a Well Pump Breaker Keeps Tripping",
+      "hub": "well-pump-problems",
+      "status": "in-repo",
+      "href": "/resources/guides/why-a-well-pump-breaker-keeps-tripping/",
+      "image": "/images/resources/guide-why-a-well-pump-breaker-keeps-tripping.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "What Causes Air or Sputtering at the Faucets?",
+      "hub": "well-pump-problems",
+      "status": "in-repo",
+      "href": "/resources/guides/what-causes-air-or-sputtering-at-the-faucets/",
+      "image": "/images/resources/guide-what-causes-air-or-sputtering-at-the-faucets.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Why Water Stops After a Power Outage",
+      "hub": "well-pump-problems",
+      "status": "in-repo",
+      "href": "/resources/guides/why-water-stops-after-a-power-outage/",
+      "image": "/images/resources/guide-why-water-stops-after-a-power-outage.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Signs a Well Pump May Be Failing",
+      "hub": "well-pump-problems",
+      "status": "in-repo",
+      "href": "/resources/guides/signs-a-well-pump-may-be-failing/",
+      "image": "/images/resources/guide-signs-a-well-pump-may-be-failing.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Common Pressure-Switch Problems",
+      "hub": "well-pump-problems",
+      "status": "in-repo",
+      "href": "/resources/guides/common-pressure-switch-problems/",
+      "image": "/images/resources/guide-common-pressure-switch-problems.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "What a Clicking Well System May Indicate",
+      "hub": "well-pump-problems",
+      "status": "in-repo",
+      "href": "/resources/guides/what-a-clicking-well-system-may-indicate/",
+      "image": "/images/resources/guide-what-a-clicking-well-system-may-indicate.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "When a No-Water Problem Requires Immediate Service",
+      "hub": "well-pump-problems",
+      "status": "in-repo",
+      "href": "/resources/guides/when-a-no-water-problem-requires-immediate-service/",
+      "image": "/images/resources/guide-when-a-no-water-problem-requires-immediate-service.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "What Causes Low Water Pressure on a Private Well?",
+      "hub": "water-pressure",
+      "status": "in-repo",
+      "href": "/resources/guides/what-causes-low-water-pressure-on-a-private-well/",
+      "image": "/images/resources/guide-what-causes-low-water-pressure-on-a-private-well.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Low Pressure Throughout the House Versus One Fixture",
+      "hub": "water-pressure",
+      "status": "in-repo",
+      "href": "/resources/guides/low-pressure-throughout-the-house-versus-one-fixture/",
+      "image": "/images/resources/guide-low-pressure-throughout-the-house-versus-one-fixture.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "How a Pressure Tank Affects Water Pressure",
+      "hub": "water-pressure",
+      "status": "in-repo",
+      "href": "/resources/guides/how-a-pressure-tank-affects-water-pressure/",
+      "image": "/images/resources/guide-how-a-pressure-tank-affects-water-pressure.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Why Water Pressure Drops During Heavy Use",
+      "hub": "water-pressure",
+      "status": "in-repo",
+      "href": "/resources/guides/why-water-pressure-drops-during-heavy-use/",
+      "image": "/images/resources/guide-why-water-pressure-drops-during-heavy-use.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "What Causes Water Pressure to Surge?",
+      "hub": "water-pressure",
+      "status": "in-repo",
+      "href": "/resources/guides/what-causes-water-pressure-to-surge/",
+      "image": "/images/resources/guide-what-causes-water-pressure-to-surge.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Well Yield Versus Pump Capacity",
+      "hub": "water-pressure",
+      "status": "in-repo",
+      "href": "/resources/guides/well-yield-versus-pump-capacity/",
+      "image": "/images/resources/guide-well-yield-versus-pump-capacity.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "How to Read Basic Well-System Pressure Symptoms",
+      "hub": "water-pressure",
+      "status": "in-repo",
+      "href": "/resources/guides/how-to-read-basic-well-system-pressure-symptoms/",
+      "image": "/images/resources/guide-how-to-read-basic-well-system-pressure-symptoms.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "What Is a Constant-Pressure Well System?",
+      "hub": "water-pressure",
+      "status": "in-repo",
+      "href": "/resources/guides/what-is-a-constant-pressure-well-system/",
+      "image": "/images/resources/guide-what-is-a-constant-pressure-well-system.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Constant-Pressure Systems Versus Traditional Pressure Tanks",
+      "hub": "water-pressure",
+      "status": "in-repo",
+      "href": "/resources/guides/constant-pressure-systems-versus-traditional-pressure-tanks/",
+      "image": "/images/resources/guide-constant-pressure-systems-versus-traditional-pressure-tanks.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Can a Larger Pressure Tank Improve Water Pressure?",
+      "hub": "water-pressure",
+      "status": "in-repo",
+      "href": "/resources/guides/can-a-larger-pressure-tank-improve-water-pressure/",
+      "image": "/images/resources/guide-can-a-larger-pressure-tank-improve-water-pressure.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Why Multiple Fixtures Can Reduce Well-Water Flow",
+      "hub": "water-pressure",
+      "status": "in-repo",
+      "href": "/resources/guides/why-multiple-fixtures-can-reduce-well-water-flow/",
+      "image": "/images/resources/guide-why-multiple-fixtures-can-reduce-well-water-flow.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "When Low Pressure May Indicate a Pump Problem",
+      "hub": "water-pressure",
+      "status": "in-repo",
+      "href": "/resources/guides/when-low-pressure-may-indicate-a-pump-problem/",
+      "image": "/images/resources/guide-when-low-pressure-may-indicate-a-pump-problem.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "How Does a Residential Well Pump System Work?",
+      "hub": "well-system-components",
+      "status": "in-repo",
+      "href": "/resources/guides/how-residential-well-pump-system-works/",
+      "image": "/images/resources/guide-how-residential-well-pump-system-works.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Submersible Well Pumps Versus Jet Pumps",
+      "hub": "well-system-components",
+      "status": "in-repo",
+      "href": "/resources/guides/submersible-well-pumps-vs-jet-pumps/",
+      "image": "/images/resources/guide-submersible-well-pumps-vs-jet-pumps.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "What Does a Well Pressure Tank Do?",
+      "hub": "well-system-components",
+      "status": "in-repo",
+      "href": "/resources/guides/what-a-well-pressure-tank-does/",
+      "image": "/images/resources/guide-what-a-well-pressure-tank-does.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "How Does a Well Pressure Switch Work?",
+      "hub": "well-system-components",
+      "status": "in-repo",
+      "href": "/resources/guides/how-a-well-pressure-switch-works/",
+      "image": "/images/resources/guide-how-a-well-pressure-switch-works.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "What Is a Well Pump Control Box?",
+      "hub": "well-system-components",
+      "status": "in-repo",
+      "href": "/resources/guides/what-is-a-well-pump-control-box/",
+      "image": "/images/resources/guide-what-is-a-well-pump-control-box.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "What Does a Well Pump Capacitor Do?",
+      "hub": "well-system-components",
+      "status": "in-repo",
+      "href": "/resources/guides/what-a-well-pump-capacitor-does/",
+      "image": "/images/resources/guide-what-a-well-pump-capacitor-does.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "What Is a Pitless Adapter?",
+      "hub": "well-system-components",
+      "status": "in-repo",
+      "href": "/resources/guides/what-is-a-pitless-adapter/",
+      "image": "/images/resources/guide-what-is-a-pitless-adapter.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Why Are Check Valves Used in Well Systems?",
+      "hub": "well-system-components",
+      "status": "in-repo",
+      "href": "/resources/guides/why-check-valves-are-used-in-well-systems/",
+      "image": "/images/resources/guide-why-check-valves-are-used-in-well-systems.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "What Are Drop Pipe and Pump Wire?",
+      "hub": "well-system-components",
+      "status": "in-repo",
+      "href": "/resources/guides/what-are-drop-pipe-and-pump-wire/",
+      "image": "/images/resources/guide-what-are-drop-pipe-and-pump-wire.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "What Is the Purpose of a Well Cap or Seal?",
+      "hub": "well-system-components",
+      "status": "in-repo",
+      "href": "/resources/guides/purpose-of-a-well-cap-or-seal/",
+      "image": "/images/resources/guide-purpose-of-a-well-cap-or-seal.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "What Does a Well-System Pressure Gauge Show?",
+      "hub": "well-system-components",
+      "status": "in-repo",
+      "href": "/resources/guides/what-a-well-system-pressure-gauge-shows/",
+      "image": "/images/resources/guide-what-a-well-system-pressure-gauge-shows.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Which Well Components Are Located Inside the House?",
+      "hub": "well-system-components",
+      "status": "in-repo",
+      "href": "/resources/guides/which-well-components-are-inside-the-house/",
+      "image": "/images/resources/guide-which-well-components-are-inside-the-house.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "What Information Does a Well Pump Technician Need?",
+      "hub": "maintenance-and-planning",
+      "status": "in-repo",
+      "href": "/resources/guides/what-information-does-a-well-pump-technician-need/",
+      "image": "/images/resources/guide-what-information-does-a-well-pump-technician-need.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "What Photos Should You Send Before Well Pump Service?",
+      "hub": "maintenance-and-planning",
+      "status": "in-repo",
+      "href": "/resources/guides/what-photos-should-you-send-before-well-pump-service/",
+      "image": "/images/resources/guide-what-photos-should-you-send-before-well-pump-service.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "How to Locate the Well Head on Your Property",
+      "hub": "maintenance-and-planning",
+      "status": "in-repo",
+      "href": "/resources/guides/how-to-locate-the-well-head-on-your-property/",
+      "image": "/images/resources/guide-how-to-locate-the-well-head-on-your-property.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "How to Prepare Access for a Well Pump Service Truck",
+      "hub": "maintenance-and-planning",
+      "status": "in-repo",
+      "href": "/resources/guides/how-to-prepare-access-for-a-well-pump-service-truck/",
+      "image": "/images/resources/guide-how-to-prepare-access-for-a-well-pump-service-truck.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "What to Do When a Well Pump Stops Working",
+      "hub": "maintenance-and-planning",
+      "status": "in-repo",
+      "href": "/resources/guides/what-to-do-when-a-well-pump-stops-working/",
+      "image": "/images/resources/guide-what-to-do-when-a-well-pump-stops-working.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "How Long Can Well Pump Replacement Take?",
+      "hub": "maintenance-and-planning",
+      "status": "in-repo",
+      "href": "/resources/guides/how-long-can-well-pump-replacement-take/",
+      "image": "/images/resources/guide-how-long-can-well-pump-replacement-take.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "What Well-System Maintenance Should Homeowners Track?",
+      "hub": "maintenance-and-planning",
+      "status": "in-repo",
+      "href": "/resources/guides/what-well-system-maintenance-should-homeowners-track/",
+      "image": "/images/resources/guide-what-well-system-maintenance-should-homeowners-track.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "How to Protect Accessible Well Components During Freezing Weather",
+      "hub": "maintenance-and-planning",
+      "status": "in-repo",
+      "href": "/resources/guides/how-to-protect-accessible-well-components-during-freezing-weather/",
+      "image": "/images/resources/guide-how-to-protect-accessible-well-components-during-freezing-weather.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "What to Check After a Storm or Power Outage",
+      "hub": "maintenance-and-planning",
+      "status": "in-repo",
+      "href": "/resources/guides/what-to-check-after-a-storm-or-power-outage/",
+      "image": "/images/resources/guide-what-to-check-after-a-storm-or-power-outage.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "When Should a Pressure Tank Be Evaluated?",
+      "hub": "maintenance-and-planning",
+      "status": "in-repo",
+      "href": "/resources/guides/when-should-a-pressure-tank-be-evaluated/",
+      "image": "/images/resources/guide-when-should-a-pressure-tank-be-evaluated.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Questions to Ask Before Buying a Home With a Private Well",
+      "hub": "maintenance-and-planning",
+      "status": "in-repo",
+      "href": "/resources/guides/questions-to-ask-before-buying-a-home-with-a-private-well/",
+      "image": "/images/resources/guide-questions-to-ask-before-buying-a-home-with-a-private-well.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "What Well-System Records Should a Property Owner Keep?",
+      "hub": "maintenance-and-planning",
+      "status": "in-repo",
+      "href": "/resources/guides/what-well-system-records-should-a-property-owner-keep/",
+      "image": "/images/resources/guide-what-well-system-records-should-a-property-owner-keep.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Well Pump Planning for a Rural Home",
+      "hub": "rural-well-projects",
+      "status": "in-repo",
+      "href": "/resources/guides/rural-home-well-pump-planning/",
+      "image": "/images/resources/guide-rural-home-well-pump-planning.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Well-Water Systems for Cabins and Seasonal Properties",
+      "hub": "rural-well-projects",
+      "status": "in-repo",
+      "href": "/resources/guides/cabin-seasonal-well-water-systems/",
+      "image": "/images/resources/guide-cabin-seasonal-well-water-systems.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Well Pump Considerations for Farms and Livestock",
+      "hub": "rural-well-projects",
+      "status": "in-repo",
+      "href": "/resources/guides/farm-livestock-well-pump-considerations/",
+      "image": "/images/resources/guide-farm-livestock-well-pump-considerations.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Planning Well Water for a New Rural Home",
+      "hub": "rural-well-projects",
+      "status": "in-repo",
+      "href": "/resources/guides/new-rural-home-well-water-planning/",
+      "image": "/images/resources/guide-new-rural-home-well-water-planning.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Supplying Water to a Detached Garage or Workshop",
+      "hub": "rural-well-projects",
+      "status": "in-repo",
+      "href": "/resources/guides/water-supply-detached-garage-workshop/",
+      "image": "/images/resources/guide-water-supply-detached-garage-workshop.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Well-Pump Considerations for Long Water-Line Runs",
+      "hub": "rural-well-projects",
+      "status": "in-repo",
+      "href": "/resources/guides/long-water-line-run-well-pump/",
+      "image": "/images/resources/guide-long-water-line-run-well-pump.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Improving Water Pressure Across a Large Property",
+      "hub": "rural-well-projects",
+      "status": "in-repo",
+      "href": "/resources/guides/improving-water-pressure-large-property/",
+      "image": "/images/resources/guide-improving-water-pressure-large-property.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Preparing Remote Property Access for Pump Service",
+      "hub": "rural-well-projects",
+      "status": "in-repo",
+      "href": "/resources/guides/remote-property-access-pump-service/",
+      "image": "/images/resources/guide-remote-property-access-pump-service.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Backup Water Planning During Power Outages",
+      "hub": "rural-well-projects",
+      "status": "in-repo",
+      "href": "/resources/guides/backup-water-power-outage-planning/",
+      "image": "/images/resources/guide-backup-water-power-outage-planning.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Well Houses: Access, Ventilation and Freeze Protection",
+      "hub": "rural-well-projects",
+      "status": "in-repo",
+      "href": "/resources/guides/well-house-access-ventilation-freeze-protection/",
+      "image": "/images/resources/guide-well-house-access-ventilation-freeze-protection.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Evaluating an Older Well System on Rural Property",
+      "hub": "rural-well-projects",
+      "status": "in-repo",
+      "href": "/resources/guides/evaluating-older-well-system-rural/",
+      "image": "/images/resources/guide-evaluating-older-well-system-rural.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "What to Know Before Buying Undeveloped Land With a Well",
+      "hub": "rural-well-projects",
+      "status": "in-repo",
+      "href": "/resources/guides/buying-undeveloped-land-with-well/",
+      "image": "/images/resources/guide-buying-undeveloped-land-with-well.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Private Well and Pump Guide for Upper Cumberland Property Owners",
+      "hub": "upper-cumberland-well-guide",
+      "status": "in-repo",
+      "href": "/resources/guides/private-well-pump-guide-upper-cumberland/",
+      "image": "/images/resources/guide-private-well-pump-guide-upper-cumberland.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Common Well Pump Problems Around Cookeville",
+      "hub": "upper-cumberland-well-guide",
+      "status": "in-repo",
+      "href": "/resources/guides/common-well-pump-problems-cookeville/",
+      "image": "/images/resources/guide-common-well-pump-problems-cookeville.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Preparing a Rural Well System for Freezing Weather",
+      "hub": "upper-cumberland-well-guide",
+      "status": "in-repo",
+      "href": "/resources/guides/preparing-rural-well-freezing-weather/",
+      "image": "/images/resources/guide-preparing-rural-well-freezing-weather.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "How Power Outages Can Affect Private Well Systems",
+      "hub": "upper-cumberland-well-guide",
+      "status": "in-repo",
+      "href": "/resources/guides/power-outages-private-well-systems/",
+      "image": "/images/resources/guide-power-outages-private-well-systems.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Well Pump Service on Steep or Hard-to-Access Property",
+      "hub": "upper-cumberland-well-guide",
+      "status": "in-repo",
+      "href": "/resources/guides/well-pump-service-steep-hard-access-property/",
+      "image": "/images/resources/guide-well-pump-service-steep-hard-access-property.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Evaluating a Private Well Before Buying Rural Tennessee Property",
+      "hub": "upper-cumberland-well-guide",
+      "status": "in-repo",
+      "href": "/resources/guides/evaluating-private-well-before-buying-rural-tennessee/",
+      "image": "/images/resources/guide-evaluating-private-well-before-buying-rural-tennessee.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Well-System Considerations for Cabins and Seasonal Homes",
+      "hub": "upper-cumberland-well-guide",
+      "status": "in-repo",
+      "href": "/resources/guides/well-system-cabins-seasonal-homes/",
+      "image": "/images/resources/guide-well-system-cabins-seasonal-homes.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Planning Water Service Across Large Rural Acreage",
+      "hub": "upper-cumberland-well-guide",
+      "status": "in-repo",
+      "href": "/resources/guides/planning-water-service-large-rural-acreage/",
+      "image": "/images/resources/guide-planning-water-service-large-rural-acreage.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Questions to Ask About an Existing Well System",
+      "hub": "upper-cumberland-well-guide",
+      "status": "in-repo",
+      "href": "/resources/guides/questions-to-ask-existing-well-system/",
+      "image": "/images/resources/guide-questions-to-ask-existing-well-system.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "What Well-System Records Should Transfer With a Property?",
+      "hub": "upper-cumberland-well-guide",
+      "status": "in-repo",
+      "href": "/resources/guides/well-system-records-transfer-with-property/",
+      "image": "/images/resources/guide-well-system-records-transfer-with-property.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Preparing a Well System for Increased Household Demand",
+      "hub": "upper-cumberland-well-guide",
+      "status": "in-repo",
+      "href": "/resources/guides/preparing-well-system-increased-household-demand/",
+      "image": "/images/resources/guide-preparing-well-system-increased-household-demand.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "When Rural Property Access Can Affect Pump Service",
+      "hub": "upper-cumberland-well-guide",
+      "status": "in-repo",
+      "href": "/resources/guides/rural-property-access-pump-service/",
+      "image": "/images/resources/guide-rural-property-access-pump-service.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    }
+  ]
+}

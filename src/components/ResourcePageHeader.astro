@@ -1,0 +1,62 @@
+---
+/**
+ * Shared header for resource pages: navy page hero (eyebrow + single H1),
+ * visible breadcrumbs, featured-image slot and introductory copy.
+ * Mirrors the ServicePage hero so resource pages match the site exactly.
+ */
+import Breadcrumbs from "./Breadcrumbs.astro";
+import ResourceFeaturedImage from "./ResourceFeaturedImage.astro";
+import type { Crumb } from "../utils/schema";
+import type { ResourceImage } from "../data/resources";
+
+interface Props {
+  h1: string;
+  eyebrow?: string;
+  crumbs: Crumb[];
+  intro: readonly string[];
+  image: ResourceImage;
+}
+const { h1, eyebrow = "Well Pump Resources", crumbs, intro, image } = Astro.props;
+---
+
+<div class="page-hero">
+  <div class="container">
+    <p class="page-hero__eyebrow">{eyebrow}</p>
+    <h1>{h1}</h1>
+  </div>
+</div>
+
+<Breadcrumbs crumbs={crumbs} />
+
+<div class="container resource-header__body">
+  <ResourceFeaturedImage image={image} />
+  {intro.map((paragraph) => <p class="resource-header__intro">{paragraph}</p>)}
+</div>
+
+<style>
+  .page-hero {
+    background: linear-gradient(160deg, var(--navy-deep), var(--navy) 70%, var(--blue));
+    color: var(--white);
+    padding-block: clamp(2.5rem, 6vw, 4rem);
+  }
+  .page-hero h1 {
+    color: var(--white);
+    margin-bottom: 0;
+  }
+  .page-hero__eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: #9fd7a8;
+    margin-bottom: 0.5rem;
+  }
+  .resource-header__body {
+    max-width: 860px;
+    padding-top: 0.5rem;
+  }
+  .resource-header__intro {
+    font-size: 1.1rem;
+    max-width: 50rem;
+  }
+</style>

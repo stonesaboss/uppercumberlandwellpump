@@ -51,10 +51,7 @@ const {
   isService = true,
 } = Astro.props;
 
-const schema: object[] = [
-  webPageSchema({ path, title, description }),
-  breadcrumbSchema(crumbs),
-];
+const schema: object[] = [webPageSchema({ path, title, description }), breadcrumbSchema(crumbs)];
 if (isService) {
   schema.push(serviceSchema({ path, name: h1, description }));
 }

@@ -24,10 +24,11 @@
   --cta-text-green: #c4e3c4;
 
   /* Typography */
-  --font-heading: "Arial Narrow", "Helvetica Neue Condensed", "Roboto Condensed",
-    Impact, "Segoe UI", Arial, sans-serif;
-  --font-body: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto,
-    "Helvetica Neue", Arial, sans-serif;
+  --font-heading:
+    "Arial Narrow", "Helvetica Neue Condensed", "Roboto Condensed", Impact, "Segoe UI", Arial,
+    sans-serif;
+  --font-body:
+    "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Arial, sans-serif;
 
   /* Layout */
   --max-width: 1180px;
@@ -209,7 +210,10 @@ a:hover {
   text-decoration: none;
   text-align: center;
   min-height: 48px;
-  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease,
+    border-color 0.15s ease;
 }
 
 /* CTA text uses visibly tinted palette colors rather than white —

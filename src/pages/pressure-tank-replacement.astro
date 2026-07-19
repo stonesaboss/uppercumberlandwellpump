@@ -1,5 +1,6 @@
 ---
 import ServicePage from "../layouts/ServicePage.astro";
+import HelpfulGuides from "../components/HelpfulGuides.astro";
 import type { Faq } from "../data/faqs";
 
 const faqs: Faq[] = [
@@ -43,19 +44,34 @@ const faqs: Faq[] = [
   <p>
     The pressure tank is the unsung part of a private well system. It stores a cushion of
     pressurized water so the pump doesn't have to start every time someone opens a tap, and it
-    smooths delivery between pump cycles. When the tank fails, the symptoms often get blamed on
-    the pump — which is why an honest evaluation looks at both.
+    smooths delivery between pump cycles. When the tank fails, the symptoms often get blamed on the
+    pump — which is why an honest evaluation looks at both.
   </p>
 
   <h2>Symptoms That Point Toward the Pressure Tank</h2>
   <ul>
-    <li><strong>Rapid cycling</strong> — the pump clicking on and off every few seconds while water runs.</li>
+    <li>
+      <strong>Rapid cycling</strong> — the pump clicking on and off every few seconds while water runs.
+    </li>
     <li><strong>Unstable pressure</strong> — surging strong-weak-strong at fixtures.</li>
-    <li><strong>Waterlogged tank</strong> — the tank has lost its air cushion and filled with water; it may feel heavy at the top when it shouldn't.</li>
-    <li><strong>Visible corrosion or leaks</strong> — rust at seams, fittings or the base of the tank.</li>
-    <li><strong>Air-charge problems</strong> — the pre-charge no longer matches the pressure-switch settings.</li>
-    <li><strong>Pressure-switch concerns</strong> — chattering or clicking at the switch, often interacting with tank problems.</li>
-    <li><strong>Lost drawdown</strong> — the tank technically holds pressure but stores almost no usable water, so the pump runs constantly.</li>
+    <li>
+      <strong>Waterlogged tank</strong> — the tank has lost its air cushion and filled with water; it
+      may feel heavy at the top when it shouldn't.
+    </li>
+    <li>
+      <strong>Visible corrosion or leaks</strong> — rust at seams, fittings or the base of the tank.
+    </li>
+    <li>
+      <strong>Air-charge problems</strong> — the pre-charge no longer matches the pressure-switch settings.
+    </li>
+    <li>
+      <strong>Pressure-switch concerns</strong> — chattering or clicking at the switch, often interacting
+      with tank problems.
+    </li>
+    <li>
+      <strong>Lost drawdown</strong> — the tank technically holds pressure but stores almost no usable
+      water, so the pump runs constantly.
+    </li>
   </ul>
   <p>
     None of these confirm the tank by themselves — leaks, pump problems and control faults can
@@ -65,18 +81,18 @@ const faqs: Faq[] = [
   <h2>Bladder Tanks and Air-Charge Basics</h2>
   <p>
     Most modern tanks are <strong>bladder or diaphragm tanks</strong>: a rubber membrane separates
-    pressurized air from the water. When the membrane fails, water takes over the air space and
-    the cushion disappears. Older galvanized tanks manage the air-water balance differently and
-    have their own failure modes. Knowing which type sits in your well house (a photo of the
-    label helps) speeds up the conversation with the provider.
+    pressurized air from the water. When the membrane fails, water takes over the air space and the
+    cushion disappears. Older galvanized tanks manage the air-water balance differently and have
+    their own failure modes. Knowing which type sits in your well house (a photo of the label helps)
+    speeds up the conversation with the provider.
   </p>
 
   <h2>Tank Sizing Is a System Decision</h2>
   <p>
-    A replacement tank is sized to the pump's flow rate, the pressure settings and how the
-    property draws water — a weekend cabin, a family of six and a cattle operation need different
-    drawdown. The tank and pump work as a pair: the right tank extends pump life by reducing
-    starts. This is also why a tank evaluation is standard during
+    A replacement tank is sized to the pump's flow rate, the pressure settings and how the property
+    draws water — a weekend cabin, a family of six and a cattle operation need different drawdown.
+    The tank and pump work as a pair: the right tank extends pump life by reducing starts. This is
+    also why a tank evaluation is standard during
     <a href="/well-pump-replacement/">pump replacement</a>.
   </p>
 
@@ -87,4 +103,21 @@ const faqs: Faq[] = [
     anything electrical to the provider. This site does not provide DIY electrical or plumbing
     instructions.
   </p>
+
+  <HelpfulGuides
+    links={[
+      {
+        label: "How the pressure tank fits into pressure and flow",
+        href: "/resources/water-pressure/",
+      },
+      {
+        label: "Tanks, switches and gauges in the complete system",
+        href: "/resources/well-system-components/",
+      },
+      {
+        label: "What can affect pressure-equipment service scope",
+        href: "/resources/well-pump-costs/",
+      },
+    ]}
+  />
 </ServicePage>

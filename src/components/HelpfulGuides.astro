@@ -1,0 +1,52 @@
+---
+/**
+ * Compact "Helpful Guides" block for existing service pages, linking to the
+ * two or three most relevant resource hubs with descriptive anchor text.
+ * Deliberately understated so it supports rather than competes with the
+ * page's service-request CTA.
+ */
+interface GuideLink {
+  label: string;
+  href: string;
+}
+
+interface Props {
+  heading?: string;
+  links: GuideLink[];
+}
+const { heading = "Helpful Well Pump Guides", links } = Astro.props;
+---
+
+<aside class="helpful-guides" aria-label={heading}>
+  <h2>{heading}</h2>
+  <ul>
+    {
+      links.map((link) => (
+        <li>
+          <a href={link.href}>{link.label}</a>
+        </li>
+      ))
+    }
+  </ul>
+</aside>
+
+<style>
+  .helpful-guides {
+    border-left: 4px solid var(--blue);
+    background: var(--blue-light);
+    border-radius: var(--radius-sm);
+    padding: 1.1rem 1.4rem;
+    margin-block: 1.75rem;
+  }
+  .helpful-guides h2 {
+    font-size: 1.15rem;
+    margin-bottom: 0.6rem;
+  }
+  .helpful-guides ul {
+    margin: 0;
+    padding-left: 1.3rem;
+  }
+  .helpful-guides li {
+    margin-bottom: 0.4rem;
+  }
+</style>

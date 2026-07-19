@@ -1,5 +1,6 @@
 ---
 import ServicePage from "../layouts/ServicePage.astro";
+import HelpfulGuides from "../components/HelpfulGuides.astro";
 import type { Faq } from "../data/faqs";
 
 const faqs: Faq[] = [
@@ -42,50 +43,91 @@ const faqs: Faq[] = [
   ]}
 >
   <p>
-    Every well pump eventually reaches the point where fixing it again stops making sense. Maybe
-    it is the third service call in two years, maybe the motor finally shorted, or maybe the
-    household outgrew what the pump was sized for twenty years ago. This page is for Upper
-    Cumberland property owners weighing that decision — and for requesting an evaluation from an
-    independent local provider who can look at the actual system.
+    Every well pump eventually reaches the point where fixing it again stops making sense. Maybe it
+    is the third service call in two years, maybe the motor finally shorted, or maybe the household
+    outgrew what the pump was sized for twenty years ago. This page is for Upper Cumberland property
+    owners weighing that decision — and for requesting an evaluation from an independent local
+    provider who can look at the actual system.
   </p>
 
   <h2>Repair or Replace? The Factors That Matter</h2>
-  <p>
-    Age alone doesn't decide it. Providers typically weigh:
-  </p>
+  <p>Age alone doesn't decide it. Providers typically weigh:</p>
   <ul>
-    <li><strong>What failed</strong> — a pressure switch or control box is routinely repairable; a burned-out submersible motor usually is not.</li>
-    <li><strong>Failure history</strong> — repeated breakdowns shift the math toward replacement.</li>
-    <li><strong>Repair cost versus replacement cost</strong> — pulling a deep submersible pump is labor-intensive either way, which can tilt the decision once the pump is out of the well.</li>
-    <li><strong>System fit</strong> — a pump that never matched the well's yield or the property's demand may be worth replacing even if it still runs.</li>
-    <li><strong>Well condition</strong> — a usable well with a bad pump needs a pump; a compromised well is a different conversation (see <a href="/water-well-drilling/">water well drilling</a>).</li>
+    <li>
+      <strong>What failed</strong> — a pressure switch or control box is routinely repairable; a burned-out
+      submersible motor usually is not.
+    </li>
+    <li>
+      <strong>Failure history</strong> — repeated breakdowns shift the math toward replacement.
+    </li>
+    <li>
+      <strong>Repair cost versus replacement cost</strong> — pulling a deep submersible pump is labor-intensive
+      either way, which can tilt the decision once the pump is out of the well.
+    </li>
+    <li>
+      <strong>System fit</strong> — a pump that never matched the well's yield or the property's demand
+      may be worth replacing even if it still runs.
+    </li>
+    <li>
+      <strong>Well condition</strong> — a usable well with a bad pump needs a pump; a compromised well
+      is a different conversation (see <a href="/water-well-drilling/">water well drilling</a>).
+    </li>
   </ul>
 
   <h2>Submersible, Jet and Constant-Pressure Terminology</h2>
   <p>
-    Most drilled wells in the region run <strong>submersible pumps</strong> — the motor and pump
-    sit down in the well on a drop pipe. Shallower or older wells sometimes use
-    <strong>jet pumps</strong> mounted above ground. Replacement is also the natural moment to ask
-    about <a href="/constant-pressure-well-pump-systems/">constant-pressure systems</a>, which
-    vary pump speed to hold steadier pressure. Which option fits depends on well depth, yield,
-    electrical service and how the property uses water.
+    Most drilled wells in the region run <strong>submersible pumps</strong> — the motor and pump sit down
+    in the well on a drop pipe. Shallower or older wells sometimes use
+    <strong>jet pumps</strong> mounted above ground. Replacement is also the natural moment to ask about
+    <a href="/constant-pressure-well-pump-systems/">constant-pressure systems</a>, which vary pump
+    speed to hold steadier pressure. Which option fits depends on well depth, yield, electrical
+    service and how the property uses water.
   </p>
 
   <h2>What Shapes the Scope of a Replacement</h2>
   <ul>
-    <li><strong>Well depth and access</strong> — deeper pump settings mean more drop pipe, more wire and more pulling work.</li>
-    <li><strong>Capacity and compatibility</strong> — the new pump must fit the well's yield and the household or farm demand; oversizing causes cycling, undersizing causes pressure complaints.</li>
-    <li><strong>Pressure equipment</strong> — the tank, switch and controls are checked because they directly affect the new pump's lifespan.</li>
-    <li><strong>Electrical condition</strong> — wiring, splices and the control box may need attention during the swap.</li>
+    <li>
+      <strong>Well depth and access</strong> — deeper pump settings mean more drop pipe, more wire and
+      more pulling work.
+    </li>
+    <li>
+      <strong>Capacity and compatibility</strong> — the new pump must fit the well's yield and the household
+      or farm demand; oversizing causes cycling, undersizing causes pressure complaints.
+    </li>
+    <li>
+      <strong>Pressure equipment</strong> — the tank, switch and controls are checked because they directly
+      affect the new pump's lifespan.
+    </li>
+    <li>
+      <strong>Electrical condition</strong> — wiring, splices and the control box may need attention during
+      the swap.
+    </li>
   </ul>
 
   <h2>Requesting an Evaluation</h2>
   <p>
     Use the form on this page and choose "Well Pump Replacement." Include anything known about the
     system — pump type, well depth, service history — and describe the failure pattern. An
-    independent provider evaluates the pump, controls, pressure system and well before
-    recommending repair or replacement, and independently sets pricing and terms. Verify the
-    provider's current Tennessee license on the
+    independent provider evaluates the pump, controls, pressure system and well before recommending
+    repair or replacement, and independently sets pricing and terms. Verify the provider's current
+    Tennessee license on the
     <a href="/licensing-information/">licensing information page</a> before work begins.
   </p>
+
+  <HelpfulGuides
+    links={[
+      {
+        label: "Which conditions shape pump replacement scope and cost",
+        href: "/resources/well-pump-costs/",
+      },
+      {
+        label: "Understanding submersible pumps, tanks and controls",
+        href: "/resources/well-system-components/",
+      },
+      {
+        label: "Preparing your property and records for pump service",
+        href: "/resources/maintenance-and-planning/",
+      },
+    ]}
+  />
 </ServicePage>

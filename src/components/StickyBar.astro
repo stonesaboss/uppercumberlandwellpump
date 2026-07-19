@@ -5,7 +5,11 @@ import { SITE } from "../data/site";
 <div class="sticky-bar" data-sticky-bar>
   {
     SITE.phone.tel ? (
-      <a href={`tel:${SITE.phone.tel}`} class="sticky-bar__btn sticky-bar__btn--call" data-event="sticky_phone_click">
+      <a
+        href={`tel:${SITE.phone.tel}`}
+        class="sticky-bar__btn sticky-bar__btn--call"
+        data-event="sticky_phone_click"
+      >
         Call
       </a>
     ) : (
@@ -14,7 +18,11 @@ import { SITE } from "../data/site";
       </a>
     )
   }
-  <a href="/request-service/" class="sticky-bar__btn sticky-bar__btn--request" data-event="sticky_request_cta">
+  <a
+    href="/request-service/"
+    class="sticky-bar__btn sticky-bar__btn--request"
+    data-event="sticky_request_cta"
+  >
     Request Service
   </a>
 </div>

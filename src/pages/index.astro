@@ -11,10 +11,7 @@ const title = "Well Pump Repair & Water Well Service | Upper Cumberland TN";
 const description =
   "Request help with well-pump repair, no-water problems, pump replacement, pressure tanks and water-well services in Cookeville and Upper Cumberland, TN.";
 
-const schema = [
-  webPageSchema({ path: "/", title, description }),
-  faqSchema(HOME_FAQS),
-];
+const schema = [webPageSchema({ path: "/", title, description }), faqSchema(HOME_FAQS)];
 
 const serviceCards = [
   {
@@ -139,8 +136,8 @@ const steps = [
         <p class="hero__eyebrow">Upper Cumberland Well-Pump Service</p>
         <h1>Well Pump Repair &amp;<br />Water Well Service</h1>
         <p class="hero__sub">
-          Request help for no-water problems, failed well pumps, low water pressure, pressure
-          tanks, pump replacement and water-well services throughout <strong>Cookeville</strong>
+          Request help for no-water problems, failed well pumps, low water pressure, pressure tanks,
+          pump replacement and water-well services throughout <strong>Cookeville</strong>
           and the <strong>Upper Cumberland</strong>.
         </p>
         <div class="hero__ctas">
@@ -260,11 +257,13 @@ const steps = [
       <div class="nowater__checklist card">
         <h3>Before you submit, it helps to know:</h3>
         <ul>
-          {noWaterQuestions.map((q) => (
-            <li>
-              <Icon name="check" size={18} /> <span>{q}</span>
-            </li>
-          ))}
+          {
+            noWaterQuestions.map((q) => (
+              <li>
+                <Icon name="check" size={18} /> <span>{q}</span>
+              </li>
+            ))
+          }
         </ul>
         <p class="fine-print" style="margin-bottom: 0;">
           Only observe what is safely visible. Do not open electrical panels, handle wiring or
@@ -277,9 +276,7 @@ const steps = [
   <!-- SECTION 5 — REPAIR OR REPLACE -->
   <section class="section" aria-labelledby="repair-replace-heading">
     <div class="container">
-      <h2 id="repair-replace-heading" class="section-heading">
-        Well Pump Repair or Replacement?
-      </h2>
+      <h2 id="repair-replace-heading" class="section-heading">Well Pump Repair or Replacement?</h2>
       <div class="compare-grid">
         <div class="card">
           <h3>Repair May Be Appropriate When:</h3>
@@ -448,12 +445,10 @@ const steps = [
           <h3>What to Expect Honestly</h3>
           <p>
             Drilling depth, water yield and final cost cannot be promised in advance by a website.
-            Site conditions vary from property to property, and an appropriately licensed driller
-            or installer evaluates the project before committing to specifics.
+            Site conditions vary from property to property, and an appropriately licensed driller or
+            installer evaluates the project before committing to specifics.
           </p>
-          <p>
-            Explore the details on each project page:
-          </p>
+          <p>Explore the details on each project page:</p>
           <ul>
             <li><a href="/water-well-drilling/">Water Well Drilling in Upper Cumberland</a></li>
             <li><a href="/well-pump-installation/">Well Pump Installation</a></li>
@@ -534,9 +529,9 @@ const steps = [
           </ul>
           <div class="disclosure-box disclosure-box--warn" style="margin-bottom: 0;">
             <p style="margin: 0;">
-              Appearance, odor or taste alone cannot diagnose contamination, and no treatment
-              device should be assumed to make water safe without appropriate testing and
-              professional evaluation.
+              Appearance, odor or taste alone cannot diagnose contamination, and no treatment device
+              should be assumed to make water safe without appropriate testing and professional
+              evaluation.
             </p>
           </div>
         </div>
@@ -555,9 +550,9 @@ const steps = [
       <div>
         <h2 id="cp-heading">Constant-Pressure Well Pump Systems</h2>
         <p>
-          Constant-pressure equipment may help eligible properties maintain steadier pressure
-          across changing household or property demand. Suitability depends on the existing well,
-          pump, electrical system, plumbing, water demand and provider assessment.
+          Constant-pressure equipment may help eligible properties maintain steadier pressure across
+          changing household or property demand. Suitability depends on the existing well, pump,
+          electrical system, plumbing, water demand and provider assessment.
         </p>
         <p>Common reasons people ask about constant-pressure systems:</p>
         <ul class="check-list">
@@ -619,8 +614,8 @@ const steps = [
           <div class="card area-card area-card--primary">
             <h3><Icon name="pin" size={20} /> Cookeville &amp; Putnam County</h3>
             <p>
-              The primary content and lead-generation hub for pump repair, urgent no-water
-              requests, replacement, pressure tanks and related water-well services.
+              The primary content and lead-generation hub for pump repair, urgent no-water requests,
+              replacement, pressure tanks and related water-well services.
             </p>
             <a href="/well-pump-repair-cookeville-tn/" class="card-link">
               Well Pump Repair in Cookeville
@@ -687,7 +682,12 @@ const steps = [
   /* HERO */
   .hero {
     background-image:
-      linear-gradient(100deg, rgba(7, 31, 58, 0.92) 0%, rgba(12, 49, 88, 0.75) 45%, rgba(7, 31, 58, 0.35) 100%),
+      linear-gradient(
+        100deg,
+        rgba(7, 31, 58, 0.92) 0%,
+        rgba(12, 49, 88, 0.75) 45%,
+        rgba(7, 31, 58, 0.35) 100%
+      ),
       url("/images/hero/well-pump-rural-service-desktop.webp");
     background-size: cover;
     background-position: center;
@@ -697,7 +697,12 @@ const steps = [
   @media (max-width: 767px) {
     .hero {
       background-image:
-        linear-gradient(100deg, rgba(7, 31, 58, 0.94) 0%, rgba(12, 49, 88, 0.82) 52%, rgba(7, 31, 58, 0.62) 100%),
+        linear-gradient(
+          100deg,
+          rgba(7, 31, 58, 0.94) 0%,
+          rgba(12, 49, 88, 0.82) 52%,
+          rgba(7, 31, 58, 0.62) 100%
+        ),
         url("/images/hero/well-pump-rural-service-mobile.webp");
       background-position: center;
     }

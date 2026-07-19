@@ -1,5 +1,6 @@
 ---
 import ServicePage from "../layouts/ServicePage.astro";
+import HelpfulGuides from "../components/HelpfulGuides.astro";
 import type { Faq } from "../data/faqs";
 
 const faqs: Faq[] = [
@@ -41,24 +42,50 @@ const faqs: Faq[] = [
   ]}
 >
   <p>
-    Weak showers, a washing machine that takes forever to fill, sprinklers that barely reach —
-    low pressure on a private well is one of the most common complaints in the Upper Cumberland,
-    and one of the least straightforward. Unlike a dead pump, low pressure has a long suspect
-    list, and honest troubleshooting means keeping every suspect on it until the system is
-    examined.
+    Weak showers, a washing machine that takes forever to fill, sprinklers that barely reach — low
+    pressure on a private well is one of the most common complaints in the Upper Cumberland, and one
+    of the least straightforward. Unlike a dead pump, low pressure has a long suspect list, and
+    honest troubleshooting means keeping every suspect on it until the system is examined.
   </p>
 
   <h2>The Suspect List</h2>
   <ul>
-    <li><strong>Pump output</strong> — a worn pump, or one that was never sized for the demand, delivers less than the plumbing expects.</li>
-    <li><strong>Pressure settings</strong> — the cut-in/cut-out range at the switch defines the pressure you feel; wrong or drifted settings feel like weak water.</li>
-    <li><strong>Pressure-tank condition</strong> — a failing tank causes surging and sag between cycles (see <a href="/pressure-tank-replacement/">pressure tank replacement</a>).</li>
-    <li><strong>Clogged filters</strong> — whole-house sediment filters quietly strangle flow as they load up.</li>
-    <li><strong>Plumbing restrictions</strong> — scaled or corroded pipe, partially closed valves, undersized lines on additions.</li>
-    <li><strong>Leaks</strong> — underground line leaks between the well and the house bleed pressure constantly and can also make the pump cycle.</li>
-    <li><strong>Well yield</strong> — the well itself may recover water more slowly than the household draws it, especially in dry spells.</li>
-    <li><strong>High property demand</strong> — new bathrooms, irrigation or livestock watering added since the system was designed.</li>
-    <li><strong>Treatment equipment</strong> — softeners and filtration systems add pressure drop, more as media ages.</li>
+    <li>
+      <strong>Pump output</strong> — a worn pump, or one that was never sized for the demand, delivers
+      less than the plumbing expects.
+    </li>
+    <li>
+      <strong>Pressure settings</strong> — the cut-in/cut-out range at the switch defines the pressure
+      you feel; wrong or drifted settings feel like weak water.
+    </li>
+    <li>
+      <strong>Pressure-tank condition</strong> — a failing tank causes surging and sag between cycles
+      (see <a href="/pressure-tank-replacement/">pressure tank replacement</a>).
+    </li>
+    <li>
+      <strong>Clogged filters</strong> — whole-house sediment filters quietly strangle flow as they load
+      up.
+    </li>
+    <li>
+      <strong>Plumbing restrictions</strong> — scaled or corroded pipe, partially closed valves, undersized
+      lines on additions.
+    </li>
+    <li>
+      <strong>Leaks</strong> — underground line leaks between the well and the house bleed pressure constantly
+      and can also make the pump cycle.
+    </li>
+    <li>
+      <strong>Well yield</strong> — the well itself may recover water more slowly than the household draws
+      it, especially in dry spells.
+    </li>
+    <li>
+      <strong>High property demand</strong> — new bathrooms, irrigation or livestock watering added since
+      the system was designed.
+    </li>
+    <li>
+      <strong>Treatment equipment</strong> — softeners and filtration systems add pressure drop, more
+      as media ages.
+    </li>
   </ul>
 
   <h2>Details That Sharpen the Diagnosis</h2>
@@ -68,15 +95,35 @@ const faqs: Faq[] = [
     <li>Whether it affects the whole property or certain fixtures.</li>
     <li>How it developed — overnight or over months.</li>
     <li>The pressure-gauge reading at the tank, if safely visible.</li>
-    <li>Whether a filter or treatment system is installed and when media or cartridges were last changed.</li>
+    <li>
+      Whether a filter or treatment system is installed and when media or cartridges were last
+      changed.
+    </li>
   </ul>
 
   <h2>Why This Page Won't Name Your Cause</h2>
   <p>
-    Because it can't — and any site that claims otherwise is guessing with your money. The right
-    fix might be a cartridge, a tank, a switch adjustment, a leak repair or a pump. A provider
-    confirms the cause with gauges and flow measurements on site, then quotes the actual fix. Use
-    the form on this page, pick "Low Water Pressure," and describe the pattern; the details route
-    the request to a provider whose capabilities fit.
+    Because it can't — and any site that claims otherwise is guessing with your money. The right fix
+    might be a cartridge, a tank, a switch adjustment, a leak repair or a pump. A provider confirms
+    the cause with gauges and flow measurements on site, then quotes the actual fix. Use the form on
+    this page, pick "Low Water Pressure," and describe the pattern; the details route the request to
+    a provider whose capabilities fit.
   </p>
+
+  <HelpfulGuides
+    links={[
+      {
+        label: "Pressure versus flow versus available water, explained",
+        href: "/resources/water-pressure/",
+      },
+      {
+        label: "Other symptoms that share causes with low pressure",
+        href: "/resources/well-pump-problems/",
+      },
+      {
+        label: "The components involved in delivering water pressure",
+        href: "/resources/well-system-components/",
+      },
+    ]}
+  />
 </ServicePage>

@@ -1,5 +1,6 @@
 ---
 import ServicePage from "../layouts/ServicePage.astro";
+import HelpfulGuides from "../components/HelpfulGuides.astro";
 import type { Faq } from "../data/faqs";
 
 const faqs: Faq[] = [
@@ -52,37 +53,62 @@ const faqs: Faq[] = [
   <p>
     The core is a controller (often called a variable-frequency drive) paired with a compatible
     pump. When someone opens a tap, the drive speeds the pump just enough to hold the target
-    pressure; when demand rises — laundry plus a shower plus a stock waterer — it speeds up
-    further. Pressure tanks in these systems are typically much smaller, since the drive rather
-    than the tank does the smoothing. Suitability depends on the existing well, pump, electrical
-    system, plumbing, water demand and provider assessment.
+    pressure; when demand rises — laundry plus a shower plus a stock waterer — it speeds up further.
+    Pressure tanks in these systems are typically much smaller, since the drive rather than the tank
+    does the smoothing. Suitability depends on the existing well, pump, electrical system, plumbing,
+    water demand and provider assessment.
   </p>
 
   <h2>Who Tends to Ask About Constant Pressure</h2>
   <ul>
-    <li>Households annoyed by <strong>significant pressure fluctuation</strong> — the strong-then-weak shower problem.</li>
-    <li>Properties with <strong>multiple simultaneous water uses</strong> — big families, guest quarters, in-law suites.</li>
+    <li>
+      Households annoyed by <strong>significant pressure fluctuation</strong> — the strong-then-weak shower
+      problem.
+    </li>
+    <li>
+      Properties with <strong>multiple simultaneous water uses</strong> — big families, guest quarters,
+      in-law suites.
+    </li>
     <li>Anyone running <strong>irrigation</strong> alongside household demand.</li>
-    <li><strong>Farms and larger properties</strong> where barns, waterers and residences share a system.</li>
-    <li>Owners doing <strong>system modernization</strong> or planning ahead for a <a href="/well-pump-replacement/">pump replacement</a> and weighing options while the system is already open.</li>
+    <li>
+      <strong>Farms and larger properties</strong> where barns, waterers and residences share a system.
+    </li>
+    <li>
+      Owners doing <strong>system modernization</strong> or planning ahead for a <a
+        href="/well-pump-replacement/">pump replacement</a
+      > and weighing options while the system is already open.
+    </li>
   </ul>
 
   <h2>An Option to Evaluate — Not a Required Upgrade</h2>
   <p>
-    Constant-pressure equipment costs more than a conventional setup, involves electronics that
-    have their own service considerations, and is not automatically better for every property. A
-    correctly sized conventional pump and <a href="/pressure-tank-replacement/">healthy pressure
-    tank</a> solve plenty of pressure complaints on their own — sometimes the honest answer to a
-    pressure problem is a <a href="/low-water-pressure-from-well/">diagnosis</a>, not an upgrade.
-    The right way to decide is a provider assessment against your actual well, wiring and
-    demand.
+    Constant-pressure equipment costs more than a conventional setup, involves electronics that have
+    their own service considerations, and is not automatically better for every property. A
+    correctly sized conventional pump and <a href="/pressure-tank-replacement/"
+      >healthy pressure tank</a
+    > solve plenty of pressure complaints on their own — sometimes the honest answer to a pressure problem
+    is a <a href="/low-water-pressure-from-well/">diagnosis</a>, not an upgrade. The right way to
+    decide is a provider assessment against your actual well, wiring and demand.
   </p>
 
   <h2>Asking About Constant-Pressure Options</h2>
   <p>
     Use the form and select "Constant-Pressure System." Describe the property, what bothers you
-    about the current pressure behavior, and any known system details. An independent provider
-    can assess compatibility and give you a real comparison between upgrading and servicing what
-    you have.
+    about the current pressure behavior, and any known system details. An independent provider can
+    assess compatibility and give you a real comparison between upgrading and servicing what you
+    have.
   </p>
+
+  <HelpfulGuides
+    links={[
+      {
+        label: "How constant pressure differs from tank-and-switch systems",
+        href: "/resources/water-pressure/",
+      },
+      {
+        label: "The controls and components a pressure upgrade involves",
+        href: "/resources/well-system-components/",
+      },
+    ]}
+  />
 </ServicePage>

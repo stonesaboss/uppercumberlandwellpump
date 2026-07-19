@@ -38,36 +38,47 @@ const year = new Date().getFullYear();
         class="footer-brand__logo"
       />
       <p class="footer-brand__text">
-        {SITE.name} is an independent referral resource for well pump repair, replacement, pressure
-        tank service and water-well services throughout Cookeville and the Upper Cumberland region
-        of Tennessee.
+        {SITE.name} is an independent referral resource for well pump repair, replacement, pressure tank
+        service and water-well services throughout Cookeville and the Upper Cumberland region of Tennessee.
       </p>
     </div>
 
     <nav aria-label="Footer — services">
       <p class="footer-heading">Services</p>
       <ul>
-        {FOOTER_SERVICES.map((l) => (
-          <li><a href={l.href}>{l.label}</a></li>
-        ))}
+        {
+          FOOTER_SERVICES.map((l) => (
+            <li>
+              <a href={l.href}>{l.label}</a>
+            </li>
+          ))
+        }
       </ul>
     </nav>
 
     <nav aria-label="Footer — service area">
       <p class="footer-heading">Service Area</p>
       <ul>
-        {FOOTER_AREAS.map((l) => (
-          <li><a href={l.href}>{l.label}</a></li>
-        ))}
+        {
+          FOOTER_AREAS.map((l) => (
+            <li>
+              <a href={l.href}>{l.label}</a>
+            </li>
+          ))
+        }
       </ul>
     </nav>
 
     <nav aria-label="Footer — resources">
       <p class="footer-heading">Resources</p>
       <ul>
-        {FOOTER_RESOURCES.map((l) => (
-          <li><a href={l.href}>{l.label}</a></li>
-        ))}
+        {
+          FOOTER_RESOURCES.map((l) => (
+            <li>
+              <a href={l.href}>{l.label}</a>
+            </li>
+          ))
+        }
       </ul>
       <p class="footer-heading footer-heading--gap">Requests</p>
       <ul>
@@ -87,9 +98,13 @@ const year = new Date().getFullYear();
     <div class="container footer-bottom__inner">
       <p>&copy; {year} {SITE.name}. All rights reserved.</p>
       <ul class="footer-legal">
-        {FOOTER_LEGAL.map((l) => (
-          <li><a href={l.href}>{l.label}</a></li>
-        ))}
+        {
+          FOOTER_LEGAL.map((l) => (
+            <li>
+              <a href={l.href}>{l.label}</a>
+            </li>
+          ))
+        }
         <li><a href="/sitemap-index.xml">Sitemap</a></li>
       </ul>
     </div>

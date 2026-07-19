@@ -60,12 +60,7 @@ export const URGENCY_LEVELS = [
   "Planning a Future Project",
 ];
 
-export const CONTACT_TIMES = [
-  "Anytime",
-  "Morning",
-  "Afternoon",
-  "Evening",
-];
+export const CONTACT_TIMES = ["Anytime", "Morning", "Afternoon", "Evening"];
 
 export const PUMP_TYPES = [
   "Submersible Pump",

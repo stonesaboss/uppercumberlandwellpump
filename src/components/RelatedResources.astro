@@ -1,0 +1,47 @@
+---
+/** Compact links from one resource hub to related hubs and back to the center. */
+import { getHub } from "../data/resources";
+
+interface Props {
+  hubSlugs: string[];
+}
+const { hubSlugs } = Astro.props;
+const hubs = hubSlugs.map((slug) => getHub(slug)).filter((h): h is NonNullable<typeof h> => !!h);
+---
+
+<nav class="related-resources" aria-label="Related resource topics">
+  <h2>Related Resource Topics</h2>
+  <ul>
+    {
+      hubs.map((hub) => (
+        <li>
+          <a href={hub.route}>{hub.cardTitle}</a> —{" "}
+          {hub.cardDescription.split(",")[0].toLowerCase()}
+        </li>
+      ))
+    }
+    <li>
+      <a href="/resources/">Back to the Well Pump Knowledge Center</a>
+    </li>
+  </ul>
+</nav>
+
+<style>
+  .related-resources {
+    background: var(--gray-light);
+    border-radius: var(--radius);
+    padding: 1.4rem 1.6rem;
+    margin-block: 2rem;
+  }
+  .related-resources h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+  .related-resources ul {
+    margin: 0;
+    padding-left: 1.3rem;
+  }
+  .related-resources li {
+    margin-bottom: 0.45rem;
+  }
+</style>

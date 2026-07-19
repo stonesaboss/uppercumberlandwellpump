@@ -122,11 +122,7 @@ function normalize(value: string): string {
 function makeReference(): string {
   const now = new Date();
   const ymd = now.toISOString().slice(2, 10).replace(/-/g, "");
-  const rand = crypto
-    .getRandomValues(new Uint32Array(1))[0]
-    .toString(36)
-    .toUpperCase()
-    .slice(0, 5);
+  const rand = crypto.getRandomValues(new Uint32Array(1))[0].toString(36).toUpperCase().slice(0, 5);
   return `UCWP-${ymd}-${rand.padStart(5, "0")}`;
 }
 
@@ -238,9 +234,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
   const uploadRefs: string[] = [];
   const r2Enabled = env.ENABLE_R2_UPLOADS === "true" && !!env.LEAD_UPLOADS;
   const photoEntries = form.getAll("photos") as unknown as (string | File)[];
-  const photos = photoEntries.filter(
-    (p): p is File => typeof p !== "string" && !!p && p.size > 0,
-  );
+  const photos = photoEntries.filter((p): p is File => typeof p !== "string" && !!p && p.size > 0);
 
   if (photos.length > 0) {
     if (photos.length > MAX_PHOTOS) {
@@ -374,7 +368,9 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
             const body = JSON.parse(bodyText) as { ok?: boolean };
             if (body.ok === false) {
               delivered = false;
-              console.error(`[lead] webhook script error for ${reference}: receiver returned ok=false`);
+              console.error(
+                `[lead] webhook script error for ${reference}: receiver returned ok=false`,
+              );
             }
           } catch {
             // Non-JSON body with a 2xx status — accept (not all webhooks return JSON).

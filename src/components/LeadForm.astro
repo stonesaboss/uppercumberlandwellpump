@@ -53,25 +53,57 @@ const isFull = variant === "full";
     <div class="form-status" role="status" aria-live="polite" data-form-status></div>
 
     <div class="form-field">
-      <label for={`${id}-name`}>Full Name <span class="required-mark" aria-hidden="true">*</span></label>
-      <input type="text" id={`${id}-name`} name="full_name" autocomplete="name" required maxlength="120" aria-describedby={`${id}-name-err`} />
+      <label for={`${id}-name`}
+        >Full Name <span class="required-mark" aria-hidden="true">*</span></label
+      >
+      <input
+        type="text"
+        id={`${id}-name`}
+        name="full_name"
+        autocomplete="name"
+        required
+        maxlength="120"
+        aria-describedby={`${id}-name-err`}
+      />
       <p class="field-error" id={`${id}-name-err`}>Please enter your full name.</p>
     </div>
 
     <div class="form-field">
-      <label for={`${id}-phone`}>Phone Number <span class="required-mark" aria-hidden="true">*</span></label>
-      <input type="tel" id={`${id}-phone`} name="phone" autocomplete="tel" required maxlength="30" aria-describedby={`${id}-phone-err`} />
+      <label for={`${id}-phone`}
+        >Phone Number <span class="required-mark" aria-hidden="true">*</span></label
+      >
+      <input
+        type="tel"
+        id={`${id}-phone`}
+        name="phone"
+        autocomplete="tel"
+        required
+        maxlength="30"
+        aria-describedby={`${id}-phone-err`}
+      />
       <p class="field-error" id={`${id}-phone-err`}>Please enter a valid phone number.</p>
     </div>
 
     <div class="form-field">
-      <label for={`${id}-email`}>Email Address <span class="required-mark" aria-hidden="true">*</span></label>
-      <input type="email" id={`${id}-email`} name="email" autocomplete="email" required maxlength="200" aria-describedby={`${id}-email-err`} />
+      <label for={`${id}-email`}
+        >Email Address <span class="required-mark" aria-hidden="true">*</span></label
+      >
+      <input
+        type="email"
+        id={`${id}-email`}
+        name="email"
+        autocomplete="email"
+        required
+        maxlength="200"
+        aria-describedby={`${id}-email-err`}
+      />
       <p class="field-error" id={`${id}-email-err`}>Please enter a valid email address.</p>
     </div>
 
     <div class="form-field">
-      <label for={`${id}-city`}>City or County <span class="required-mark" aria-hidden="true">*</span></label>
+      <label for={`${id}-city`}
+        >City or County <span class="required-mark" aria-hidden="true">*</span></label
+      >
       <input
         type="text"
         id={`${id}-city`}
@@ -84,77 +116,150 @@ const isFull = variant === "full";
       <p class="field-error" id={`${id}-city-err`}>Please tell us the city or county.</p>
     </div>
 
-    {isFull && (
-      <div class="form-field">
-        <label for={`${id}-property-type`}>Property Type <span class="required-mark" aria-hidden="true">*</span></label>
-        <select id={`${id}-property-type`} name="property_type" required aria-describedby={`${id}-property-type-err`}>
-          <option value="">Select property type</option>
-          {PROPERTY_TYPES.map((o) => (
-            <option value={o}>{o}</option>
-          ))}
-        </select>
-        <p class="field-error" id={`${id}-property-type-err`}>Please select a property type.</p>
-      </div>
-    )}
+    {
+      isFull && (
+        <div class="form-field">
+          <label for={`${id}-property-type`}>
+            Property Type{" "}
+            <span class="required-mark" aria-hidden="true">
+              *
+            </span>
+          </label>
+          <select
+            id={`${id}-property-type`}
+            name="property_type"
+            required
+            aria-describedby={`${id}-property-type-err`}
+          >
+            <option value="">Select property type</option>
+            {PROPERTY_TYPES.map((o) => (
+              <option value={o}>{o}</option>
+            ))}
+          </select>
+          <p class="field-error" id={`${id}-property-type-err`}>
+            Please select a property type.
+          </p>
+        </div>
+      )
+    }
 
     <div class="form-field">
-      <label for={`${id}-service`}>Service Needed <span class="required-mark" aria-hidden="true">*</span></label>
-      <select id={`${id}-service`} name="service_needed" required data-event-select="service_selected" aria-describedby={`${id}-service-err`}>
+      <label for={`${id}-service`}
+        >Service Needed <span class="required-mark" aria-hidden="true">*</span></label
+      >
+      <select
+        id={`${id}-service`}
+        name="service_needed"
+        required
+        data-event-select="service_selected"
+        aria-describedby={`${id}-service-err`}
+      >
         <option value="">Select a service</option>
-        {SERVICES_NEEDED.map((o) => (
-          <option value={o} selected={o === defaultService}>{o}</option>
-        ))}
+        {
+          SERVICES_NEEDED.map((o) => (
+            <option value={o} selected={o === defaultService}>
+              {o}
+            </option>
+          ))
+        }
       </select>
       <p class="field-error" id={`${id}-service-err`}>Please select the service needed.</p>
     </div>
 
     <div class="form-field">
-      <label for={`${id}-situation`}>Current Water Situation <span class="required-mark" aria-hidden="true">*</span></label>
-      <select id={`${id}-situation`} name="water_situation" required data-event-select="water_situation_selected" aria-describedby={`${id}-situation-err`}>
+      <label for={`${id}-situation`}
+        >Current Water Situation <span class="required-mark" aria-hidden="true">*</span></label
+      >
+      <select
+        id={`${id}-situation`}
+        name="water_situation"
+        required
+        data-event-select="water_situation_selected"
+        aria-describedby={`${id}-situation-err`}
+      >
         <option value="">What's going on?</option>
-        {WATER_SITUATIONS.map((o) => (
-          <option value={o}>{o}</option>
-        ))}
+        {WATER_SITUATIONS.map((o) => <option value={o}>{o}</option>)}
       </select>
-      <p class="field-error" id={`${id}-situation-err`}>Please describe the current water situation.</p>
+      <p class="field-error" id={`${id}-situation-err`}>
+        Please describe the current water situation.
+      </p>
     </div>
 
-    {isFull && (
-      <>
-        <div class="form-field">
-          <label for={`${id}-started`}>When the Problem Started <span class="required-mark" aria-hidden="true">*</span></label>
-          <select id={`${id}-started`} name="problem_started" required aria-describedby={`${id}-started-err`}>
-            <option value="">Select one</option>
-            {PROBLEM_STARTED.map((o) => (
-              <option value={o}>{o}</option>
-            ))}
-          </select>
-          <p class="field-error" id={`${id}-started-err`}>Please select when the problem started.</p>
-        </div>
+    {
+      isFull && (
+        <>
+          <div class="form-field">
+            <label for={`${id}-started`}>
+              When the Problem Started{" "}
+              <span class="required-mark" aria-hidden="true">
+                *
+              </span>
+            </label>
+            <select
+              id={`${id}-started`}
+              name="problem_started"
+              required
+              aria-describedby={`${id}-started-err`}
+            >
+              <option value="">Select one</option>
+              {PROBLEM_STARTED.map((o) => (
+                <option value={o}>{o}</option>
+              ))}
+            </select>
+            <p class="field-error" id={`${id}-started-err`}>
+              Please select when the problem started.
+            </p>
+          </div>
 
-        <div class="form-field">
-          <label for={`${id}-urgency`}>Urgency <span class="required-mark" aria-hidden="true">*</span></label>
-          <select id={`${id}-urgency`} name="urgency" required data-event-select="urgency_selected" aria-describedby={`${id}-urgency-err`}>
-            <option value="">Select urgency</option>
-            {URGENCY_LEVELS.map((o) => (
-              <option value={o}>{o}</option>
-            ))}
-          </select>
-          <p class="field-error" id={`${id}-urgency-err`}>Please select an urgency level.</p>
-        </div>
+          <div class="form-field">
+            <label for={`${id}-urgency`}>
+              Urgency{" "}
+              <span class="required-mark" aria-hidden="true">
+                *
+              </span>
+            </label>
+            <select
+              id={`${id}-urgency`}
+              name="urgency"
+              required
+              data-event-select="urgency_selected"
+              aria-describedby={`${id}-urgency-err`}
+            >
+              <option value="">Select urgency</option>
+              {URGENCY_LEVELS.map((o) => (
+                <option value={o}>{o}</option>
+              ))}
+            </select>
+            <p class="field-error" id={`${id}-urgency-err`}>
+              Please select an urgency level.
+            </p>
+          </div>
 
-        <div class="form-field">
-          <label for={`${id}-contact-time`}>Preferred Contact Time <span class="required-mark" aria-hidden="true">*</span></label>
-          <select id={`${id}-contact-time`} name="preferred_contact_time" required aria-describedby={`${id}-contact-time-err`}>
-            <option value="">Select a time</option>
-            {CONTACT_TIMES.map((o) => (
-              <option value={o}>{o}</option>
-            ))}
-          </select>
-          <p class="field-error" id={`${id}-contact-time-err`}>Please select a preferred contact time.</p>
-        </div>
-      </>
-    )}
+          <div class="form-field">
+            <label for={`${id}-contact-time`}>
+              Preferred Contact Time{" "}
+              <span class="required-mark" aria-hidden="true">
+                *
+              </span>
+            </label>
+            <select
+              id={`${id}-contact-time`}
+              name="preferred_contact_time"
+              required
+              aria-describedby={`${id}-contact-time-err`}
+            >
+              <option value="">Select a time</option>
+              {CONTACT_TIMES.map((o) => (
+                <option value={o}>{o}</option>
+              ))}
+            </select>
+            <p class="field-error" id={`${id}-contact-time-err`}>
+              Please select a preferred contact time.
+            </p>
+          </div>
+        </>
+      )
+    }
 
     <div class="form-field">
       <label for={`${id}-details`}>
@@ -171,97 +276,152 @@ const isFull = variant === "full";
       <p class="field-error" id={`${id}-details-err`}>Please describe the problem briefly.</p>
     </div>
 
-    {isFull && (
-      <details class="optional-details">
-        <summary>Optional system details (helps the provider prepare)</summary>
-        <div class="optional-details__body">
-          <div class="form-field">
-            <label for={`${id}-location`}>Property Address or Nearest Road</label>
-            <input type="text" id={`${id}-location`} name="property_location" maxlength="200" />
+    {
+      isFull && (
+        <details class="optional-details">
+          <summary>Optional system details (helps the provider prepare)</summary>
+          <div class="optional-details__body">
+            <div class="form-field">
+              <label for={`${id}-location`}>Property Address or Nearest Road</label>
+              <input type="text" id={`${id}-location`} name="property_location" maxlength="200" />
+            </div>
+            <div class="form-field">
+              <label for={`${id}-pump-type`}>Pump Type</label>
+              <select id={`${id}-pump-type`} name="pump_type">
+                <option value="">Select if known</option>
+                {PUMP_TYPES.map((o) => (
+                  <option value={o}>{o}</option>
+                ))}
+              </select>
+            </div>
+            <div class="form-field">
+              <label for={`${id}-well-type`}>Well Type</label>
+              <input
+                type="text"
+                id={`${id}-well-type`}
+                name="well_type"
+                maxlength="120"
+                placeholder="e.g., drilled, bored, unknown"
+              />
+            </div>
+            <div class="form-field">
+              <label for={`${id}-depth`}>Approximate Well Depth</label>
+              <input
+                type="text"
+                id={`${id}-depth`}
+                name="well_depth"
+                maxlength="60"
+                placeholder="e.g., 250 ft, unknown"
+              />
+            </div>
+            <div class="form-field">
+              <label for={`${id}-pressure`}>Pressure Gauge Reading (if visible)</label>
+              <input
+                type="text"
+                id={`${id}-pressure`}
+                name="pressure_reading"
+                maxlength="60"
+                placeholder="e.g., 0 PSI, 40 PSI, unknown"
+              />
+            </div>
+            <div class="form-field">
+              <label for={`${id}-pump-running`}>Can the Pump Be Heard Running?</label>
+              <select id={`${id}-pump-running`} name="pump_running">
+                <option value="">Select if known</option>
+                {PUMP_RUNNING.map((o) => (
+                  <option value={o}>{o}</option>
+                ))}
+              </select>
+            </div>
+            <div class="form-field">
+              <label for={`${id}-breaker`}>Breaker Status</label>
+              <select id={`${id}-breaker`} name="breaker_status">
+                <option value="">Select if known</option>
+                {BREAKER_STATUS.map((o) => (
+                  <option value={o}>{o}</option>
+                ))}
+              </select>
+              <p class="fine-print" style="margin-top:0.3rem;">
+                Only report what you can see. Do not open electrical panels or handle wiring.
+              </p>
+            </div>
+            <div class="form-field">
+              <label for={`${id}-tank`}>Pressure-Tank Symptoms</label>
+              <input
+                type="text"
+                id={`${id}-tank`}
+                name="tank_symptoms"
+                maxlength="300"
+                placeholder="e.g., rapid clicking, tank feels heavy"
+              />
+            </div>
+            <div class="form-field">
+              <label for={`${id}-quality`}>Water-Quality Changes</label>
+              <input
+                type="text"
+                id={`${id}-quality`}
+                name="water_quality_changes"
+                maxlength="300"
+                placeholder="e.g., sediment, odor, staining"
+              />
+            </div>
+            <div class="form-field">
+              <label for={`${id}-records`}>Existing Provider or System Records</label>
+              <input
+                type="text"
+                id={`${id}-records`}
+                name="system_records"
+                maxlength="300"
+                placeholder="e.g., well log available, installed 2015"
+              />
+            </div>
+            <div class="form-field">
+              <label for={`${id}-photos`}>Photos (optional — JPG, PNG or HEIC, up to 4)</label>
+              <input
+                type="file"
+                id={`${id}-photos`}
+                name="photos"
+                multiple
+                accept=".jpg,.jpeg,.png,.heic,image/jpeg,image/png,image/heic"
+                data-event-change="photo_upload"
+              />
+              <p class="fine-print" style="margin-top:0.3rem;">
+                Helpful: well head, pressure tank, gauge, control box exterior, visible leaks or
+                equipment labels. Please do not photograph inside electrical panels.
+              </p>
+            </div>
           </div>
-          <div class="form-field">
-            <label for={`${id}-pump-type`}>Pump Type</label>
-            <select id={`${id}-pump-type`} name="pump_type">
-              <option value="">Select if known</option>
-              {PUMP_TYPES.map((o) => (
-                <option value={o}>{o}</option>
-              ))}
-            </select>
-          </div>
-          <div class="form-field">
-            <label for={`${id}-well-type`}>Well Type</label>
-            <input type="text" id={`${id}-well-type`} name="well_type" maxlength="120" placeholder="e.g., drilled, bored, unknown" />
-          </div>
-          <div class="form-field">
-            <label for={`${id}-depth`}>Approximate Well Depth</label>
-            <input type="text" id={`${id}-depth`} name="well_depth" maxlength="60" placeholder="e.g., 250 ft, unknown" />
-          </div>
-          <div class="form-field">
-            <label for={`${id}-pressure`}>Pressure Gauge Reading (if visible)</label>
-            <input type="text" id={`${id}-pressure`} name="pressure_reading" maxlength="60" placeholder="e.g., 0 PSI, 40 PSI, unknown" />
-          </div>
-          <div class="form-field">
-            <label for={`${id}-pump-running`}>Can the Pump Be Heard Running?</label>
-            <select id={`${id}-pump-running`} name="pump_running">
-              <option value="">Select if known</option>
-              {PUMP_RUNNING.map((o) => (
-                <option value={o}>{o}</option>
-              ))}
-            </select>
-          </div>
-          <div class="form-field">
-            <label for={`${id}-breaker`}>Breaker Status</label>
-            <select id={`${id}-breaker`} name="breaker_status">
-              <option value="">Select if known</option>
-              {BREAKER_STATUS.map((o) => (
-                <option value={o}>{o}</option>
-              ))}
-            </select>
-            <p class="fine-print" style="margin-top:0.3rem;">
-              Only report what you can see. Do not open electrical panels or handle wiring.
-            </p>
-          </div>
-          <div class="form-field">
-            <label for={`${id}-tank`}>Pressure-Tank Symptoms</label>
-            <input type="text" id={`${id}-tank`} name="tank_symptoms" maxlength="300" placeholder="e.g., rapid clicking, tank feels heavy" />
-          </div>
-          <div class="form-field">
-            <label for={`${id}-quality`}>Water-Quality Changes</label>
-            <input type="text" id={`${id}-quality`} name="water_quality_changes" maxlength="300" placeholder="e.g., sediment, odor, staining" />
-          </div>
-          <div class="form-field">
-            <label for={`${id}-records`}>Existing Provider or System Records</label>
-            <input type="text" id={`${id}-records`} name="system_records" maxlength="300" placeholder="e.g., well log available, installed 2015" />
-          </div>
-          <div class="form-field">
-            <label for={`${id}-photos`}>Photos (optional — JPG, PNG or HEIC, up to 4)</label>
-            <input
-              type="file"
-              id={`${id}-photos`}
-              name="photos"
-              multiple
-              accept=".jpg,.jpeg,.png,.heic,image/jpeg,image/png,image/heic"
-              data-event-change="photo_upload"
-            />
-            <p class="fine-print" style="margin-top:0.3rem;">
-              Helpful: well head, pressure tank, gauge, control box exterior, visible leaks or
-              equipment labels. Please do not photograph inside electrical panels.
-            </p>
-          </div>
-        </div>
-      </details>
-    )}
+        </details>
+      )
+    }
 
     <div class="consent-row">
-      <input type="checkbox" id={`${id}-consent`} name="consent" value="yes" required aria-describedby={`${id}-consent-err`} />
+      <input
+        type="checkbox"
+        id={`${id}-consent`}
+        name="consent"
+        value="yes"
+        required
+        aria-describedby={`${id}-consent-err`}
+      />
       <label for={`${id}-consent`}>{CONSENT_TEXT}</label>
     </div>
-    <p class="field-error" id={`${id}-consent-err`} data-consent-error>Please check the consent box to send your request.</p>
+    <p class="field-error" id={`${id}-consent-err`} data-consent-error>
+      Please check the consent box to send your request.
+    </p>
 
     <div class="cf-turnstile" data-sitekey={SITE.turnstileSiteKey} data-turnstile></div>
 
     <input type="hidden" name="source_page" value={Astro.url.pathname} />
-    <input type="text" name="company_website" value="" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp-field" />
+    <input
+      type="text"
+      name="company_website"
+      value=""
+      tabindex="-1"
+      autocomplete="off"
+      aria-hidden="true"
+      class="hp-field"
+    />
 
     <button type="submit" class="btn btn--green btn--block" data-submit-btn>
       {isFull ? "Send Well-Service Request" : "Send Service Request"}

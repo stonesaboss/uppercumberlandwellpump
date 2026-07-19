@@ -1,0 +1,127 @@
+---
+/**
+ * Resource hub pages — one template driven entirely by src/data/resources.ts.
+ * Adding a future hub (or publishing an article link inside one) is a config
+ * change, not a template change.
+ */
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ResourcePageHeader from "../../components/ResourcePageHeader.astro";
+import PlannedGuideCard from "../../components/PlannedGuideCard.astro";
+import RelatedResources from "../../components/RelatedResources.astro";
+import CtaBand from "../../components/CtaBand.astro";
+import { RESOURCE_HUBS, type ResourceHub } from "../../data/resources";
+import { REFERRAL_DISCLOSURE } from "../../data/site";
+import { breadcrumbSchema, webPageSchema } from "../../utils/schema";
+
+export function getStaticPaths() {
+  return RESOURCE_HUBS.map((hub) => ({
+    params: { slug: hub.slug },
+    props: { hub },
+  }));
+}
+
+interface Props {
+  hub: ResourceHub;
+}
+const { hub } = Astro.props;
+
+const crumbs = [
+  { name: "Home", path: "/" },
+  { name: "Well Pump Resources", path: "/resources/" },
+  { name: hub.breadcrumbLabel, path: hub.route },
+];
+
+const schema = [
+  webPageSchema({ path: hub.route, title: hub.title, description: hub.metaDescription }),
+  breadcrumbSchema(crumbs),
+];
+---
+
+<BaseLayout title={hub.title} description={hub.metaDescription} path={hub.route} schema={schema}>
+  <ResourcePageHeader h1={hub.h1} crumbs={crumbs} intro={hub.intro} image={hub.image} />
+
+  <div class="container hub-body">
+    <section aria-labelledby="hub-factors-heading">
+      <h2 id="hub-factors-heading">What Shapes This Topic</h2>
+      <ul class="hub-factors">
+        {hub.factors.map((factor) => <li>{factor}</li>)}
+      </ul>
+      <p class="fine-print">
+        Private-well systems and property conditions vary — these resources are general information
+        to help you prepare for professional service, not a diagnosis of your system.
+      </p>
+    </section>
+
+    <section aria-labelledby="hub-guides-heading">
+      <h2 id="hub-guides-heading">{hub.plannedGuidesHeading}</h2>
+      <p class="hub-guides-note">
+        These guides are being developed for this section. Titles may be refined before publication.
+      </p>
+      <div class="hub-guides-grid">
+        {hub.plannedGuides.map((guide) => <PlannedGuideCard guide={guide} />)}
+      </div>
+    </section>
+
+    <section aria-labelledby="hub-services-heading">
+      <h2 id="hub-services-heading">{hub.relatedServicesHeading}</h2>
+      <p>
+        When reading turns into needing help, these pages cover the related services and how to
+        request them:
+      </p>
+      <ul class="hub-service-links">
+        {
+          hub.relatedServices.map((link) => (
+            <li>
+              <a href={link.href}>{link.label}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <RelatedResources hubSlugs={hub.relatedHubs} />
+
+    <div class="disclosure-box">
+      <p style="margin:0;">{REFERRAL_DISCLOSURE}</p>
+    </div>
+  </div>
+
+  <CtaBand
+    heading="Need Help With a Well Pump Problem?"
+    copy="Send the property location, a description of the problem, any recent changes in pressure or water flow, the location of the well head and several clear photographs of the visible system components for an initial service review."
+    primaryLabel="Request Well Pump Service"
+  />
+</BaseLayout>
+
+<style>
+  .hub-body {
+    max-width: 860px;
+    padding-bottom: 3rem;
+  }
+  .hub-body h2 {
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+    margin-top: 2.25rem;
+  }
+  .hub-factors {
+    padding-left: 1.4rem;
+  }
+  .hub-factors li {
+    margin-bottom: 0.5rem;
+  }
+  .hub-guides-note {
+    color: #4a5a68;
+    font-size: 0.95rem;
+  }
+  .hub-guides-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 0.9rem;
+    margin-top: 1rem;
+  }
+  .hub-service-links {
+    padding-left: 1.4rem;
+  }
+  .hub-service-links li {
+    margin-bottom: 0.45rem;
+  }
+</style>

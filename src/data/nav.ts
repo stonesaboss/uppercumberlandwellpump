@@ -26,6 +26,17 @@ export const WATER_WELL_SERVICES: NavLink[] = [
   { label: "Existing Well Evaluation", href: "/well-inspection/#existing-well-evaluation" },
 ];
 
+export const RESOURCES_NAV: NavLink[] = [
+  { label: "Knowledge Center", href: "/resources/" },
+  { label: "Pump Cost Guides", href: "/resources/well-pump-costs/" },
+  { label: "Pump Problems", href: "/resources/well-pump-problems/" },
+  { label: "Water Pressure", href: "/resources/water-pressure/" },
+  { label: "System Components", href: "/resources/well-system-components/" },
+  { label: "Maintenance and Planning", href: "/resources/maintenance-and-planning/" },
+  { label: "Common Well Problems", href: "/common-well-problems/" },
+  { label: "FAQs", href: "/#faqs" },
+];
+
 export const SERVICE_AREAS_NAV: NavLink[] = [
   { label: "Cookeville", href: "/well-pump-repair-cookeville-tn/" },
   { label: "Crossville", href: "/well-pump-repair-crossville-tn/" },
@@ -37,10 +48,9 @@ export const SERVICE_AREAS_NAV: NavLink[] = [
 export const PRIMARY_NAV: NavGroup[] = [
   { label: "Home", href: "/" },
   { label: "Well Pump Services", children: WELL_PUMP_SERVICES },
-  { label: "Common Problems", href: "/common-well-problems/" },
   { label: "Water Well Services", children: WATER_WELL_SERVICES },
   { label: "Service Areas", children: SERVICE_AREAS_NAV },
-  { label: "FAQs", href: "/#faqs" },
+  { label: "Well Pump Resources", children: RESOURCES_NAV },
   { label: "About This Service", href: "/about-this-service/" },
 ];
 
@@ -66,6 +76,7 @@ export const FOOTER_AREAS: NavLink[] = [
 ];
 
 export const FOOTER_RESOURCES: NavLink[] = [
+  { label: "Well Pump Knowledge Center", href: "/resources/" },
   { label: "Common Well Problems", href: "/common-well-problems/" },
   { label: "About This Service", href: "/about-this-service/" },
   { label: "How Referrals Work", href: "/how-referrals-work/" },

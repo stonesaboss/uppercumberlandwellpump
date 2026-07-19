@@ -1,0 +1,158 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ResourcePageHeader from "../../components/ResourcePageHeader.astro";
+import ResourceCategoryCard from "../../components/ResourceCategoryCard.astro";
+import CtaBand from "../../components/CtaBand.astro";
+import Icon from "../../components/Icon.astro";
+import { RESOURCES_INDEX, SORTED_HUBS } from "../../data/resources";
+import { REFERRAL_DISCLOSURE } from "../../data/site";
+import { breadcrumbSchema, webPageSchema } from "../../utils/schema";
+
+const { title, metaDescription, h1, intro, image, route } = RESOURCES_INDEX;
+
+const crumbs = [
+  { name: "Home", path: "/" },
+  { name: "Well Pump Resources", path: route },
+];
+
+const schema = [
+  webPageSchema({ path: route, title, description: metaDescription }),
+  breadcrumbSchema(crumbs),
+];
+---
+
+<BaseLayout title={title} description={metaDescription} path={route} schema={schema}>
+  <ResourcePageHeader
+    h1={h1}
+    eyebrow="Knowledge Center"
+    crumbs={crumbs}
+    intro={intro}
+    image={image}
+  />
+
+  <section class="section" aria-labelledby="resource-topics-heading">
+    <div class="container">
+      <h2 id="resource-topics-heading" class="section-heading">Explore Resource Topics</h2>
+      <div class="card-grid" style="margin-top: 2rem;">
+        {
+          SORTED_HUBS.map((hub) => (
+            <ResourceCategoryCard
+              title={hub.cardTitle}
+              description={hub.cardDescription}
+              href={hub.route}
+              icon={hub.cardIcon}
+              linkText={hub.breadcrumbLabel}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--gray" aria-labelledby="start-evaluating-heading">
+    <div class="container evaluate">
+      <div class="evaluate__copy">
+        <h2 id="start-evaluating-heading">Start Evaluating Your Well System</h2>
+        <p>
+          A useful evaluation starts with what you can safely observe: what the water is doing at
+          the fixtures, when the change began, what the pressure gauge reads, whether the pump can
+          be heard, and what the visible equipment looks like. You don't need to know the cause —
+          documenting the symptoms accurately is the real preparation.
+        </p>
+        <ul class="check-list">
+          <li>Note the symptoms and when they started — sudden or gradual matters</li>
+          <li>Photograph visible equipment: pressure tank, gauge, well cap</li>
+          <li>Check only what is safe: breaker positions, gauge readings, sounds</li>
+          <li>Gather any records — well logs, prior service, equipment labels</li>
+        </ul>
+        <p>
+          The <a href="/common-well-problems/">common well problems guide</a> walks through the symptom
+          patterns in plain language, and the
+          <a href="/resources/maintenance-and-planning/">maintenance and planning hub</a> covers what
+          to prepare before requesting service. When something is clearly wrong now, start with <a
+            href="/well-pump-repair-cookeville-tn/">well pump repair</a
+          > or the
+          <a href="/emergency-no-water-well-service/">urgent no-water request</a> instead.
+        </p>
+        <p class="fine-print">
+          Private-well systems and property conditions vary. These resources are general
+          information, not a diagnosis — never open electrical panels, enter well pits or dismantle
+          sealed system components.
+        </p>
+      </div>
+      <div class="evaluate__aside card">
+        <span class="icon-circle icon-circle--green"><Icon name="wrench" /></span>
+        <h3>Popular Service Pages</h3>
+        <ul class="evaluate__services">
+          <li><a href="/well-pump-repair-cookeville-tn/">Well Pump Repair in Cookeville</a></li>
+          <li><a href="/well-pump-replacement/">Well Pump Replacement</a></li>
+          <li><a href="/pressure-tank-replacement/">Pressure Tank Replacement</a></li>
+          <li><a href="/low-water-pressure-from-well/">Low Water Pressure Help</a></li>
+          <li><a href="/well-pump-installation/">Well Pump Installation</a></li>
+          <li><a href="/service-area/">Upper Cumberland Service Area</a></li>
+        </ul>
+        <a
+          href="/request-service/"
+          class="btn btn--primary btn--block"
+          data-event="request_service_cta"
+        >
+          Request Well Pump Service
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="disclosure-box">
+      <p style="margin:0;">{REFERRAL_DISCLOSURE}</p>
+    </div>
+  </div>
+
+  <CtaBand
+    heading="Need Help With a Well Pump Problem?"
+    copy="Send the property location, a description of the problem, any recent changes in pressure or water flow, the location of the well head and several clear photographs of the visible system components for an initial service review."
+    primaryLabel="Request Well Pump Service"
+  />
+</BaseLayout>
+
+<style>
+  .evaluate {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(260px, 1fr);
+    gap: 2.5rem;
+    align-items: start;
+  }
+  .evaluate__aside h3 {
+    margin-bottom: 0.6rem;
+  }
+  .evaluate__services {
+    list-style: none;
+    margin: 0 0 1.25rem;
+    padding: 0;
+  }
+  .evaluate__services li {
+    margin-bottom: 0.5rem;
+  }
+  .check-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem;
+  }
+  .check-list li {
+    padding-left: 1.6rem;
+    position: relative;
+    margin-bottom: 0.5rem;
+  }
+  .check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--green);
+    font-weight: 700;
+  }
+  @media (max-width: 900px) {
+    .evaluate {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -1,5 +1,6 @@
 ---
 import ServicePage from "../layouts/ServicePage.astro";
+import HelpfulGuides from "../components/HelpfulGuides.astro";
 import type { Faq } from "../data/faqs";
 
 const faqs: Faq[] = [
@@ -42,9 +43,9 @@ const faqs: Faq[] = [
 >
   <p>
     Well inspections get requested for three very different reasons, and the reason shapes the
-    scope. Real estate closings need documentation; troubled systems need diagnosis; healthy
-    systems benefit from a periodic look before small issues grow. Tell us which situation is
-    yours and the request routes accordingly.
+    scope. Real estate closings need documentation; troubled systems need diagnosis; healthy systems
+    benefit from a periodic look before small issues grow. Tell us which situation is yours and the
+    request routes accordingly.
   </p>
 
   <h2 id="property-transaction">Property Purchase or Sale</h2>
@@ -59,19 +60,19 @@ const faqs: Faq[] = [
 
   <h2 id="system-problem">System-Problem Inspection</h2>
   <p>
-    When something is wrong but not catastrophic — pressure loss, cycling, unusual noises,
-    sediment, alarms or recurring pump issues — a problem-focused inspection evaluates the system
-    to find out why. If the water has stopped entirely, skip ahead to the
+    When something is wrong but not catastrophic — pressure loss, cycling, unusual noises, sediment,
+    alarms or recurring pump issues — a problem-focused inspection evaluates the system to find out
+    why. If the water has stopped entirely, skip ahead to the
     <a href="/emergency-no-water-well-service/">urgent no-water request</a> instead.
   </p>
 
   <h2 id="existing-well-evaluation">Maintenance and Existing-Well Evaluation</h2>
   <p>
-    For a system that seems fine, a maintenance-focused review covers the visible equipment:
-    well cap and casing condition, pressure tank and switch behavior, controls, gauges and any
-    developing concerns. It is also the natural evaluation when you have bought a property with
-    an older well and simply want to know what you have — age, equipment type and apparent
-    condition — before anything goes wrong.
+    For a system that seems fine, a maintenance-focused review covers the visible equipment: well
+    cap and casing condition, pressure tank and switch behavior, controls, gauges and any developing
+    concerns. It is also the natural evaluation when you have bought a property with an older well
+    and simply want to know what you have — age, equipment type and apparent condition — before
+    anything goes wrong.
   </p>
 
   <h2>Scope Honesty</h2>
@@ -80,7 +81,24 @@ const faqs: Faq[] = [
     provider and purpose. A visual equipment review, a flow test and a full pump-pull examination
     are different services at different costs. Ask the provider exactly what their inspection
     includes and what qualifications they hold — the
-    <a href="/licensing-information/">licensing information page</a> explains Tennessee's
-    licensing categories for well work.
+    <a href="/licensing-information/">licensing information page</a> explains Tennessee's licensing categories
+    for well work.
   </p>
+
+  <HelpfulGuides
+    links={[
+      {
+        label: "What records and photos to gather before an inspection",
+        href: "/resources/maintenance-and-planning/",
+      },
+      {
+        label: "Symptom patterns an inspection can help explain",
+        href: "/resources/well-pump-problems/",
+      },
+      {
+        label: "Regional considerations for Upper Cumberland wells",
+        href: "/resources/upper-cumberland-well-guide/",
+      },
+    ]}
+  />
 </ServicePage>

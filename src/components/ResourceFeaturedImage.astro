@@ -1,0 +1,82 @@
+---
+/**
+ * Featured-image slot for resource pages.
+ * - status "available": renders the final asset.
+ * - status "pending" with a fallbackPath: renders an existing relevant site
+ *   photo as a temporary stand-in.
+ * - status "pending" with no fallback: renders a polished branded band
+ *   (navy gradient + ridge pattern + icon) at the same aspect ratio —
+ *   never a gray placeholder box, never a broken image.
+ * Fixed aspect ratio prevents layout shift in every mode.
+ */
+import Icon from "./Icon.astro";
+import type { ResourceImage } from "../data/resources";
+
+interface Props {
+  image: ResourceImage;
+}
+const { image } = Astro.props;
+
+const src = image.status === "available" ? image.assetPath : image.fallbackPath;
+---
+
+<div class="resource-figure">
+  {
+    src ? (
+      <img
+        src={src}
+        alt={image.alt}
+        width={image.recommendedWidth}
+        height={image.recommendedHeight}
+        loading="eager"
+        decoding="async"
+        class="resource-figure__img"
+      />
+    ) : (
+      <div class="resource-figure__band" aria-hidden="true">
+        <span class="resource-figure__icon">
+          <Icon name={image.fallbackIcon} size={72} />
+        </span>
+      </div>
+    )
+  }
+</div>
+
+<style>
+  .resource-figure {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin-bottom: 1.75rem;
+    border: 1px solid var(--gray-border);
+  }
+  .resource-figure__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .resource-figure__band {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image:
+      linear-gradient(120deg, rgba(7, 31, 58, 0.92), rgba(18, 111, 186, 0.85)),
+      url("/images/ridge-band.svg");
+    background-size: cover;
+    background-position: center;
+  }
+  .resource-figure__icon {
+    width: 132px;
+    height: 132px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.12);
+    color: var(--blue-light);
+  }
+</style>

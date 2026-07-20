@@ -1,13 +1,14 @@
-# Resource Center Image Assets — PENDING
+# Resource Center Image Assets — INSTALLED
 
-This directory is reserved for the Well Pump Resources featured images.
-**None of these assets exist yet.** The machine-readable manifest (paths,
-alt text, aspect ratios, recommended subjects, fallbacks, status) lives in
-`src/data/resources.ts` — when an asset is produced, place the file here and
-flip that entry's `status` from `"pending"` to `"available"`.
+All 90 featured images (8 hub + 82 guide) are installed here as 1600×900
+WebP (16:9), status `"available"` in the manifests. The machine-readable
+manifests live in `src/data/resources.ts` (hubs) and `src/data/guides.ts`
+(guides). All imagery is representative generated imagery — it does not
+depict completed local projects, employees, or company-owned equipment.
 
-Until then, pages render either an existing relevant site photo (fallback)
-or a branded gradient band — never a broken image or gray placeholder.
+If an asset is ever removed, flip its manifest `status` back to
+`"pending"` and the page falls back to a site photo or branded band —
+never a broken image.
 
 | Filename | Route | Aspect | Temporary fallback |
 | --- | --- | --- | --- |

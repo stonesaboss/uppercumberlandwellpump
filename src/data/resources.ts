@@ -93,7 +93,7 @@ export const RESOURCES_INDEX = {
     recommendedHeight: 900,
     recommendedSubject:
       "A professional, photorealistic overview of a private-well service setting on rural Tennessee property, showing a visible well head and appropriate service equipment without posing workers or branding.",
-    status: "pending",
+    status: "available",
   } satisfies ResourceImage,
 } as const;
 
@@ -155,7 +155,7 @@ export const RESOURCE_HUBS: ResourceHub[] = [
       recommendedHeight: 900,
       recommendedSubject:
         "A technician or service setup preparing to inspect or retrieve a residential pump, emphasizing the equipment and property access factors involved in estimating work.",
-      status: "pending",
+      status: "available",
     },
   },
   {
@@ -216,7 +216,7 @@ export const RESOURCE_HUBS: ResourceHub[] = [
       recommendedHeight: 900,
       recommendedSubject:
         "A professional inspection of an above-ground well head or accessible pump-system components during a no-water diagnosis.",
-      status: "pending",
+      status: "available",
     },
   },
   {
@@ -277,7 +277,7 @@ export const RESOURCE_HUBS: ResourceHub[] = [
       recommendedHeight: 900,
       recommendedSubject:
         "A clean pressure-tank and pressure-gauge installation with visible piping in a utility room, basement or well house.",
-      status: "pending",
+      status: "available",
     },
   },
   {
@@ -337,7 +337,7 @@ export const RESOURCE_HUBS: ResourceHub[] = [
       recommendedHeight: 900,
       recommendedSubject:
         "A realistic installed well-system scene showing the relationship among a pressure tank, controls, gauge, piping and related components.",
-      status: "pending",
+      status: "available",
     },
   },
   {
@@ -396,7 +396,7 @@ export const RESOURCE_HUBS: ResourceHub[] = [
       recommendedHeight: 900,
       recommendedSubject:
         "A well head with a clean, accessible service area and a rural residence softly visible in the background.",
-      status: "pending",
+      status: "available",
     },
   },
   {
@@ -456,7 +456,7 @@ export const RESOURCE_HUBS: ResourceHub[] = [
       recommendedHeight: 900,
       recommendedSubject:
         "A rural residence, barn, workshop or similar property context served by a private-well system.",
-      status: "pending",
+      status: "available",
     },
   },
   {
@@ -516,7 +516,7 @@ export const RESOURCE_HUBS: ResourceHub[] = [
       recommendedHeight: 900,
       recommendedSubject:
         "A rolling, wooded rural landscape representative of Tennessee's Upper Cumberland region, with a residence or private-well context where appropriate.",
-      status: "pending",
+      status: "available",
     },
   },
 ];

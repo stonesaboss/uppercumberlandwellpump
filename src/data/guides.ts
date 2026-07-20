@@ -56,7 +56,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A professional well-pump replacement setup beside a residential well head on rural Tennessee property, equipment visible, no posed workers or branding.",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -178,7 +178,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A technician evaluating accessible well-system controls (pressure switch, wiring, gauge) during a repair diagnosis, no branding.",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -298,7 +298,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A retrieved submersible pump and drop pipe laid out for evaluation beside a well head, showing the scale of the equipment.",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -417,7 +417,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "Drop pipe and pump wire being pulled from a deep well during pump replacement, conveying the depth and length involved.",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -537,7 +537,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A submersible pump and a jet pump shown for comparison, illustrating the difference between down-well and surface-mounted equipment.",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -656,7 +656,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A residential pressure tank with connected piping, pressure switch and gauge in a utility room or well house.",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -776,7 +776,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "Service equipment pulling drop pipe and a submersible pump from a deep well, showing the retrieval process.",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -895,7 +895,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "New drop pipe, pump wire, and fittings staged beside a well head for a replacement, emphasizing the supporting components.",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -1016,7 +1016,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "Close view of a pressure tank, gauge and pressure switch being documented for a service request, no people's faces.",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -1136,7 +1136,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "An urgent well-system diagnosis at a well head or utility area during a no-water call, conveying prompt but careful evaluation.",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -1255,7 +1255,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A well-system pressure gauge and switch being checked during a no-water situation, no faces, conveying calm troubleshooting.",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -1376,7 +1376,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A pressure gauge reading near zero while a pump runs, illustrating a pump operating without delivering water.",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -1492,7 +1492,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A technician evaluating the pressure switch and electrical supply to a well pump, emphasizing controls not the pump.",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -1608,7 +1608,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A pressure tank, switch and gauge being evaluated on a continuously running well system.",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -1724,7 +1724,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A pressure tank and gauge being evaluated for short cycling, with attention on the tank's air charge and bladder.",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -1839,7 +1839,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A residential electrical panel context for a well pump circuit, emphasizing professional evaluation, no hands inside the panel.",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -1955,7 +1955,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A faucet running with sputtering air-and-water flow, illustrating air entering a well-system line.",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -2071,7 +2071,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A well-system breaker and pressure gauge being checked after a storm-related outage, calm troubleshooting context.",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -2187,7 +2187,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A well-system evaluation focused on early warning signs, pressure gauge and tank in view.",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -2305,7 +2305,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A pressure switch mounted on the piping near a pressure tank and gauge, closed cover, professional context.",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -2421,7 +2421,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A pressure switch and tank being inspected for a clicking sound, focus on the switch and gauge.",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -2536,7 +2536,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A well head and service context conveying an urgent no-water response, calm and professional.",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -2652,7 +2652,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A residential utility area showing a blue pressure tank connected to copper and PEX plumbing lines, natural light from a small window, no people, no visible text or branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -2764,7 +2764,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A modern kitchen faucet with a weak water stream falling into a stainless steel sink, soft daylight, no people, no text or branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -2875,7 +2875,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A blue steel pressure tank on a basement floor next to a pump and plumbing manifold, cool ambient light, no people, no text or branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -2987,7 +2987,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A residential bathroom shower running with water, viewed through an open doorway toward a laundry area, warm daylight, no people, no text or branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -3099,7 +3099,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A bathroom faucet with an uneven, pulsing water stream falling into a white ceramic sink, soft morning light, no people, no text or branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -3211,7 +3211,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A well casing cap in a grassy rural yard with a wellhead and buried line, distant tree line, overcast daylight, no people, no text or branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -3323,7 +3323,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A close-up of a round analog pressure gauge mounted on well system plumbing, needle mid-dial, soft indoor light, no people, no text or branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -3435,7 +3435,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A wall-mounted variable-speed pump controller beside well plumbing in a clean utility space, even indoor light, no people, no text or branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -3547,7 +3547,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "Two well system setups side by side in a utility room, a large traditional blue tank and a compact variable-speed unit, even light, no people, no text or branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -3659,7 +3659,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "Two pressure tanks of different sizes standing side by side on a basement floor for scale, cool light, no people, no text or branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -3771,7 +3771,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "Two side-by-side bathroom sink faucets both running with modest water streams, bright bathroom light, no people, no text or branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -3883,7 +3883,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A submersible well pump resting on grass next to coiled black poly drop pipe and wiring during a service visit, daylight, no people, no text or branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -3995,7 +3995,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "Cutaway-style real scene of a rural Tennessee home's private well system: well casing in the yard, pressure tank in a basement, water lines running to the house; no faces, no text, no branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -4104,7 +4104,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "Real scene comparing two well pump types on a clean workshop bench: a long cylindrical submersible pump and a compact above-ground jet pump with its casing; no faces, no text, no branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -4213,7 +4213,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "Real scene of a blue captive-air well pressure tank standing in a home utility room with copper and PEX plumbing connections; no faces, no text, no branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -4322,7 +4322,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "Real close scene of a well pressure switch device mounted on a brass fitting near a pressure tank and gauge in a utility space; no faces, no text, no branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -4431,7 +4431,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "Real scene of a gray well pump control box mounted on an interior utility wall with conduit running to it; no faces, no text, no branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -4540,7 +4540,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "Real close scene of a cylindrical motor start capacitor resting on a workbench next to pump wiring and a control box lid; no faces, no text, no branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -4650,7 +4650,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "Real scene of a well casing partially excavated to show a pitless adapter fitting where the horizontal supply line meets the vertical casing below grade; no faces, no text, no branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -4759,7 +4759,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "Real close scene of a brass inline check valve fitting on a section of well drop pipe laid on a workbench; no faces, no text, no branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -4868,7 +4868,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "Real scene of coiled black polyethylene drop pipe and attached electrical pump wire laid out on the ground next to an open well casing; no faces, no text, no branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -4977,7 +4977,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "Real scene of a black or aluminum well cap secured on top of a well casing rising a foot above a grassy rural yard; no faces, no text, no branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -5086,7 +5086,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "Real close scene of a round dial pressure gauge mounted on a brass tee near a well pressure tank and pressure switch; no faces, no text, no branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -5195,7 +5195,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "Real scene of a home basement or utility room showing a well pressure tank, pressure switch, gauge, and water lines mounted along a wall; no faces, no text, no branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -5304,7 +5304,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A close-up of a homeowner holding a notebook and smartphone next to a capped well head in a grassy rural yard, natural daylight, no faces, no text or branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -5410,7 +5410,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A smartphone screen framing a blue pressure tank and pressure gauge inside a small utility area, soft indoor light, no faces, no text or branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -5516,7 +5516,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A steel well casing with a sealed cap rising about a foot above mowed grass near a treeline, rural Tennessee setting, natural daylight, no faces, no text or branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -5622,7 +5622,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A wide gravel driveway curving through a rural yard toward a capped well head near a fence line, clear open path, daylight, no faces, no text or branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -5728,7 +5728,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A kitchen faucet turned on with no water coming out, over a stainless sink, soft daylight from a window, no faces, no text or branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -5838,7 +5838,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A well-service rig positioned over a well casing with lengths of pipe laid out on the grass beside it, rural setting, daylight, no faces, no text or branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -5948,7 +5948,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A simple log sheet and calendar hanging on a wall near a pressure tank in a utility room, soft indoor light, no faces, no text or branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -6054,7 +6054,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A small wooden well house lightly dusted with snow in a rural yard with bare trees, winter daylight, no faces, no text or branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -6164,7 +6164,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A capped well head in a rural yard with scattered small branches and a gray post-storm sky, daylight, no faces, no text or branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -6274,7 +6274,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A blue pressure tank with an attached pressure gauge and fittings in a clean basement utility area, soft indoor light, no faces, no text or branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -6384,7 +6384,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A rural farmhouse with a for-sale setting and a capped well head visible in the front yard, daylight, no faces, no text or branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -6494,7 +6494,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "An organized paper folder of documents and a water test report laid out on a wooden desk, soft daylight, no faces, no text or branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -6604,7 +6604,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A modest rural home on wooded Upper Cumberland acreage, visible well casing and pressure tank enclosure, gravel driveway, no people, no signage",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -6713,7 +6713,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A quiet wooden cabin on a wooded Cumberland Plateau lot, well casing partly visible among trees, autumn foliage, no people, no signage",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -6822,7 +6822,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "Cattle at a metal stock tank in a green pasture on rolling Upper Cumberland farmland, well and pipe run visible, no people, no signage",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -6935,7 +6935,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A rural home under construction on cleared Upper Cumberland acreage, well drilling rig in the background, framed structure, no people, no signage",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -7048,7 +7048,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A detached metal workshop building on rural Upper Cumberland acreage with an exterior spigot and buried line trench, gravel yard, no people, no signage",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -7157,7 +7157,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A long open trench for a buried water line crossing a rural field toward a distant farmhouse on Upper Cumberland acreage, no people, no signage",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -7266,7 +7266,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A wide rural property with a garden sprinkler running and a farmhouse in the distance on Upper Cumberland acreage, no people, no signage",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -7375,7 +7375,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A long steep gravel driveway winding up through dense woods toward a remote property on the Cumberland Plateau, no people, no signage",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -7484,7 +7484,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A rural home during an overcast storm with a standby generator unit beside it and a well enclosure nearby on Upper Cumberland acreage, no people, no signage",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -7597,7 +7597,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A small wooden well house structure on rural Upper Cumberland acreage in winter with light frost on the ground, no people, no signage",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -7710,7 +7710,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A weathered older well casing with an aging pressure tank and worn fittings on rural Upper Cumberland acreage, no people, no signage",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -7823,7 +7823,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "Undeveloped wooded acreage on the Cumberland Plateau with an old well casing standing among trees and brush, for-sale context implied without signage, no people",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -7936,7 +7936,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A well head and pressure tank at a rural home on the Cumberland Plateau, wooded sloping property, no people, no text, no branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -8045,7 +8045,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A residential well pressure tank and gauge in a garage utility area, rural Tennessee setting, no people, no text, no branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -8158,7 +8158,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A well head with an insulated cover on a frosty rural property, bare winter trees, Cumberland Plateau, no people, no text, no branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -8271,7 +8271,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A rural home on a wooded hillside during an overcast storm, power lines visible, Tennessee plateau, no people, no text, no branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -8384,7 +8384,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A long gravel driveway winding up a steep wooded hillside toward a rural home, Cumberland Plateau terrain, no people, no text, no branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -8497,7 +8497,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A rural property for sale with a well head near a pasture and wooded ridge, Tennessee Highland Rim, no people, no text, no branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -8610,7 +8610,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A rustic wooded cabin near a lake with a well head visible in the yard, Dale Hollow style setting, no people, no text, no branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -8723,7 +8723,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "Rolling rural acreage with a farmhouse, barn, and fenced pasture stretching to a wooded ridge, Tennessee Highland Rim, no people, no text, no branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -8836,7 +8836,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "An established well head and pressure tank at a rural home with mature trees, Tennessee plateau setting, no people, no text, no branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -8949,7 +8949,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A folder of paper documents and a well log on a wooden table, warm indoor light, rural home setting, no people, no text, no branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -9062,7 +9062,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A rural home with a small addition under construction and a well head in the yard, wooded Tennessee property, no people, no text, no branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
@@ -9175,7 +9175,7 @@ export const GUIDES: Guide[] = [
       "recommendedWidth": 1600,
       "recommendedHeight": 900,
       "recommendedSubject": "A closed farm gate at the start of a gravel drive leading into wooded rural land, Tennessee plateau, no people, no text, no branding",
-      "status": "pending"
+      "status": "available"
     },
     "sections": [
       {
